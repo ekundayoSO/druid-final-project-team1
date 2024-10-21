@@ -1,0 +1,7 @@
+name: druid-final-project-team1
+recipe: drupal10
+config:
+  webroot: web
+services:
+  appservice:
+    type: phpmyadmin
