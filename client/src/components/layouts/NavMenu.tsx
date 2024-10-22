@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useMatch, useNavigate } from 'react-router-dom';
 import { Menu } from 'lucide-react';
-import Logo from '@/assets/wander-app-logo-v1.svg';
+import Logo from '@/assets/druid.svg';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 import { ModeToggle } from '../custom/themes/mode-toggle';
 

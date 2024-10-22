@@ -9,8 +9,9 @@ interface Route {
 
 const routes: Route[] = [
   { path: '/', name: 'Home' },
-  { path: '/discover', name: 'Discover' },
-  { path: '/trips', name: 'Trips' },
+  { path: '/projects', name: 'Projects' },
+  { path: '/maintenance', name: 'Maintenance' },
+  { path: '/consultation', name: 'Consultation' },
 ];
 
 export function AppLayout() {
