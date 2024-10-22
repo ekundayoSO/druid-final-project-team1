@@ -27,7 +27,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ routes }) => {
             <AvatarImage src={Logo} />
             <AvatarFallback>WB</AvatarFallback>
           </Avatar>
-          <span className='ml-2 text-2xl font-medium text-black dark:text-white'>Wander Buddy</span>
+          <span className='ml-2 text-2xl font-medium text-black dark:text-white'>Druid Final Project</span>
         </a>
       </div>
       <div className='flex flex-grow justify-center absolute left-1/2 transform -translate-x-1/2'>
