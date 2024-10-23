@@ -6,6 +6,7 @@ module:
   big_pipe: 0
   block: 0
   block_content: 0
+  blog: 0
   breakpoint: 0
   ckeditor5: 0
   comment: 0
@@ -25,6 +26,8 @@ module:
   help: 0
   history: 0
   image: 0
+  jsonapi: 0
+  jsonapi_extras: 0
   link: 0
   menu_link_content: 0
   menu_ui: 0
@@ -34,7 +37,10 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  rest: 0
+  restui: 0
   search: 0
+  serialization: 0
   shortcut: 0
   system: 0
   taxonomy: 0
