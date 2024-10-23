@@ -21,6 +21,7 @@
         "drupal/core-project-message": "^10.3",
         "drupal/core-recommended": "^10.3",
         "drupal/devel": "^5.3",
+        "drupal/jsonapi_extras": "^3.26",
         "drupal/pathauto": "^1.13",
         "drupal/restui": "^1.22",
         "drush/drush": "^12.5"
