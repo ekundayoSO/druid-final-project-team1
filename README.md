@@ -52,7 +52,13 @@ cd druid-final-project-team1
    lando db-import druid.sql
    ```
 
-5. **Import configurations**
+   4. **Export the database**
+   Share the exported database with the team members
+   ```sh
+   lando db-export druid.sql
+   ```
+
+5. **Export configurations**
    ```sh
    lando drush cim
    ```
