@@ -1,7 +1,7 @@
 contact_form.contact_us:
-  path: '/contact-form/contact-us'
+  path: 'contact-us'
   defaults:
-    _title: 'Customer Details'
+    _title: 'Send us a message'
     _form: 'Drupal\contact_form\Form\ContactUsForm'
   requirements:
     _permission: 'access content'
