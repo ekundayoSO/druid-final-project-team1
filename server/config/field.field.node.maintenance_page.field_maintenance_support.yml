@@ -1,0 +1,19 @@
+uuid: 957229ed-2181-4eac-a2af-ca16725499ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maintenance_support
+    - node.type.maintenance_page
+id: node.maintenance_page.field_maintenance_support
+field_name: field_maintenance_support
+entity_type: node
+bundle: maintenance_page
+label: 'Maintenance support'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

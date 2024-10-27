@@ -1,0 +1,26 @@
+uuid: 4799c94f-61c3-4e56-9b46-eefbb2bc9d99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.full_html
+    - node.type.consultation_page
+  module:
+    - text
+id: node.consultation_page.body
+field_name: body
+entity_type: node
+bundle: consultation_page
+label: 'Consultation description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - full_html
+field_type: text_with_summary

@@ -1,0 +1,19 @@
+uuid: 3a155012-4a78-4a72-85cd-01a5bc48b3a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_why_druid
+    - node.type.maintenance_page
+id: node.maintenance_page.field_why_druid
+field_name: field_why_druid
+entity_type: node
+bundle: maintenance_page
+label: 'Why Druid'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

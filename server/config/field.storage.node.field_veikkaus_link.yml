@@ -1,0 +1,19 @@
+uuid: 88cad8f7-6aaa-4700-a71f-10a2d20dde82
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_veikkaus_link
+field_name: field_veikkaus_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

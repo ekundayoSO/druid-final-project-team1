@@ -1,0 +1,23 @@
+uuid: bee4e4f6-3f70-4221-ae39-904d6333edfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_us
+    - node.type.maintenance_page
+  module:
+    - link
+id: node.maintenance_page.field_contact_us
+field_name: field_contact_us
+entity_type: node
+bundle: maintenance_page
+label: 'Contact Us'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

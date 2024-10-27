@@ -1,0 +1,189 @@
+uuid: 04f97483-ec78-4d8f-a9a1-f0373ab79339
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.projects_page.field_footbalance
+    - field.field.node.projects_page.field_footbalance_description
+    - field.field.node.projects_page.field_footbalance_image
+    - field.field.node.projects_page.field_footbalance_link
+    - field.field.node.projects_page.field_helsingin_kaupunki
+    - field.field.node.projects_page.field_helsingin_kaupunki_descrip
+    - field.field.node.projects_page.field_helsingin_kaupunki_image
+    - field.field.node.projects_page.field_helsingin_kaupunki_link
+    - field.field.node.projects_page.field_taitotalo
+    - field.field.node.projects_page.field_taitotalo_description
+    - field.field.node.projects_page.field_taitotalo_image
+    - field.field.node.projects_page.field_taitotalo_link
+    - field.field.node.projects_page.field_veikkaus
+    - field.field.node.projects_page.field_veikkaus_description
+    - field.field.node.projects_page.field_veikkaus_img
+    - field.field.node.projects_page.field_veikkaus_link
+    - node.type.projects_page
+  module:
+    - image
+    - link
+    - user
+id: node.projects_page.default
+targetEntityType: node
+bundle: projects_page
+mode: default
+content:
+  field_footbalance:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_footbalance_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_footbalance_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  field_footbalance_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  field_helsingin_kaupunki:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_helsingin_kaupunki_descrip:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_helsingin_kaupunki_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_helsingin_kaupunki_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_taitotalo:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_taitotalo_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_taitotalo_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_taitotalo_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_veikkaus:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_veikkaus_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_veikkaus_img:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_veikkaus_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
