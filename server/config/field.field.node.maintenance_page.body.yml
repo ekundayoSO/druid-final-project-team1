@@ -1,0 +1,26 @@
+uuid: a54f73c7-bc38-45cc-8b35-a51d8aa214a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.full_html
+    - node.type.maintenance_page
+  module:
+    - text
+id: node.maintenance_page.body
+field_name: body
+entity_type: node
+bundle: maintenance_page
+label: 'Maintenance description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - full_html
+field_type: text_with_summary

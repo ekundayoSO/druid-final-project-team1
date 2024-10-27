@@ -1,0 +1,19 @@
+uuid: c9aab602-078b-4f82-8db6-6f81d9ba498d
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_footbalance_link
+field_name: field_footbalance_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

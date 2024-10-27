@@ -1,0 +1,5 @@
+name: 'Contact form'
+type: module
+description: 'This is a custom form module'
+package: Custom
+core_version_requirement: ^10 || ^11

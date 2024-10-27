@@ -1,0 +1,18 @@
+uuid: 2490a952-7294-4a41-bdda-c06a726b0004
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.consultation_page
+id: node.consultation_page.title
+field_name: title
+entity_type: node
+bundle: consultation_page
+label: Consultation
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

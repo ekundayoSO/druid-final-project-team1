@@ -1,0 +1,19 @@
+uuid: 2e5a6135-6cf6-4a32-a60f-651a75882db1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_maintenance_support
+field_name: field_maintenance_support
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

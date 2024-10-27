@@ -1,0 +1,19 @@
+uuid: a1a4925f-da26-4cc9-b664-c04d22952730
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_support_strength
+    - node.type.maintenance_page
+id: node.maintenance_page.field_support_strength
+field_name: field_support_strength
+entity_type: node
+bundle: maintenance_page
+label: 'Support Strength'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

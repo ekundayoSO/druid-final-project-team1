@@ -1,0 +1,30 @@
+uuid: 3a533fde-96bf-4303-bd4a-9724dc0c2f49
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+id: node.field_helsingin_kaupunki_image
+field_name: field_helsingin_kaupunki_image
+entity_type: node
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: 7ab20713-51c8-4517-b5dd-6f05d1088d5f
+    alt: hk_image
+    title: ''
+    width: 1914
+    height: 894
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

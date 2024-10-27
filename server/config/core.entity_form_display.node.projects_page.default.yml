@@ -1,0 +1,212 @@
+uuid: eb7953d9-6ff9-45af-bf48-588e609ee400
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.projects_page.field_footbalance
+    - field.field.node.projects_page.field_footbalance_description
+    - field.field.node.projects_page.field_footbalance_image
+    - field.field.node.projects_page.field_footbalance_link
+    - field.field.node.projects_page.field_helsingin_kaupunki
+    - field.field.node.projects_page.field_helsingin_kaupunki_descrip
+    - field.field.node.projects_page.field_helsingin_kaupunki_image
+    - field.field.node.projects_page.field_helsingin_kaupunki_link
+    - field.field.node.projects_page.field_taitotalo
+    - field.field.node.projects_page.field_taitotalo_description
+    - field.field.node.projects_page.field_taitotalo_image
+    - field.field.node.projects_page.field_taitotalo_link
+    - field.field.node.projects_page.field_veikkaus
+    - field.field.node.projects_page.field_veikkaus_description
+    - field.field.node.projects_page.field_veikkaus_img
+    - field.field.node.projects_page.field_veikkaus_link
+    - image.style.thumbnail
+    - node.type.projects_page
+  module:
+    - image
+    - link
+    - path
+id: node.projects_page.default
+targetEntityType: node
+bundle: projects_page
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_footbalance:
+    type: string_textfield
+    weight: 134
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_footbalance_description:
+    type: string_textarea
+    weight: 135
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_footbalance_image:
+    type: image_image
+    weight: 136
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_footbalance_link:
+    type: link_default
+    weight: 137
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_helsingin_kaupunki:
+    type: string_textfield
+    weight: 130
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_helsingin_kaupunki_descrip:
+    type: string_textarea
+    weight: 131
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_helsingin_kaupunki_image:
+    type: image_image
+    weight: 132
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_helsingin_kaupunki_link:
+    type: link_default
+    weight: 133
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_taitotalo:
+    type: string_textfield
+    weight: 126
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_taitotalo_description:
+    type: string_textarea
+    weight: 127
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_taitotalo_image:
+    type: image_image
+    weight: 128
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_taitotalo_link:
+    type: link_default
+    weight: 129
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_veikkaus:
+    type: string_textfield
+    weight: 122
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_veikkaus_description:
+    type: string_textarea
+    weight: 124
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_veikkaus_img:
+    type: image_image
+    weight: 123
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_veikkaus_link:
+    type: link_default
+    weight: 125
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
