@@ -1,0 +1,18 @@
+uuid: 1af769b9-4d80-4d88-86b9-4c4aaf8ca487
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - serialization
+    - user
+id: entity.contact_form
+plugin_id: 'entity:contact_form'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

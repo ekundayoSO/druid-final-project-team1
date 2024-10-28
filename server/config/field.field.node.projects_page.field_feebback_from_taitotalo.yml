@@ -1,0 +1,19 @@
+uuid: 9b3374fa-11ea-4f27-b0f1-2891f737b906
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feebback_from_taitotalo
+    - node.type.projects_page
+id: node.projects_page.field_feebback_from_taitotalo
+field_name: field_feebback_from_taitotalo
+entity_type: node
+bundle: projects_page
+label: 'Feebback from Taitotalo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

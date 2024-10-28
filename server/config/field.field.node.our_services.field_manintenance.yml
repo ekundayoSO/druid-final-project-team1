@@ -1,0 +1,29 @@
+uuid: a610fcbe-ea7c-46f3-a14c-97ca38a7f06b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_manintenance
+    - node.type.maintenance_page
+    - node.type.our_services
+id: node.our_services.field_manintenance
+field_name: field_manintenance
+entity_type: node
+bundle: our_services
+label: Manintenance
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      maintenance_page: maintenance_page
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -13,6 +13,7 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
+      - alignment
       - bold
       - italic
       - strikethrough
@@ -34,7 +35,17 @@ settings:
       - codeBlock
       - '|'
       - sourceEditing
+      - indent
+      - outdent
+      - undo
+      - redo
   plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
     ckeditor5_codeBlock:
       languages:
         -
@@ -81,6 +92,7 @@ settings:
           language: xml
     ckeditor5_heading:
       enabled_headings:
+        - heading1
         - heading2
         - heading3
         - heading4

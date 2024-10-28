@@ -1,0 +1,21 @@
+uuid: d1f51ee8-34b8-4f36-9e95-a8b9f0bd98fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - serialization
+    - user
+id: entity.file
+plugin_id: 'entity:file'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - json
+  authentication:
+    - cookie

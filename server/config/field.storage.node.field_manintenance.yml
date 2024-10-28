@@ -1,18 +1,18 @@
-uuid: e97b689b-b131-46fa-b197-1acd38f2940a
+uuid: 8d93709a-868a-4270-958e-0d2cc4c2ebf5
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_taitotalo_description
-field_name: field_taitotalo_description
+id: node.field_manintenance
+field_name: field_manintenance
 entity_type: node
-type: string_long
+type: entity_reference
 settings:
-  case_sensitive: false
+  target_type: node
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

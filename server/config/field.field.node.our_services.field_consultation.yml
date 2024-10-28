@@ -1,0 +1,29 @@
+uuid: 971154b9-f547-4bf4-abbc-cd0011a6e4c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_consultation
+    - node.type.consultation_page
+    - node.type.our_services
+id: node.our_services.field_consultation
+field_name: field_consultation
+entity_type: node
+bundle: our_services
+label: Consultation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      consultation_page: consultation_page
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

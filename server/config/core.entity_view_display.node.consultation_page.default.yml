@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.consultation_page.body
     - field.field.node.consultation_page.field_consulting
+    - field.field.node.consultation_page.field_form
     - node.type.consultation_page
   module:
     - image
@@ -32,6 +33,14 @@ content:
         attribute: lazy
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_form:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
     region: content
   links:
     settings: {  }

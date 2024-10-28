@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.projects_page.field_feebback_from_taitotalo
     - field.field.node.projects_page.field_footbalance
     - field.field.node.projects_page.field_footbalance_description
     - field.field.node.projects_page.field_footbalance_image
@@ -34,6 +35,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_feebback_from_taitotalo: true
   field_footbalance: true
   field_footbalance_description: true
   field_footbalance_image: true

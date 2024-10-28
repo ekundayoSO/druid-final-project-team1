@@ -1,0 +1,18 @@
+uuid: db5659e6-6407-4a95-977d-49aea818444f
+langcode: en
+status: true
+dependencies:
+  module:
+    - pathauto
+    - serialization
+    - user
+id: entity.pathauto_pattern
+plugin_id: 'entity:pathauto_pattern'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

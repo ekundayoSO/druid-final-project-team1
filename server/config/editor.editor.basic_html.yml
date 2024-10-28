@@ -27,10 +27,24 @@ settings:
       - heading
       - code
       - '|'
+      - removeFormat
       - sourceEditing
+      - undo
+      - redo
+      - alignment
+      - insertTable
+      - indent
+      - outdent
   plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
     ckeditor5_heading:
       enabled_headings:
+        - heading1
         - heading2
         - heading3
         - heading4

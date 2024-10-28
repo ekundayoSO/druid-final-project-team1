@@ -1,0 +1,55 @@
+uuid: 858f3d51-24e2-4401-aaab-4676d25e0580
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.our_services.body
+    - field.field.node.our_services.field_consultation
+    - field.field.node.our_services.field_manintenance
+    - field.field.node.our_services.field_projects
+    - node.type.our_services
+  module:
+    - text
+    - user
+id: node.our_services.default
+targetEntityType: node
+bundle: our_services
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_consultation:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_manintenance:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_projects:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

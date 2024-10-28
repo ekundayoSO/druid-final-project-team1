@@ -1,18 +1,18 @@
-uuid: e97b689b-b131-46fa-b197-1acd38f2940a
+uuid: c27b2dcc-cc28-4f39-ba64-e763a19bf5d0
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_taitotalo_description
-field_name: field_taitotalo_description
+id: node.field_feebback_from_taitotalo
+field_name: field_feebback_from_taitotalo
 entity_type: node
 type: string_long
 settings:
   case_sensitive: false
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

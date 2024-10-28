@@ -1,19 +1,20 @@
-uuid: 54e4e561-dde4-436c-baa8-7e38a0e4d613
+uuid: bf59b208-717c-4b33-860a-c2ad0fe658c1
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.consultation_page.body
-    - field.field.node.consultation_page.field_consulting
-    - field.field.node.consultation_page.field_form
-    - node.type.consultation_page
+    - field.field.node.our_services.body
+    - field.field.node.our_services.field_consultation
+    - field.field.node.our_services.field_manintenance
+    - field.field.node.our_services.field_projects
+    - node.type.our_services
   module:
     - text
     - user
-id: node.consultation_page.teaser
+id: node.our_services.teaser
 targetEntityType: node
-bundle: consultation_page
+bundle: our_services
 mode: teaser
 content:
   body:
@@ -30,5 +31,6 @@ content:
     weight: 100
     region: content
 hidden:
-  field_consulting: true
-  field_form: true
+  field_consultation: true
+  field_manintenance: true
+  field_projects: true

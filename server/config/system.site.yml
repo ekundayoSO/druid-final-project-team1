@@ -2,7 +2,7 @@ _core:
   default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
 langcode: en
 uuid: 833b71d0-0c7d-411b-8f53-432909dffff7
-name: 'Drush Site-Install'
+name: 'Druid Final Project'
 mail: admin@example.com
 slogan: ''
 page:
@@ -12,4 +12,4 @@ page:
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
-mail_notification: null
+mail_notification: ''

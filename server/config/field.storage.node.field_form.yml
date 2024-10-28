@@ -1,18 +1,19 @@
-uuid: e97b689b-b131-46fa-b197-1acd38f2940a
+uuid: 55b09a51-0f27-4913-92c7-8e1605b30fa6
 langcode: en
 status: true
 dependencies:
   module:
+    - contact
     - node
-id: node.field_taitotalo_description
-field_name: field_taitotalo_description
+id: node.field_form
+field_name: field_form
 entity_type: node
-type: string_long
+type: entity_reference
 settings:
-  case_sensitive: false
+  target_type: contact_form
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

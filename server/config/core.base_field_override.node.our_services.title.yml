@@ -1,0 +1,18 @@
+uuid: b5a0e397-f7f5-49d3-bb46-999bd513f600
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.our_services
+id: node.our_services.title
+field_name: title
+entity_type: node
+bundle: our_services
+label: 'Services Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
