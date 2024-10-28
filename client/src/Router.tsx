@@ -5,6 +5,7 @@ import { AppLayout } from '@/components/layouts/AppLayout';
 import Projects from './components/pages/Projects';
 import Maintenance from './components/pages/Maintenance';
 import Consultation from './components/pages/Consultation';
+import Jobs from './components/pages/Job';
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
       {
         path: 'consultation',
         element: <Consultation />,
+      },
+      {
+        path: 'jobs',
+        element: <Jobs />,
       },
     ],
   },

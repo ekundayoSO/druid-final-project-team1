@@ -12,6 +12,7 @@ const routes: Route[] = [
   { path: '/projects', name: 'Projects' },
   { path: '/maintenance', name: 'Maintenance' },
   { path: '/consultation', name: 'Consultation' },
+  { path: '/jobs', name: 'Jobs' },
 ];
 
 export function AppLayout() {
