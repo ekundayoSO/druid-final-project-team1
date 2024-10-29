@@ -1,13 +1,29 @@
-import React from 'react';
+import { fetchPages } from '@/lib/api/drupalAPI';
+import React, { useEffect, useState } from 'react';
 
-const AboutUs = () => {
+const AboutUs: React.FC = () => {
+  const [aboutUsContent, setAboutUsContent] = useState<string>('');
+
+  useEffect(() => {
+    const getAboutUsContent = async () => {
+      try {
+        const data = await fetchPages();
+        const aboutUsPage = data.find((page) => page.attributes.title === 'About Us');
+        if (aboutUsPage) {
+          setAboutUsContent(aboutUsPage.attributes.field_content.value);
+        }
+      } catch (error) {
+        console.error('Error fetching About Us content:', error);
+      }
+    };
+
+    getAboutUsContent();
+  }, []);
+
   return (
     <div>
       <h1>About Us</h1>
-      <p>
-        We are a team of developers who are passionate about coding and building applications. We are always looking for
-        ways to improve our skills and learn new technologies.
-      </p>
+      <div dangerouslySetInnerHTML={{ __html: aboutUsContent }} />
     </div>
   );
 };
