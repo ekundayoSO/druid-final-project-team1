@@ -1,0 +1,22 @@
+uuid: a2648b6a-f058-46aa-9dce-82cd1fbb2fc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_long_description
+    - node.type.projects
+  module:
+    - text
+id: node.projects.field_long_description
+field_name: field_long_description
+entity_type: node
+bundle: projects
+label: 'long description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,49 @@
+uuid: bdad1bb9-d9f6-47cb-ae1a-e735869a1f86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.maintenance.field_hero_image
+    - field.field.node.maintenance.field_long_description
+    - field.field.node.maintenance.field_short_description
+    - node.type.maintenance
+  module:
+    - image
+    - text
+    - user
+id: node.maintenance.default
+targetEntityType: node
+bundle: maintenance
+mode: default
+content:
+  field_hero_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_long_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_short_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

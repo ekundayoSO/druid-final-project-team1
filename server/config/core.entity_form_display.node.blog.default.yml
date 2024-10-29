@@ -1,21 +1,21 @@
-uuid: a3dce8c9-a09c-4351-abbb-f037c012163f
+uuid: 592e6c21-6f62-41df-9436-af9ccae0a666
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.field_content
-    - field.field.node.page.field_hero_image
+    - field.field.node.blog.field_author
+    - field.field.node.blog.field_content
+    - field.field.node.blog.field_date
+    - field.field.node.blog.field_hero_image
     - image.style.thumbnail
-    - node.type.page
+    - node.type.blog
   module:
     - image
     - path
     - text
-_core:
-  default_config_hash: SfpLhPExzvR0MgFp0Wp7CrmgEnhcqQ-fXIWFhbf4ue0
-id: node.page.default
+id: node.blog.default
 targetEntityType: node
-bundle: page
+bundle: blog
 mode: default
 content:
   created:
@@ -24,6 +24,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_author:
+    type: entity_reference_autocomplete
+    weight: 121
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_content:
     type: text_textarea
     weight: 122
@@ -31,6 +41,12 @@ content:
     settings:
       rows: 5
       placeholder: ''
+    third_party_settings: {  }
+  field_date:
+    type: datetime_timestamp
+    weight: 123
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_hero_image:
     type: image_image

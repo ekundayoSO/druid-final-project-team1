@@ -1,0 +1,20 @@
+{
+  "coauthors": {
+    "TA": {
+      "name": "Toni Andström",
+      "email": "toni_andstrom@hotmail.com"
+    },
+    "AA": {
+      "name": "Adel Ansari",
+      "email": "adelansari.a@gmail.com"
+    },
+    "hhe": {
+      "name": "Hetti",
+      "email": "hetti.ronnemaa@gmail.com"
+    },
+    "seto": {
+      "name": "Sulaimon Ekundayo",
+      "email": "topdandydot@gmail.com"
+    }
+  }
+}

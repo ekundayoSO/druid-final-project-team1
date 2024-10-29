@@ -1,0 +1,22 @@
+uuid: 5f56e419-7e18-405d-a332-5aebcd6347f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_short_description
+    - node.type.maintenance
+  module:
+    - text
+id: node.maintenance.field_short_description
+field_name: field_short_description
+entity_type: node
+bundle: maintenance
+label: 'short description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

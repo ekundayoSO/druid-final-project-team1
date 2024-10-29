@@ -1,21 +1,20 @@
-uuid: a3dce8c9-a09c-4351-abbb-f037c012163f
+uuid: ab942ed9-1cf5-4696-b641-5275b6b95c99
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.field_content
-    - field.field.node.page.field_hero_image
+    - field.field.node.projects.field_hero_image
+    - field.field.node.projects.field_long_description
+    - field.field.node.projects.field_short_description
     - image.style.thumbnail
-    - node.type.page
+    - node.type.projects
   module:
     - image
     - path
     - text
-_core:
-  default_config_hash: SfpLhPExzvR0MgFp0Wp7CrmgEnhcqQ-fXIWFhbf4ue0
-id: node.page.default
+id: node.projects.default
 targetEntityType: node
-bundle: page
+bundle: projects
 mode: default
 content:
   created:
@@ -24,14 +23,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_content:
-    type: text_textarea
-    weight: 122
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
   field_hero_image:
     type: image_image
     weight: 121
@@ -39,6 +30,22 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_long_description:
+    type: text_textarea
+    weight: 123
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_short_description:
+    type: text_textfield
+    weight: 122
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

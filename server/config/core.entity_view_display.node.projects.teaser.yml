@@ -1,0 +1,26 @@
+uuid: ea623dd4-0ebc-42e8-995c-b12022828cd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.projects.field_hero_image
+    - field.field.node.projects.field_long_description
+    - field.field.node.projects.field_short_description
+    - node.type.projects
+  module:
+    - user
+id: node.projects.teaser
+targetEntityType: node
+bundle: projects
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_hero_image: true
+  field_long_description: true
+  field_short_description: true

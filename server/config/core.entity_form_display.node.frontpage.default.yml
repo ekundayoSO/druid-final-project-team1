@@ -1,36 +1,36 @@
-uuid: a3dce8c9-a09c-4351-abbb-f037c012163f
+uuid: 906adec7-be6b-497f-bb50-90067c0d70c7
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.field_content
-    - field.field.node.page.field_hero_image
+    - field.field.node.frontpage.body
+    - field.field.node.frontpage.field_hero_image
     - image.style.thumbnail
-    - node.type.page
+    - node.type.frontpage
   module:
     - image
     - path
     - text
-_core:
-  default_config_hash: SfpLhPExzvR0MgFp0Wp7CrmgEnhcqQ-fXIWFhbf4ue0
-id: node.page.default
+id: node.frontpage.default
 targetEntityType: node
-bundle: page
+bundle: frontpage
 mode: default
 content:
+  body:
+    type: text_textarea_with_summary
+    weight: 121
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_content:
-    type: text_textarea
-    weight: 122
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
     third_party_settings: {  }
   field_hero_image:
     type: image_image
