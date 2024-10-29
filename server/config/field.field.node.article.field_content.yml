@@ -1,0 +1,19 @@
+uuid: 6022e75d-9bab-4b24-a3eb-1f8d5cd6544b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.article
+id: node.article.field_content
+field_name: field_content
+entity_type: node
+bundle: article
+label: content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

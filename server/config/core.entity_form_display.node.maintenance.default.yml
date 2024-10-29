@@ -1,52 +1,24 @@
-uuid: ac15f72d-2068-436f-8ca7-7e90c8b5fd77
+uuid: 9a712e5c-52b2-4abc-9254-25cc8ef49690
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.field_author
-    - field.field.node.article.field_content
-    - field.field.node.article.field_date
-    - field.field.node.article.field_hero_image
+    - field.field.node.maintenance.field_hero_image
+    - field.field.node.maintenance.field_long_description
+    - field.field.node.maintenance.field_short_description
     - image.style.thumbnail
-    - node.type.article
+    - node.type.maintenance
   module:
-    - datetime
     - image
     - path
-_core:
-  default_config_hash: ewbd6G2uX456-bgwseM2Q-KQG3RkASoyHmTh-XR3oLU
-id: node.article.default
+id: node.maintenance.default
 targetEntityType: node
-bundle: article
+bundle: maintenance
 mode: default
 content:
   created:
     type: datetime_timestamp
     weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_author:
-    type: entity_reference_autocomplete
-    weight: 122
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_content:
-    type: string_textarea
-    weight: 123
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_date:
-    type: datetime_default
-    weight: 121
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -57,6 +29,22 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_long_description:
+    type: string_textarea
+    weight: 123
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_short_description:
+    type: string_textfield
+    weight: 122
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path
@@ -87,7 +75,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60

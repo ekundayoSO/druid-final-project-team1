@@ -1,0 +1,19 @@
+uuid: 770329e1-444e-419c-aee1-d93e05a17809
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_long_description
+    - node.type.maintenance
+id: node.maintenance.field_long_description
+field_name: field_long_description
+entity_type: node
+bundle: maintenance
+label: long-description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

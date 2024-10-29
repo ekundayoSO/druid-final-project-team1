@@ -1,0 +1,49 @@
+uuid: 563350eb-edb0-40c5-a5c4-c7a6658ea199
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.projects.field_hero_image
+    - field.field.node.projects.field_long_description
+    - field.field.node.projects.field_short_description
+    - node.type.projects
+  module:
+    - image
+    - user
+id: node.projects.default
+targetEntityType: node
+bundle: projects
+mode: default
+content:
+  field_hero_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_long_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_short_description:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
