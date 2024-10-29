@@ -9,6 +9,7 @@ dependencies:
     - node.type.consultation
   module:
     - image
+    - text
     - user
 id: node.consultation.default
 targetEntityType: node
@@ -27,17 +28,16 @@ content:
     weight: 101
     region: content
   field_long_description:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 103
     region: content
   field_short_description:
-    type: string
+    type: text_default
     label: above
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
     weight: 102
     region: content

@@ -10,6 +10,7 @@ dependencies:
   module:
     - image
     - path
+    - text
 _core:
   default_config_hash: SfpLhPExzvR0MgFp0Wp7CrmgEnhcqQ-fXIWFhbf4ue0
 id: node.page.default
@@ -24,8 +25,8 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_content:
-    type: string_textarea
-    weight: 123
+    type: text_textarea
+    weight: 122
     region: content
     settings:
       rows: 5

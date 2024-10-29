@@ -4,8 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.service.field_hero_image
-    - field.field.node.service.field_long_description
-    - field.field.node.service.field_short_description
     - node.type.service
   module:
     - image
@@ -25,21 +23,6 @@ content:
         attribute: lazy
     third_party_settings: {  }
     weight: 101
-    region: content
-  field_long_description:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 103
-    region: content
-  field_short_description:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 102
     region: content
   links:
     settings: {  }

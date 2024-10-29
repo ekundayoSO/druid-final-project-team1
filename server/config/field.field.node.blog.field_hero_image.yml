@@ -1,16 +1,16 @@
-uuid: da0144c5-5062-484f-8c8d-5d30422d25de
+uuid: 613dab85-fedf-4e94-a8b8-e34c13d242f3
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_hero_image
-    - node.type.article
+    - node.type.blog
   module:
     - image
-id: node.article.field_hero_image
+id: node.blog.field_hero_image
 field_name: field_hero_image
 entity_type: node
-bundle: article
+bundle: blog
 label: hero-image
 description: ''
 required: false

@@ -11,6 +11,7 @@ dependencies:
   module:
     - image
     - path
+    - text
 id: node.consultation.default
 targetEntityType: node
 bundle: consultation
@@ -31,7 +32,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
   field_long_description:
-    type: string_textarea
+    type: text_textarea
     weight: 123
     region: content
     settings:
@@ -39,7 +40,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_short_description:
-    type: string_textfield
+    type: text_textfield
     weight: 122
     region: content
     settings:

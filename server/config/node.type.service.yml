@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: Service
 type: service
-description: null
+description: 'A listing page for projects, maintenance and consultation'
 help: null
 new_revision: true
 preview_mode: 1

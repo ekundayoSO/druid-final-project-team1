@@ -1,23 +1,21 @@
-uuid: ac15f72d-2068-436f-8ca7-7e90c8b5fd77
+uuid: 592e6c21-6f62-41df-9436-af9ccae0a666
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.field_author
-    - field.field.node.article.field_content
-    - field.field.node.article.field_date
-    - field.field.node.article.field_hero_image
+    - field.field.node.blog.field_author
+    - field.field.node.blog.field_content
+    - field.field.node.blog.field_date
+    - field.field.node.blog.field_hero_image
     - image.style.thumbnail
-    - node.type.article
+    - node.type.blog
   module:
-    - datetime
     - image
     - path
-_core:
-  default_config_hash: ewbd6G2uX456-bgwseM2Q-KQG3RkASoyHmTh-XR3oLU
-id: node.article.default
+    - text
+id: node.blog.default
 targetEntityType: node
-bundle: article
+bundle: blog
 mode: default
 content:
   created:
@@ -28,7 +26,7 @@ content:
     third_party_settings: {  }
   field_author:
     type: entity_reference_autocomplete
-    weight: 122
+    weight: 121
     region: content
     settings:
       match_operator: CONTAINS
@@ -37,16 +35,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_content:
-    type: string_textarea
-    weight: 123
+    type: text_textarea
+    weight: 122
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
   field_date:
-    type: datetime_default
-    weight: 121
+    type: datetime_timestamp
+    weight: 123
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -87,7 +85,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60

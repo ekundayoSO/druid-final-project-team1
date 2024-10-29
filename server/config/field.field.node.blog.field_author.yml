@@ -1,14 +1,14 @@
-uuid: 1767405c-f2ae-472a-b8ba-13e500394c2e
+uuid: c4c5d464-2b9b-420e-b1d0-3a3bc7de7163
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_author
-    - node.type.article
-id: node.article.field_author
+    - node.type.blog
+id: node.blog.field_author
 field_name: field_author
 entity_type: node
-bundle: article
+bundle: blog
 label: author
 description: ''
 required: false

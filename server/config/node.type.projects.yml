@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: Projects
 type: projects
-description: null
+description: 'Service pages: Title, hero-image, short description, long description'
 help: null
 new_revision: true
 preview_mode: 1

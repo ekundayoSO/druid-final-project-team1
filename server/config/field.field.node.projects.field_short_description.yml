@@ -1,19 +1,22 @@
-uuid: 7cb4947f-19a1-4ee7-ad90-b0f7fba0dedc
+uuid: e191cda5-5c86-4ddb-a41a-e12cbd7555e3
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_short_description
     - node.type.projects
+  module:
+    - text
 id: node.projects.field_short_description
 field_name: field_short_description
 entity_type: node
 bundle: projects
-label: short-description
+label: 'short description'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string
+settings:
+  allowed_formats: {  }
+field_type: text

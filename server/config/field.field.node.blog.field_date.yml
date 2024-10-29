@@ -1,16 +1,14 @@
-uuid: 213ac7be-ea78-4a93-ace9-3873d4071b4f
+uuid: 1dff43b9-4154-4c9f-9060-ca679024beb8
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_date
-    - node.type.article
-  module:
-    - datetime
-id: node.article.field_date
+    - node.type.blog
+id: node.blog.field_date
 field_name: field_date
 entity_type: node
-bundle: article
+bundle: blog
 label: date
 description: ''
 required: false
@@ -18,4 +16,4 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: datetime
+field_type: timestamp

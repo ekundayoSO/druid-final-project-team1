@@ -1,4 +1,4 @@
-uuid: b490f9e9-982a-47d4-b0ed-55a7e0c9769a
+uuid: 83b37bd8-45b4-4d6f-876f-583452388e2f
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,8 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-_core:
-  default_config_hash: Fe3N1uqaAyyKJbVkqT-btXy3t98puW8GCRD822xjl10
 name: Blog
-type: article
+type: blog
 description: 'Blog articles having author, date, title, hero-image and content fields'
 help: null
 new_revision: true

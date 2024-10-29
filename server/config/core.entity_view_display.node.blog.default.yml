@@ -1,22 +1,20 @@
-uuid: 61169ef9-b2c9-4329-83ed-03f67ea07dd3
+uuid: 614dc137-a6fa-469a-88e3-f7aed727c364
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.field_author
-    - field.field.node.article.field_content
-    - field.field.node.article.field_date
-    - field.field.node.article.field_hero_image
-    - node.type.article
+    - field.field.node.blog.field_author
+    - field.field.node.blog.field_content
+    - field.field.node.blog.field_date
+    - field.field.node.blog.field_hero_image
+    - node.type.blog
   module:
-    - datetime
     - image
+    - text
     - user
-_core:
-  default_config_hash: br6izr-iGEu--JvNbCJNtOBpRnxpFLXfoV5y61U9Nqc
-id: node.article.default
+id: node.blog.default
 targetEntityType: node
-bundle: article
+bundle: blog
 mode: default
 content:
   field_author:
@@ -25,23 +23,33 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 112
+    weight: 101
     region: content
   field_content:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 113
+    weight: 102
     region: content
   field_date:
-    type: datetime_default
+    type: timestamp
     label: above
     settings:
-      timezone_override: ''
-      format_type: medium
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
     third_party_settings: {  }
-    weight: 111
+    weight: 103
     region: content
   field_hero_image:
     type: image

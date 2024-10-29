@@ -8,6 +8,7 @@ dependencies:
     - node.type.page
   module:
     - image
+    - text
     - user
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
@@ -17,11 +18,11 @@ bundle: page
 mode: default
 content:
   field_content:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 113
+    weight: 102
     region: content
   field_hero_image:
     type: image
