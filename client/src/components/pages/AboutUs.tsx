@@ -1,5 +1,6 @@
 import { fetchPages } from '@/lib/api/drupalAPI';
 import React, { useEffect, useState } from 'react';
+import "../pages/css/AboutUs.css";
 
 const AboutUs: React.FC = () => {
   const [aboutUsContent, setAboutUsContent] = useState<string>('');
