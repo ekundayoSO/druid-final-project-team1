@@ -26,4 +26,72 @@
     .aboutUs .hero-p {
         @apply mt-6 text-xl text-gray-600 max-w-3xl;
     }
+
+    .aboutUs .story-container {
+        @apply grid lg:grid-cols-2 gap-8;
+    }
+
+    .aboutUs .story-image-div {
+        @apply rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden max-w-xs mx-auto;
+    }
+
+    .aboutUs .story-image {
+        @apply w-full h-48 object-cover;
+    }
+
+    .aboutUs .story-body {
+        @apply rounded-lg border bg-card text-card-foreground shadow-sm;
+    }
+
+    .aboutUs .story-body-div {
+        @apply flex flex-col space-y-1.5 p-6;
+    }
+
+    .aboutUs .story-body-h3 {
+        @apply text-3xl font-semibold;
+    }
+
+    .aboutUs .story-body-p {
+        @apply text-xl text-muted-foreground;
+    }
+
+    .aboutUs .story-body-div2 {
+        @apply p-6 space-y-4 text-gray-600;
+    }
+
+    .aboutUs .story-body-div2-a {
+        @apply inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2;
+    }
+
+    .aboutUs .why-druid-container {
+        @apply rounded-lg border bg-card text-card-foreground shadow-sm;
+    }
+
+    .aboutUs .why-druid-h2 {
+        @apply text-3xl font-bold mb-8;
+    }
+
+    .aboutUs .why-druid-cards-container {
+        @apply grid md:grid-cols-2 gap-6;
+    }
+
+    .aboutUs .card-div1 {
+        @apply flex flex-col space-y-1.5 p-6;
+    }
+
+    .aboutUs .card {
+        @apply h-8 w-8 text-blue-600 mb-2;
+    }
+
+    .aboutUs .card-div1-h3 {
+        @apply text-2xl font-semibold;
+    }
+
+    .aboutUs .card-div2 {
+        @apply p-6;
+    }
+
+    .aboutUs .card-div2-p {
+        @apply text-gray-600;
+    }
 }
