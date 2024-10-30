@@ -5,23 +5,23 @@
 
 /* Hero Section */
 .hero {
-  @apply rounded-lg bg-gradient-to-br from-blue-50 to-white border shadow-lg p-6;
+  @apply rounded-lg  border shadow-lg p-6 dark:bg-gray-900;
 }
 
 .hero-h1 {
-  @apply text-4xl md:text-5xl font-bold tracking-tight text-gray-900;
+  @apply text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white;
 }
 
 .hero-p {
-  @apply mt-6 text-xl text-gray-600 max-w-3xl;
+  @apply mt-6 text-xl text-gray-600 max-w-3xl dark:text-gray-300;
 }
 
 .hero-strong {
-  @apply font-bold text-gray-900;
+  @apply font-bold text-gray-900 dark:text-white;
 }
 
 .hero-em {
-  @apply font-normal text-blue-600;
+  @apply font-normal text-blue-600 dark:text-blue-400;
 }
 
 /* Story Section */
@@ -30,7 +30,7 @@
 }
 
 .story-image-div {
-  @apply rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden flex-1;
+  @apply rounded-lg border  dark:bg-gray-900 shadow-sm overflow-hidden flex-1;
 }
 
 .story-image {
@@ -38,7 +38,7 @@
 }
 
 .story-body {
-  @apply rounded-lg border bg-card text-card-foreground shadow-sm flex-1;
+  @apply rounded-lg border dark:bg-gray-900 shadow-sm flex-1;
 }
 
 .story-body-div {
@@ -46,7 +46,7 @@
 }
 
 .story-body-h3 {
-  @apply text-3xl font-semibold;
+  @apply text-3xl font-semibold text-foreground;
 }
 
 .story-body-p {
@@ -54,7 +54,7 @@
 }
 
 .story-body-div2 {
-  @apply p-6 space-y-4 text-gray-600;
+  @apply p-6 space-y-4 text-gray-600 dark:text-gray-300;
 }
 
 .story-body-div-a {
@@ -63,11 +63,11 @@
 
 /* Why Druid Section */
 .why-druid-container {
-  @apply rounded-lg border bg-card text-card-foreground shadow-sm p-4;
+  @apply rounded-lg border bg-card text-card-foreground shadow-sm p-4 dark:bg-gray-900;
 }
 
 .why-druid-h2 {
-  @apply text-3xl font-bold mb-8;
+  @apply text-3xl font-bold mb-8 text-foreground;
 }
 
 .why-druid-cards-container {
@@ -88,7 +88,7 @@
 }
 
 .card {
-  @apply flex flex-col bg-white rounded-lg shadow-md p-6;
+  @apply flex flex-col bg-white rounded-lg shadow-md p-6 dark:bg-gray-800;
 }
 
 .card-header {
@@ -100,9 +100,9 @@
 }
 
 .card-header-title {
-  @apply text-xl font-semibold ml-4;
+  @apply text-xl font-semibold ml-4 text-foreground;
 }
 
 .card-body {
-  @apply text-gray-600;
+  @apply text-gray-600 dark:text-gray-300;
 }
