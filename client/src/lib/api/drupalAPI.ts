@@ -1,7 +1,7 @@
 import axios from 'axios';
 import DOMPurify from 'dompurify';
 
-const API_BASE_URL = 'https://druid-final-project-team1.lndo.site/jsonapi';
+const API_BASE_URL = 'http://druid-final-project-team1.lndo.site/jsonapi';
 
 const drupalAPI = axios.create({
   baseURL: API_BASE_URL,
