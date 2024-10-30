@@ -23,7 +23,6 @@ const AboutUs: React.FC = () => {
 
   return (
     <div className='container mx-auto px-4'>
-      <h1>About Us</h1>
       <div className='aboutUs' dangerouslySetInnerHTML={{ __html: aboutUsContent }} />
     </div>
   );

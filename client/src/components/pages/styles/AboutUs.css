@@ -1,97 +1,108 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Container Styles */
+.about-container {
+  @apply max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-12;
+}
 
-@layer base {
-    .aboutUs .about-container {
-        @apply max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-12;
-    }
+/* Hero Section */
+.hero {
+  @apply rounded-lg bg-gradient-to-br from-blue-50 to-white border shadow-lg p-6;
+}
 
-    .aboutUs .hero {
-        @apply rounded-lg bg-gradient-to-br from-blue-50 to-white border shadow-lg p-6;
-    }
+.hero-h1 {
+  @apply text-4xl md:text-5xl font-bold tracking-tight text-gray-900;
+}
 
-    .aboutUs .hero-h1 {
-        @apply text-4xl md:text-5xl font-bold tracking-tight;
-    }
+.hero-p {
+  @apply mt-6 text-xl text-gray-600 max-w-3xl;
+}
 
-    .aboutUs em {
-        @apply font-normal text-blue-600;
-    }
+.hero-strong {
+  @apply font-bold text-gray-900;
+}
 
-    .aboutUs .hero-strong {
-        @apply font-bold;
-    }
+.hero-em {
+  @apply font-normal text-blue-600;
+}
 
-    .aboutUs .hero-p {
-        @apply mt-6 text-xl text-gray-600 max-w-3xl;
-    }
+/* Story Section */
+.story-container {
+  @apply flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0;
+}
 
-    .aboutUs .story-container {
-        @apply grid lg:grid-cols-2 gap-8;
-    }
+.story-image-div {
+  @apply rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden flex-1;
+}
 
-    .aboutUs .story-image-div {
-        @apply rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden max-w-xs mx-auto;
-    }
+.story-image {
+  @apply w-full h-auto object-cover;
+}
 
-    .aboutUs .story-image {
-        @apply w-full h-48 object-cover;
-    }
+.story-body {
+  @apply rounded-lg border bg-card text-card-foreground shadow-sm flex-1;
+}
 
-    .aboutUs .story-body {
-        @apply rounded-lg border bg-card text-card-foreground shadow-sm;
-    }
+.story-body-div {
+  @apply flex flex-col space-y-1.5 p-6;
+}
 
-    .aboutUs .story-body-div {
-        @apply flex flex-col space-y-1.5 p-6;
-    }
+.story-body-h3 {
+  @apply text-3xl font-semibold;
+}
 
-    .aboutUs .story-body-h3 {
-        @apply text-3xl font-semibold;
-    }
+.story-body-p {
+  @apply text-xl text-muted-foreground;
+}
 
-    .aboutUs .story-body-p {
-        @apply text-xl text-muted-foreground;
-    }
+.story-body-div2 {
+  @apply p-6 space-y-4 text-gray-600;
+}
 
-    .aboutUs .story-body-div2 {
-        @apply p-6 space-y-4 text-gray-600;
-    }
+.story-body-div-a {
+  @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2;
+}
 
-    .aboutUs .story-body-div2-a {
-        @apply inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2;
-    }
+/* Why Druid Section */
+.why-druid-container {
+  @apply rounded-lg border bg-card text-card-foreground shadow-sm p-4;
+}
 
-    .aboutUs .why-druid-container {
-        @apply rounded-lg border bg-card text-card-foreground shadow-sm;
-    }
+.why-druid-h2 {
+  @apply text-3xl font-bold mb-8;
+}
 
-    .aboutUs .why-druid-h2 {
-        @apply text-3xl font-bold mb-8;
-    }
+.why-druid-cards-container {
+  @apply grid gap-4;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
 
-    .aboutUs .why-druid-cards-container {
-        @apply grid md:grid-cols-2 gap-6;
-    }
+@media (min-width: 768px) {
+  .why-druid-cards-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
-    .aboutUs .card-div1 {
-        @apply flex flex-col space-y-1.5 p-6;
-    }
+@media (min-width: 1024px) {
+  .why-druid-cards-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
 
-    .aboutUs .card {
-        @apply h-8 w-8 text-blue-600 mb-2;
-    }
+.card {
+  @apply flex flex-col bg-white rounded-lg shadow-md p-6;
+}
 
-    .aboutUs .card-div1-h3 {
-        @apply text-2xl font-semibold;
-    }
+.card-header {
+  @apply flex items-center mb-4;
+}
 
-    .aboutUs .card-div2 {
-        @apply p-6;
-    }
+.card-header-icon {
+  @apply h-32 w-8 bg-gray-200;
+}
 
-    .aboutUs .card-div2-p {
-        @apply text-gray-600;
-    }
+.card-header-title {
+  @apply text-xl font-semibold ml-4;
+}
+
+.card-body {
+  @apply text-gray-600;
 }
