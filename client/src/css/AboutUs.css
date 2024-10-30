@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .aboutUs .about-container {
+        @apply max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-12
+    }
+
+    .aboutUs .hero {
+        @apply rounded-lg bg-gradient-to-br from-blue-50 to-white border shadow-lg p-6
+    }
+
+    .aboutUs .hero-h1 {
+        @apply text-4xl md:text-5xl font-bold tracking-tight
+    }
+
+    .aboutUs .hero-em {
+        @apply font-normal text-blue-600
+    }
+
+    .aboutUs .hero-strong {
+        @apply font-bold
+    }
+
+    .aboutUs .hero-p {
+        @apply mt-6 text-xl text-gray-600 max-w-3xl
+    }
+}
