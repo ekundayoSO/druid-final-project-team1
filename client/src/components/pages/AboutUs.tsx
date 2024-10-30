@@ -1,6 +1,6 @@
-import { fetchPages } from '@/lib/api/drupalAPI';
 import React, { useEffect, useState } from 'react';
-import "../pages/css/AboutUs.css";
+import { fetchPages } from '@/lib/api/drupalAPI';
+import '../pages/styles/AboutUs.css';
 
 const AboutUs: React.FC = () => {
   const [aboutUsContent, setAboutUsContent] = useState<string>('');
@@ -22,10 +22,9 @@ const AboutUs: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className='container mx-auto px-4'>
       <h1>About Us</h1>
-      <div className='aboutUs'
-      dangerouslySetInnerHTML={{ __html: aboutUsContent }} />
+      <div className='aboutUs' dangerouslySetInnerHTML={{ __html: aboutUsContent }} />
     </div>
   );
 };
