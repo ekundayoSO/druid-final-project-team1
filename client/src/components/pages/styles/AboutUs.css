@@ -30,11 +30,11 @@
 }
 
 .story-image-div {
-  @apply rounded-lg border  dark:bg-gray-900 shadow-sm overflow-hidden flex-1;
+  @apply rounded-lg border dark:bg-gray-900 shadow-sm overflow-hidden flex-1 flex items-center justify-center;
 }
 
 .story-image {
-  @apply w-full h-auto object-cover;
+  @apply w-full h-full object-cover;
 }
 
 .story-body {
