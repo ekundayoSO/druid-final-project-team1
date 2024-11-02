@@ -15,19 +15,15 @@ interface ApiResponse {
 
 interface PageData {
   attributes: {
-    title: string;
-    body: {
-      value:string;
-    }
-    field_content: {
-      value: string;
+    field_title: string;
+    field_description:string;
     };
   };
-}
+
 
 export const fetchPages = async () => {
   try {
-    const response = await drupalAPI.get<ApiResponse>('/node/page');
+    const response = await drupalAPI.get<ApiResponse>('/paragraph/card');
     return response.data.data; // Directly returning the data without sanitization
   } catch (error) {
     console.error('Error fetching pages:', error);
