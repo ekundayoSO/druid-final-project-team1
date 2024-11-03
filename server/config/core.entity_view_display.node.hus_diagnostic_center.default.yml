@@ -1,0 +1,39 @@
+uuid: 43aabada-5acd-440c-b06d-05e93c071a8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.hus_diagnostic_center.body
+    - field.field.node.hus_diagnostic_center.field_hus_diagnostic_center
+    - node.type.hus_diagnostic_center
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.hus_diagnostic_center.default
+targetEntityType: node
+bundle: hus_diagnostic_center
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_hus_diagnostic_center:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

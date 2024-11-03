@@ -1,4 +1,4 @@
-uuid: 174dcca5-56e3-419f-ac97-bf349607a8f8
+uuid: 7b2da4ec-e9f4-4e2d-acab-37c94bd7ae1d
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: Projects
 type: projects
-description: 'Service pages: Title, hero-image, short description, long description'
+description: null
 help: null
 new_revision: true
 preview_mode: 1

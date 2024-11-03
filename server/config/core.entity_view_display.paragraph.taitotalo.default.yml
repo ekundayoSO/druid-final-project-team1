@@ -1,0 +1,73 @@
+uuid: 3768422e-0922-4cec-924a-e33bb5b72b7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.taitotalo.field_client
+    - field.field.paragraph.taitotalo.field_company_name
+    - field.field.paragraph.taitotalo.field_hero_image
+    - field.field.paragraph.taitotalo.field_link
+    - field.field.paragraph.taitotalo.field_section
+    - field.field.paragraph.taitotalo.field_services
+    - paragraphs.paragraphs_type.taitotalo
+  module:
+    - link
+    - text
+id: paragraph.taitotalo.default
+targetEntityType: paragraph
+bundle: taitotalo
+mode: default
+content:
+  field_client:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_company_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_hero_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_section:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_services:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

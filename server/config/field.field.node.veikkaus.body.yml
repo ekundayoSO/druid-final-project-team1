@@ -1,0 +1,24 @@
+uuid: aa149022-8081-4c62-a4ed-3ef37f7a6941
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.veikkaus
+  module:
+    - text
+id: node.veikkaus.body
+field_name: body
+entity_type: node
+bundle: veikkaus
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

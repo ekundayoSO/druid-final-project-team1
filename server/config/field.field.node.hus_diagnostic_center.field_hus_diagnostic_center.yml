@@ -1,0 +1,54 @@
+uuid: b1cc9957-9951-4fa9-9248-b6a9a83e3c37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hus_diagnostic_center
+    - node.type.hus_diagnostic_center
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.project
+    - paragraphs.paragraphs_type.section
+    - paragraphs.paragraphs_type.singular_project
+  module:
+    - entity_reference_revisions
+id: node.hus_diagnostic_center.field_hus_diagnostic_center
+field_name: field_hus_diagnostic_center
+entity_type: node
+bundle: hus_diagnostic_center
+label: 'HUS Diagnostic Center'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      card: card
+      from_library: from_library
+      project: project
+      section: section
+      singular_project: singular_project
+    negate: 1
+    target_bundles_drag_drop:
+      card:
+        weight: 7
+        enabled: true
+      from_library:
+        weight: 8
+        enabled: true
+      project:
+        weight: 9
+        enabled: true
+      section:
+        weight: 10
+        enabled: true
+      singular_project:
+        weight: 11
+        enabled: true
+      taitotalo:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

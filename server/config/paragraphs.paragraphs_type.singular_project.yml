@@ -1,0 +1,10 @@
+uuid: 45aee2a9-292d-4316-81d9-e32b28d34c5d
+langcode: en
+status: true
+dependencies: {  }
+id: singular_project
+label: singular-project
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

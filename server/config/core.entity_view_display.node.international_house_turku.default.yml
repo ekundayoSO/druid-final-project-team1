@@ -1,0 +1,39 @@
+uuid: 05d63e09-7bf2-459b-b67f-528d83afc095
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.international_house_turku.body
+    - field.field.node.international_house_turku.field_international_house_turku
+    - node.type.international_house_turku
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.international_house_turku.default
+targetEntityType: node
+bundle: international_house_turku
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_international_house_turku:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,73 @@
+uuid: 33253ecf-17f0-4618-a130-9d7577093a32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.footbalance.field_client
+    - field.field.paragraph.footbalance.field_company_name
+    - field.field.paragraph.footbalance.field_hero_image
+    - field.field.paragraph.footbalance.field_link
+    - field.field.paragraph.footbalance.field_section
+    - field.field.paragraph.footbalance.field_services
+    - paragraphs.paragraphs_type.footbalance
+  module:
+    - link
+    - text
+id: paragraph.footbalance.default
+targetEntityType: paragraph
+bundle: footbalance
+mode: default
+content:
+  field_client:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_company_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_hero_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_section:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_services:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

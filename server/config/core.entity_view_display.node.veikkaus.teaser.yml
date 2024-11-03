@@ -1,0 +1,32 @@
+uuid: 317397fe-be04-462d-bbd0-9c1cf367012c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.veikkaus.body
+    - field.field.node.veikkaus.field_veikkaus
+    - node.type.veikkaus
+  module:
+    - text
+    - user
+id: node.veikkaus.teaser
+targetEntityType: node
+bundle: veikkaus
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_veikkaus: true

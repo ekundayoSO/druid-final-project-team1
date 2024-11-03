@@ -1,0 +1,19 @@
+uuid: fee2b4ae-50fe-4d80-8824-299de8f7e973
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.project
+id: paragraph.project.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: project
+label: title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

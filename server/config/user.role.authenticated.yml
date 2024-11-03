@@ -9,6 +9,8 @@ dependencies:
     - contact
     - file
     - filter
+    - media
+    - pathauto
     - search
     - shortcut
     - system
@@ -23,8 +25,10 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'administer pathauto'
   - 'delete own files'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'view media'

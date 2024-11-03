@@ -1,0 +1,32 @@
+uuid: 42c6caae-7d74-4c65-8c37-bb728b8c953b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.taitotalo.body
+    - field.field.node.taitotalo.field_taitotalo_page
+    - node.type.taitotalo
+  module:
+    - text
+    - user
+id: node.taitotalo.teaser
+targetEntityType: node
+bundle: taitotalo
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_taitotalo_page: true

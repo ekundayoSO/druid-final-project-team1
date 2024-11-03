@@ -1,0 +1,34 @@
+uuid: f30391a5-a7a8-4115-9e39-3a970843fdc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_card
+    - node.type.test
+    - paragraphs.paragraphs_type.card
+  module:
+    - entity_reference_revisions
+id: node.test.field_card
+field_name: field_card
+entity_type: node
+bundle: test
+label: Card
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      card: card
+    negate: 0
+    target_bundles_drag_drop:
+      card:
+        weight: 3
+        enabled: true
+      from_library:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

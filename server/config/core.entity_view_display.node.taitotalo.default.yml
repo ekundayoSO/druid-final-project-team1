@@ -1,0 +1,39 @@
+uuid: 232d5b65-220b-4288-9966-06b9e93e0691
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.taitotalo.body
+    - field.field.node.taitotalo.field_taitotalo_page
+    - node.type.taitotalo
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.taitotalo.default
+targetEntityType: node
+bundle: taitotalo
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_taitotalo_page:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
