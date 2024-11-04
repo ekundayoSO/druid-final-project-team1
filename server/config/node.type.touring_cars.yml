@@ -1,0 +1,18 @@
+uuid: 03e49a76-a2dd-4c66-9fe7-7e6a4d79a756
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Tou­ring Cars'
+type: touring_cars
+description: 'This is Tou­ring Cars content page'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,23 @@
+uuid: 42ba63f6-5fea-43c8-9d5a-9f782973515e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.telia_inmics_nebula
+  module:
+    - link
+id: paragraph.telia_inmics_nebula.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: telia_inmics_nebula
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

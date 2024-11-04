@@ -1,0 +1,19 @@
+uuid: d445da20-2d5c-4271-adbd-2e748cc5b0bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_client
+    - paragraphs.paragraphs_type.digital_and_population_data_serv
+id: paragraph.digital_and_population_data_serv.field_client
+field_name: field_client
+entity_type: paragraph
+bundle: digital_and_population_data_serv
+label: Client
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

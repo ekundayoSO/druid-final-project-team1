@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: 'City of Helsinki'
 type: city_of_helsinki
-description: null
+description: 'This is City of Helsinki content page'
 help: null
 new_revision: true
 preview_mode: 1

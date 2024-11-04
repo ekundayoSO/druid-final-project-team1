@@ -3,25 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.veikkaus.body
     - field.field.node.veikkaus.field_veikkaus
     - node.type.veikkaus
   module:
     - entity_reference_revisions
-    - text
     - user
 id: node.veikkaus.default
 targetEntityType: node
 bundle: veikkaus
 mode: default
 content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 101
-    region: content
   field_veikkaus:
     type: entity_reference_revisions_entity_view
     label: above

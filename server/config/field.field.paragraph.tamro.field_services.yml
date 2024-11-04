@@ -1,0 +1,19 @@
+uuid: 17682ce8-a8ca-4695-b0e9-bba39e8fe981
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_services
+    - paragraphs.paragraphs_type.tamro
+id: paragraph.tamro.field_services
+field_name: field_services
+entity_type: paragraph
+bundle: tamro
+label: Services
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

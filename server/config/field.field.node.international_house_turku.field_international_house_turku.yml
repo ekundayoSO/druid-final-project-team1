@@ -10,7 +10,6 @@ dependencies:
     - paragraphs.paragraphs_type.project
     - paragraphs.paragraphs_type.section
     - paragraphs.paragraphs_type.singular_project
-    - paragraphs.paragraphs_type.taitotalo
   module:
     - entity_reference_revisions
 id: node.international_house_turku.field_international_house_turku
@@ -32,7 +31,6 @@ settings:
       project: project
       section: section
       singular_project: singular_project
-      taitotalo: taitotalo
     negate: 1
     target_bundles_drag_drop:
       card:

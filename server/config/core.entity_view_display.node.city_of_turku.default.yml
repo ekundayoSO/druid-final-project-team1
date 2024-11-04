@@ -1,0 +1,30 @@
+uuid: 0cf24237-13e6-4cc2-a91d-72caed3f21a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.city_of_turku.field_city_of_turku
+    - node.type.city_of_turku
+  module:
+    - entity_reference_revisions
+    - user
+id: node.city_of_turku.default
+targetEntityType: node
+bundle: city_of_turku
+mode: default
+content:
+  field_city_of_turku:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

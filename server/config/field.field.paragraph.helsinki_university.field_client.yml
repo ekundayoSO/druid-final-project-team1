@@ -1,0 +1,19 @@
+uuid: 4eead18d-de16-4510-a595-8835b437c31d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_client
+    - paragraphs.paragraphs_type.helsinki_university
+id: paragraph.helsinki_university.field_client
+field_name: field_client
+entity_type: paragraph
+bundle: helsinki_university
+label: Client
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

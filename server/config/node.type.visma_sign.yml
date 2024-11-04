@@ -1,0 +1,18 @@
+uuid: 31a46dda-05fb-4891-a3d3-780d8aad5aa4
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Vis­ma Sign'
+type: visma_sign
+description: 'This is Vis­ma Sign content page.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

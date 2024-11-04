@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: Veikkaus
 type: veikkaus
-description: null
+description: 'This is Veikkaus content page'
 help: null
 new_revision: true
 preview_mode: 1

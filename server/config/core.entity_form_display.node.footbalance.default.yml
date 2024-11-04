@@ -3,28 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.footbalance.body
     - field.field.node.footbalance.field_footbalance
     - node.type.footbalance
   module:
     - paragraphs
     - path
-    - text
 id: node.footbalance.default
 targetEntityType: node
 bundle: footbalance
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 121
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10

@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: Foot­Ba­lan­ce
 type: footbalance
-description: null
+description: 'This is Foot­Ba­lan­ce content page'
 help: null
 new_revision: true
 preview_mode: 1

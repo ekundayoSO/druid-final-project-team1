@@ -1,0 +1,24 @@
+uuid: 66a628aa-267c-4ee5-b597-bc5e27e2c32a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.touring_cars
+  module:
+    - text
+id: paragraph.touring_cars.field_section
+field_name: field_section
+entity_type: paragraph
+bundle: touring_cars
+label: section
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

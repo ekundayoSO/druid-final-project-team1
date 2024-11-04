@@ -1,30 +1,18 @@
-uuid: e6f78b99-0e55-4122-b64b-83f3a42d49ac
+uuid: 3ff63ce6-a360-48f8-8bea-58cfb39d8329
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.hus_diagnostic_center.body
     - field.field.node.hus_diagnostic_center.field_hus_diagnostic_center
     - node.type.hus_diagnostic_center
   module:
     - paragraphs
     - path
-    - text
 id: node.hus_diagnostic_center.default
 targetEntityType: node
 bundle: hus_diagnostic_center
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 121
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
@@ -33,7 +21,7 @@ content:
     third_party_settings: {  }
   field_hus_diagnostic_center:
     type: paragraphs
-    weight: 122
+    weight: 121
     region: content
     settings:
       title: Paragraph

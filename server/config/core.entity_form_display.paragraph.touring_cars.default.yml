@@ -1,0 +1,71 @@
+uuid: 70a23f17-b23a-462a-aeef-5257819a65bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.touring_cars.field_client
+    - field.field.paragraph.touring_cars.field_company_name
+    - field.field.paragraph.touring_cars.field_hero_image
+    - field.field.paragraph.touring_cars.field_link
+    - field.field.paragraph.touring_cars.field_section
+    - field.field.paragraph.touring_cars.field_services
+    - paragraphs.paragraphs_type.touring_cars
+  module:
+    - link
+    - media_library
+    - text
+id: paragraph.touring_cars.default
+targetEntityType: paragraph
+bundle: touring_cars
+mode: default
+content:
+  field_client:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_company_name:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_hero_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_section:
+    type: text_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_services:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

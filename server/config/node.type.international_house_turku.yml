@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: 'In­ter­na­tio­nal Hou­se Tur­ku'
 type: international_house_turku
-description: null
+description: 'This is In­ter­na­tio­nal Hou­se Tur­ku content page'
 help: null
 new_revision: true
 preview_mode: 1

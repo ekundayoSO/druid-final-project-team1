@@ -1,0 +1,18 @@
+uuid: 0aca3583-660a-4ea8-a860-a99554001092
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Hel­sin­ki Uni­ver­si­ty'
+type: helsinki_university
+description: 'This is Hel­sin­ki Uni­ver­si­ty content page'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

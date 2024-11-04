@@ -1,0 +1,19 @@
+uuid: 0507718a-32fb-45ae-bc5c-55f36f03a14a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_client
+    - paragraphs.paragraphs_type.hus_diagnostic_center
+id: paragraph.hus_diagnostic_center.field_client
+field_name: field_client
+entity_type: paragraph
+bundle: hus_diagnostic_center
+label: Client
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

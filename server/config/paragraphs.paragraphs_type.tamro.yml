@@ -1,0 +1,10 @@
+uuid: 9ee26a63-b7b4-4783-8cc5-6b892ff11eb1
+langcode: en
+status: true
+dependencies: {  }
+id: tamro
+label: Tamro
+icon_uuid: null
+icon_default: null
+description: 'This is Tamro paragraph'
+behavior_plugins: {  }

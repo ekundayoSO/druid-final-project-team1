@@ -1,0 +1,10 @@
+uuid: 680bb8ea-f864-49a3-8b75-0d75f02f07f6
+langcode: en
+status: true
+dependencies: {  }
+id: touring_cars
+label: 'Tou­ring Cars'
+icon_uuid: null
+icon_default: null
+description: 'This is Tou­ring Cars paragraph'
+behavior_plugins: {  }

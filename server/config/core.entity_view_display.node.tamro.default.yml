@@ -1,0 +1,30 @@
+uuid: 9d4414a6-ae0e-4cb2-a624-a8371785f1ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tamro.field_tamro
+    - node.type.tamro
+  module:
+    - entity_reference_revisions
+    - user
+id: node.tamro.default
+targetEntityType: node
+bundle: tamro
+mode: default
+content:
+  field_tamro:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

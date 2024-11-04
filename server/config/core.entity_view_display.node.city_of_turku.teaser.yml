@@ -1,0 +1,22 @@
+uuid: ae478c07-1517-4813-b68d-571211aa45e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.city_of_turku.field_city_of_turku
+    - node.type.city_of_turku
+  module:
+    - user
+id: node.city_of_turku.teaser
+targetEntityType: node
+bundle: city_of_turku
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_city_of_turku: true

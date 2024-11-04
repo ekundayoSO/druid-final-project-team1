@@ -1,0 +1,19 @@
+uuid: 8f113ba1-4d2c-4f9f-a0a0-66486a43491b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_company_name
+    - paragraphs.paragraphs_type.touring_cars
+id: paragraph.touring_cars.field_company_name
+field_name: field_company_name
+entity_type: paragraph
+bundle: touring_cars
+label: 'Company Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

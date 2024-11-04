@@ -1,0 +1,22 @@
+uuid: ae347c1d-9f43-4b23-842f-cdfd02d23072
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tamro.field_tamro
+    - node.type.tamro
+  module:
+    - user
+id: node.tamro.teaser
+targetEntityType: node
+bundle: tamro
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_tamro: true
