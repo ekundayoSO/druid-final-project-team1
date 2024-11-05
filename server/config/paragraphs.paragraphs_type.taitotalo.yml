@@ -1,0 +1,10 @@
+uuid: 86beb482-a9c7-4ee9-bd4b-83b10db0228e
+langcode: en
+status: true
+dependencies: {  }
+id: taitotalo
+label: Taitotalo
+icon_uuid: null
+icon_default: null
+description: 'This is Taitotalo project page'
+behavior_plugins: {  }

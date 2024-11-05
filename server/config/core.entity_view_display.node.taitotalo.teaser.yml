@@ -1,0 +1,22 @@
+uuid: 2bf1638b-50fb-4f9d-b210-dcf18a422ec6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.taitotalo.field_taitotalo
+    - node.type.taitotalo
+  module:
+    - user
+id: node.taitotalo.teaser
+targetEntityType: node
+bundle: taitotalo
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_taitotalo: true

@@ -1,0 +1,18 @@
+uuid: ad6fc9d1-5a99-4caa-9422-0d7d4408d016
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'HUS Diagnostic Center'
+type: hus_diagnostic_center
+description: 'This is a HUS Diagnostic Center page'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

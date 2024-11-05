@@ -6,6 +6,8 @@ import Projects from './components/pages/Projects';
 import Maintenance from './components/pages/Maintenance';
 import Consultation from './components/pages/Consultation';
 import AboutUs from './components/pages/AboutUs';
+import Test from './components/pages/Test';
+
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +33,10 @@ export const router = createBrowserRouter([
       {
         path: 'about-us',
         element: <AboutUs />,
+      },
+      {
+        path: 'test',
+        element: <Test />,
       },
     ],
   },

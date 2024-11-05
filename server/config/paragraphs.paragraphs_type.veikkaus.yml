@@ -1,0 +1,10 @@
+uuid: 8066d69b-0e69-41a8-ad9f-a865d5193dd4
+langcode: en
+status: true
+dependencies: {  }
+id: veikkaus
+label: Veikkaus
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

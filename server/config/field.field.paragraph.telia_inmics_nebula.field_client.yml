@@ -1,0 +1,19 @@
+uuid: 37f52ee6-f381-4711-b7a9-2f212a24fd09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_client
+    - paragraphs.paragraphs_type.telia_inmics_nebula
+id: paragraph.telia_inmics_nebula.field_client
+field_name: field_client
+entity_type: paragraph
+bundle: telia_inmics_nebula
+label: Client
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,73 @@
+uuid: 422f74c1-175a-40bc-b55e-dab78fadc5bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.veikkaus.field_client
+    - field.field.paragraph.veikkaus.field_company_name
+    - field.field.paragraph.veikkaus.field_hero_image
+    - field.field.paragraph.veikkaus.field_link
+    - field.field.paragraph.veikkaus.field_section
+    - field.field.paragraph.veikkaus.field_services
+    - paragraphs.paragraphs_type.veikkaus
+  module:
+    - link
+    - text
+id: paragraph.veikkaus.default
+targetEntityType: paragraph
+bundle: veikkaus
+mode: default
+content:
+  field_client:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_company_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_hero_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_section:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_services:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

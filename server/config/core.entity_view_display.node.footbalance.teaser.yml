@@ -1,0 +1,22 @@
+uuid: ef033a49-d706-433a-8f2e-bfa3a20abb46
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.footbalance.field_footbalance
+    - node.type.footbalance
+  module:
+    - user
+id: node.footbalance.teaser
+targetEntityType: node
+bundle: footbalance
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_footbalance: true

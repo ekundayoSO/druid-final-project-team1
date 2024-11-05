@@ -1,14 +1,13 @@
-uuid: 563350eb-edb0-40c5-a5c4-c7a6658ea199
+uuid: 7be6edfa-6e1b-4b81-80ab-5c4d08ee450e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.projects.field_hero_image
-    - field.field.node.projects.field_long_description
-    - field.field.node.projects.field_short_description
+    - field.field.node.projects.body
+    - field.field.node.projects.field_project_paragraph
     - node.type.projects
   module:
-    - image
+    - entity_reference_revisions
     - text
     - user
 id: node.projects.default
@@ -16,28 +15,19 @@ targetEntityType: node
 bundle: projects
 mode: default
 content:
-  field_hero_image:
-    type: image
-    label: above
-    settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
     weight: 101
     region: content
-  field_long_description:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 103
-    region: content
-  field_short_description:
-    type: text_default
-    label: above
-    settings: {  }
+  field_project_paragraph:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
     weight: 102
     region: content

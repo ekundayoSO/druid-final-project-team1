@@ -1,0 +1,10 @@
+uuid: 7c2c9ea2-746f-4244-a1a6-fac7983a90a1
+langcode: en
+status: true
+dependencies: {  }
+id: hus_diagnostic_center
+label: 'HUS Diagnostic Center'
+icon_uuid: null
+icon_default: null
+description: 'This is HUS Diagnostic Center page'
+behavior_plugins: {  }

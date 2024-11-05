@@ -1,0 +1,74 @@
+uuid: 6106512f-9bf9-4071-a934-890eb81f1004
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_taitotalo
+    - node.type.taitotalo
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.city_of_helsinki
+    - paragraphs.paragraphs_type.footbalance
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.international_house_turku
+    - paragraphs.paragraphs_type.project
+    - paragraphs.paragraphs_type.section
+    - paragraphs.paragraphs_type.singular_project
+    - paragraphs.paragraphs_type.veikkaus
+  module:
+    - entity_reference_revisions
+id: node.taitotalo.field_taitotalo
+field_name: field_taitotalo
+entity_type: node
+bundle: taitotalo
+label: Taitotalo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      card: card
+      city_of_helsinki: city_of_helsinki
+      footbalance: footbalance
+      from_library: from_library
+      international_house_turku: international_house_turku
+      project: project
+      section: section
+      singular_project: singular_project
+      veikkaus: veikkaus
+    negate: 1
+    target_bundles_drag_drop:
+      card:
+        weight: 11
+        enabled: true
+      city_of_helsinki:
+        weight: 12
+        enabled: true
+      footbalance:
+        weight: 13
+        enabled: true
+      from_library:
+        weight: 14
+        enabled: true
+      international_house_turku:
+        weight: 15
+        enabled: true
+      project:
+        weight: 16
+        enabled: true
+      section:
+        weight: 17
+        enabled: true
+      singular_project:
+        weight: 18
+        enabled: true
+      taitotalo:
+        weight: 19
+        enabled: false
+      veikkaus:
+        weight: 20
+        enabled: true
+field_type: entity_reference_revisions

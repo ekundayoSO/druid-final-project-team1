@@ -1,0 +1,67 @@
+uuid: 70d41eb5-d02e-47a6-a5ca-e2ec25605980
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_footbalance
+    - node.type.footbalance
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.international_house_turku
+    - paragraphs.paragraphs_type.project
+    - paragraphs.paragraphs_type.section
+    - paragraphs.paragraphs_type.singular_project
+    - paragraphs.paragraphs_type.veikkaus
+  module:
+    - entity_reference_revisions
+id: node.footbalance.field_footbalance
+field_name: field_footbalance
+entity_type: node
+bundle: footbalance
+label: Foot­Ba­lan­ce
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      card: card
+      from_library: from_library
+      international_house_turku: international_house_turku
+      project: project
+      section: section
+      singular_project: singular_project
+      veikkaus: veikkaus
+    negate: 1
+    target_bundles_drag_drop:
+      card:
+        weight: 10
+        enabled: true
+      footbalance:
+        weight: 11
+        enabled: false
+      from_library:
+        weight: 12
+        enabled: true
+      international_house_turku:
+        weight: 13
+        enabled: true
+      project:
+        weight: 14
+        enabled: true
+      section:
+        weight: 15
+        enabled: true
+      singular_project:
+        weight: 16
+        enabled: true
+      taitotalo:
+        weight: 17
+        enabled: true
+      veikkaus:
+        weight: 18
+        enabled: true
+field_type: entity_reference_revisions

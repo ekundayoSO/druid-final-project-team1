@@ -1,0 +1,30 @@
+uuid: 78848bfc-9c1c-440f-b8d3-26160e97b126
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.digital_and_population_data_serv.field_digital_and_population_dat
+    - node.type.digital_and_population_data_serv
+  module:
+    - entity_reference_revisions
+    - user
+id: node.digital_and_population_data_serv.default
+targetEntityType: node
+bundle: digital_and_population_data_serv
+mode: default
+content:
+  field_digital_and_population_dat:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

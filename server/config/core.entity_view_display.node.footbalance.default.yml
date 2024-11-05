@@ -1,0 +1,30 @@
+uuid: c76cb4e5-9502-4a08-a865-3dc171e34dc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.footbalance.field_footbalance
+    - node.type.footbalance
+  module:
+    - entity_reference_revisions
+    - user
+id: node.footbalance.default
+targetEntityType: node
+bundle: footbalance
+mode: default
+content:
+  field_footbalance:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

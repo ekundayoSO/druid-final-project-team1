@@ -1,0 +1,79 @@
+uuid: f5fa8685-03a2-49f2-b264-4c102feaef83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hus_diagnostic_center
+    - node.type.hus_diagnostic_center
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.city_of_helsinki
+    - paragraphs.paragraphs_type.footbalance
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.international_house_turku
+    - paragraphs.paragraphs_type.project
+    - paragraphs.paragraphs_type.section
+    - paragraphs.paragraphs_type.singular_project
+    - paragraphs.paragraphs_type.taitotalo
+    - paragraphs.paragraphs_type.veikkaus
+  module:
+    - entity_reference_revisions
+id: node.hus_diagnostic_center.field_hus_diagnostic_center
+field_name: field_hus_diagnostic_center
+entity_type: node
+bundle: hus_diagnostic_center
+label: 'HUS Diagnostic Center'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      card: card
+      city_of_helsinki: city_of_helsinki
+      footbalance: footbalance
+      from_library: from_library
+      international_house_turku: international_house_turku
+      project: project
+      section: section
+      singular_project: singular_project
+      taitotalo: taitotalo
+      veikkaus: veikkaus
+    negate: 1
+    target_bundles_drag_drop:
+      card:
+        weight: 12
+        enabled: true
+      city_of_helsinki:
+        weight: 13
+        enabled: true
+      footbalance:
+        weight: 14
+        enabled: true
+      from_library:
+        weight: 15
+        enabled: true
+      hus_diagnostic_center:
+        weight: 16
+        enabled: false
+      international_house_turku:
+        weight: 17
+        enabled: true
+      project:
+        weight: 18
+        enabled: true
+      section:
+        weight: 19
+        enabled: true
+      singular_project:
+        weight: 20
+        enabled: true
+      taitotalo:
+        weight: 21
+        enabled: true
+      veikkaus:
+        weight: 22
+        enabled: true
+field_type: entity_reference_revisions

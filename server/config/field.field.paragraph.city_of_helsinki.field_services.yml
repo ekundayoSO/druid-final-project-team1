@@ -1,0 +1,19 @@
+uuid: 4548a2d1-f825-49f9-b10a-e8a7e1fb2526
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_services
+    - paragraphs.paragraphs_type.city_of_helsinki
+id: paragraph.city_of_helsinki.field_services
+field_name: field_services
+entity_type: paragraph
+bundle: city_of_helsinki
+label: Services
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

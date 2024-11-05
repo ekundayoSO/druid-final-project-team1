@@ -1,0 +1,30 @@
+uuid: e086d6ad-a3c8-4c6d-bb7e-2622f1c23949
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.helsinki_university.field_helsinki_university
+    - node.type.helsinki_university
+  module:
+    - entity_reference_revisions
+    - user
+id: node.helsinki_university.default
+targetEntityType: node
+bundle: helsinki_university
+mode: default
+content:
+  field_helsinki_university:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

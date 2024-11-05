@@ -1,0 +1,19 @@
+uuid: bb6e601e-3ad3-4611-af9e-502cdf0fc413
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.singular_project
+id: paragraph.singular_project.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: singular_project
+label: title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

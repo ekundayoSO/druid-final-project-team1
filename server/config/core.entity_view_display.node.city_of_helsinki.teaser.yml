@@ -1,0 +1,22 @@
+uuid: 7877f9a8-50b7-4ded-bb1b-fdfadadbe03e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.city_of_helsinki.field_city_of_helsinki
+    - node.type.city_of_helsinki
+  module:
+    - user
+id: node.city_of_helsinki.teaser
+targetEntityType: node
+bundle: city_of_helsinki
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_city_of_helsinki: true

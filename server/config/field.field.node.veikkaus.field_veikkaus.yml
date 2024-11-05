@@ -1,0 +1,62 @@
+uuid: 965c63c3-1b64-4aa2-9d89-eec30733f870
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_veikkaus
+    - node.type.veikkaus
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.international_house_turku
+    - paragraphs.paragraphs_type.project
+    - paragraphs.paragraphs_type.section
+    - paragraphs.paragraphs_type.singular_project
+  module:
+    - entity_reference_revisions
+id: node.veikkaus.field_veikkaus
+field_name: field_veikkaus
+entity_type: node
+bundle: veikkaus
+label: Veikkaus
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      card: card
+      from_library: from_library
+      international_house_turku: international_house_turku
+      project: project
+      section: section
+      singular_project: singular_project
+    negate: 1
+    target_bundles_drag_drop:
+      card:
+        weight: 9
+        enabled: true
+      from_library:
+        weight: 10
+        enabled: true
+      international_house_turku:
+        weight: 11
+        enabled: true
+      project:
+        weight: 12
+        enabled: true
+      section:
+        weight: 13
+        enabled: true
+      singular_project:
+        weight: 14
+        enabled: true
+      taitotalo:
+        weight: 15
+        enabled: true
+      veikkaus:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

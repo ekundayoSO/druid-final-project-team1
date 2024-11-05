@@ -1,0 +1,71 @@
+uuid: b69c13fa-8552-4cff-8d15-559997b55ee5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.international_house_turku.field_client
+    - field.field.paragraph.international_house_turku.field_company_name
+    - field.field.paragraph.international_house_turku.field_hero_image
+    - field.field.paragraph.international_house_turku.field_link
+    - field.field.paragraph.international_house_turku.field_section
+    - field.field.paragraph.international_house_turku.field_services
+    - paragraphs.paragraphs_type.international_house_turku
+  module:
+    - link
+    - media_library
+    - text
+id: paragraph.international_house_turku.default
+targetEntityType: paragraph
+bundle: international_house_turku
+mode: default
+content:
+  field_client:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_company_name:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_hero_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_section:
+    type: text_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_services:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

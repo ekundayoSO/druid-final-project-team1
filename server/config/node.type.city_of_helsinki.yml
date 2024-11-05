@@ -1,0 +1,18 @@
+uuid: 546a7538-0f2d-4949-a767-27e75f2f10e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'City of Helsinki'
+type: city_of_helsinki
+description: 'This is City of Helsinki content page'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,22 @@
+uuid: b096c8c3-5e9a-4ff4-a1c8-da27ded209db
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.touring_cars.field_touring_cars
+    - node.type.touring_cars
+  module:
+    - user
+id: node.touring_cars.teaser
+targetEntityType: node
+bundle: touring_cars
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_touring_cars: true

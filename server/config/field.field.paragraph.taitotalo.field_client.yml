@@ -1,0 +1,19 @@
+uuid: d5e34f80-d044-4709-87d2-85a5cca0ba53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_client
+    - paragraphs.paragraphs_type.taitotalo
+id: paragraph.taitotalo.field_client
+field_name: field_client
+entity_type: paragraph
+bundle: taitotalo
+label: Client
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

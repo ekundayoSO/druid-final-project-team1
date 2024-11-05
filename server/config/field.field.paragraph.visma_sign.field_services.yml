@@ -1,0 +1,19 @@
+uuid: 4717cfba-c23c-4064-a27c-b94f970af008
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_services
+    - paragraphs.paragraphs_type.visma_sign
+id: paragraph.visma_sign.field_services
+field_name: field_services
+entity_type: paragraph
+bundle: visma_sign
+label: Services
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

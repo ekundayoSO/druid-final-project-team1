@@ -1,0 +1,30 @@
+uuid: 3d071912-cf87-47b2-a963-3d813cbab30c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.taitotalo.field_taitotalo
+    - node.type.taitotalo
+  module:
+    - entity_reference_revisions
+    - user
+id: node.taitotalo.default
+targetEntityType: node
+bundle: taitotalo
+mode: default
+content:
+  field_taitotalo:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

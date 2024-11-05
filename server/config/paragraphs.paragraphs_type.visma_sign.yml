@@ -1,0 +1,10 @@
+uuid: d1570d78-f630-4d10-be16-6c47eae7c5a1
+langcode: en
+status: true
+dependencies: {  }
+id: visma_sign
+label: 'Vis­ma Sign'
+icon_uuid: null
+icon_default: null
+description: 'This is Vis­ma Sign paragraph'
+behavior_plugins: {  }

@@ -1,0 +1,22 @@
+uuid: 9fc892d2-77eb-4324-bd62-e1d0605c14fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.international_house_turku.field_international_house_turku
+    - node.type.international_house_turku
+  module:
+    - user
+id: node.international_house_turku.teaser
+targetEntityType: node
+bundle: international_house_turku
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_international_house_turku: true

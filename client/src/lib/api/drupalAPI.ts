@@ -16,6 +16,9 @@ interface ApiResponse {
 interface PageData {
   attributes: {
     title: string;
+    body: {
+      value:string;
+    }
     field_content: {
       value: string;
     };

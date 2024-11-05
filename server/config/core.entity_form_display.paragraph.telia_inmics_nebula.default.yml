@@ -1,0 +1,71 @@
+uuid: 12e70925-bc94-488e-b2e4-64a2c785c925
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.telia_inmics_nebula.field_client
+    - field.field.paragraph.telia_inmics_nebula.field_company_name
+    - field.field.paragraph.telia_inmics_nebula.field_hero_image
+    - field.field.paragraph.telia_inmics_nebula.field_link
+    - field.field.paragraph.telia_inmics_nebula.field_section
+    - field.field.paragraph.telia_inmics_nebula.field_services
+    - paragraphs.paragraphs_type.telia_inmics_nebula
+  module:
+    - link
+    - media_library
+    - text
+id: paragraph.telia_inmics_nebula.default
+targetEntityType: paragraph
+bundle: telia_inmics_nebula
+mode: default
+content:
+  field_client:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_company_name:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_hero_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_section:
+    type: text_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_services:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
