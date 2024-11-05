@@ -903,4 +903,9 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
 
+ini_set('upload_max_filesize', '200M');
+ini_set('post_max_size', '210M');
+ini_set('memory_limit', '512M');
+
 $settings['config_sync_directory'] = '../config';
+
