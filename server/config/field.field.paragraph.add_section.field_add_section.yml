@@ -1,0 +1,24 @@
+uuid: e93c4435-8544-4e61-9369-4acd5015f88b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_add_section
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.add_section
+  module:
+    - text
+id: paragraph.add_section.field_add_section
+field_name: field_add_section
+entity_type: paragraph
+bundle: add_section
+label: add_section_services
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

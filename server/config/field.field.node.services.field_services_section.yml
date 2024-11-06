@@ -1,0 +1,91 @@
+uuid: e06f28e9-31e4-4b07-9ce5-9b1d94c1df51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_services_section
+    - node.type.services
+    - paragraphs.paragraphs_type.add_section
+  module:
+    - entity_reference_revisions
+id: node.services.field_services_section
+field_name: field_services_section
+entity_type: node
+bundle: services
+label: section_services
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      add_section: add_section
+    negate: 0
+    target_bundles_drag_drop:
+      add_section:
+        weight: 22
+        enabled: true
+      card:
+        weight: 23
+        enabled: false
+      city_of_helsinki:
+        weight: 24
+        enabled: false
+      city_of_turku:
+        weight: 25
+        enabled: false
+      digital_and_population_data_serv:
+        weight: 26
+        enabled: false
+      footbalance:
+        weight: 27
+        enabled: false
+      footer_start:
+        weight: 28
+        enabled: false
+      from_library:
+        weight: 29
+        enabled: false
+      helsinki_university:
+        weight: 30
+        enabled: false
+      hus_diagnostic_center:
+        weight: 31
+        enabled: false
+      international_house_turku:
+        weight: 32
+        enabled: false
+      link_list:
+        weight: 33
+        enabled: false
+      project:
+        weight: 34
+        enabled: false
+      section:
+        weight: 35
+        enabled: false
+      singular_project:
+        weight: 36
+        enabled: false
+      taitotalo:
+        weight: 37
+        enabled: false
+      tamro:
+        weight: 38
+        enabled: false
+      telia_inmics_nebula:
+        weight: 39
+        enabled: false
+      touring_cars:
+        weight: 40
+        enabled: false
+      veikkaus:
+        weight: 41
+        enabled: false
+      visma_sign:
+        weight: 42
+        enabled: false
+field_type: entity_reference_revisions
