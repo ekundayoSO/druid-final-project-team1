@@ -1,0 +1,79 @@
+uuid: 3c323118-7b08-4fda-8ef2-03399cd8296e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.footer_start.field_address
+    - field.field.paragraph.footer_start.field_country
+    - field.field.paragraph.footer_start.field_e_mail
+    - field.field.paragraph.footer_start.field_link
+    - field.field.paragraph.footer_start.field_phone_number
+    - field.field.paragraph.footer_start.field_postcode
+    - field.field.paragraph.footer_start.field_title
+    - paragraphs.paragraphs_type.footer_start
+  module:
+    - link
+id: paragraph.footer_start.default
+targetEntityType: paragraph
+bundle: footer_start
+mode: default
+content:
+  field_address:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_country:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_e_mail:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_phone_number:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_postcode:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

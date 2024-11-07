@@ -1,0 +1,25 @@
+uuid: 44488ab9-880a-40a5-b33f-76d55fc1e51d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.add_section.field_add_section
+    - paragraphs.paragraphs_type.add_section
+  module:
+    - text
+id: paragraph.add_section.default
+targetEntityType: paragraph
+bundle: add_section
+mode: default
+content:
+  field_add_section:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
