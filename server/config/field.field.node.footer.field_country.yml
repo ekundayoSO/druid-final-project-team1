@@ -1,0 +1,19 @@
+uuid: bd93ce51-81b4-4090-b028-1756b64c72e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_country
+    - node.type.footer
+id: node.footer.field_country
+field_name: field_country
+entity_type: node
+bundle: footer
+label: country
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

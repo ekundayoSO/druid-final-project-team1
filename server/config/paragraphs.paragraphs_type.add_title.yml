@@ -1,0 +1,10 @@
+uuid: 527552c9-017d-4165-b10c-c95d6aaadecc
+langcode: en
+status: true
+dependencies: {  }
+id: add_title
+label: 'add title'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

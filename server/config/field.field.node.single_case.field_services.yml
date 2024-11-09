@@ -1,0 +1,19 @@
+uuid: 1c1ae30b-89f5-4871-b2f4-c22a7a05a58f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_services
+    - node.type.single_case
+id: node.single_case.field_services
+field_name: field_services
+entity_type: node
+bundle: single_case
+label: Services
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

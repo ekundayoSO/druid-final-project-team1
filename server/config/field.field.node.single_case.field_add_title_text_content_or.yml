@@ -1,0 +1,107 @@
+uuid: bfa97040-beb2-428b-812b-78e780af0e44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_add_title_text_content_or
+    - node.type.single_case
+    - paragraphs.paragraphs_type.add_image
+    - paragraphs.paragraphs_type.add_textfield
+    - paragraphs.paragraphs_type.add_title
+  module:
+    - entity_reference_revisions
+id: node.single_case.field_add_title_text_content_or
+field_name: field_add_title_text_content_or
+entity_type: node
+bundle: single_case
+label: 'add title, text content or an image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      add_image: add_image
+      add_textfield: add_textfield
+      add_title: add_title
+    negate: 0
+    target_bundles_drag_drop:
+      add_image:
+        weight: 26
+        enabled: true
+      add_section:
+        weight: 27
+        enabled: false
+      add_textfield:
+        weight: 28
+        enabled: true
+      add_title:
+        weight: 29
+        enabled: true
+      card:
+        weight: 30
+        enabled: false
+      city_of_helsinki:
+        weight: 31
+        enabled: false
+      city_of_turku:
+        weight: 32
+        enabled: false
+      digital_and_population_data_serv:
+        weight: 33
+        enabled: false
+      footbalance:
+        weight: 34
+        enabled: false
+      footer_start:
+        weight: 35
+        enabled: false
+      from_library:
+        weight: 36
+        enabled: false
+      helsinki_university:
+        weight: 37
+        enabled: false
+      hus_diagnostic_center:
+        weight: 38
+        enabled: false
+      international_house_turku:
+        weight: 39
+        enabled: false
+      link_list:
+        weight: 40
+        enabled: false
+      project:
+        weight: 41
+        enabled: false
+      section:
+        weight: 42
+        enabled: false
+      singular_project:
+        weight: 43
+        enabled: false
+      taitotalo:
+        weight: 44
+        enabled: false
+      tamro:
+        weight: 45
+        enabled: false
+      telia_inmics_nebula:
+        weight: 46
+        enabled: false
+      thing:
+        weight: 47
+        enabled: false
+      touring_cars:
+        weight: 48
+        enabled: false
+      veikkaus:
+        weight: 49
+        enabled: false
+      visma_sign:
+        weight: 50
+        enabled: false
+field_type: entity_reference_revisions

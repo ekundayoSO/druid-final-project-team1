@@ -1,0 +1,19 @@
+uuid: 099c7bbc-f63b-48a9-9e92-19af2737c2f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_client
+    - node.type.single_case
+id: node.single_case.field_client
+field_name: field_client
+entity_type: node
+bundle: single_case
+label: Client
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

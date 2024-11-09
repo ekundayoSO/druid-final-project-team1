@@ -1,0 +1,25 @@
+uuid: fc366ccd-a25f-4849-8aad-de1448d91976
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.add_textfield.field_add_textfield
+    - paragraphs.paragraphs_type.add_textfield
+  module:
+    - text
+id: paragraph.add_textfield.default
+targetEntityType: paragraph
+bundle: add_textfield
+mode: default
+content:
+  field_add_textfield:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

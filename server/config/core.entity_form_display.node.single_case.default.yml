@@ -1,27 +1,25 @@
-uuid: f7bba67b-5008-4383-ab02-1d86a3777d41
+uuid: a108f364-c503-443e-a321-e92f325c111a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.footer.body
-    - field.field.node.footer.field_add_link
-    - field.field.node.footer.field_address
-    - field.field.node.footer.field_country
-    - field.field.node.footer.field_e_mail
-    - field.field.node.footer.field_footer_link
-    - field.field.node.footer.field_phone_number
-    - field.field.node.footer.field_post_code
-    - field.field.node.footer.field_title
-    - node.type.footer
+    - field.field.node.single_case.body
+    - field.field.node.single_case.field_add_title_text_content_or
+    - field.field.node.single_case.field_client
+    - field.field.node.single_case.field_hero_image
+    - field.field.node.single_case.field_link
+    - field.field.node.single_case.field_services
+    - image.style.thumbnail
+    - node.type.single_case
   module:
+    - image
     - link
     - paragraphs
     - path
-    - telephone
     - text
-id: node.footer.default
+id: node.single_case.default
 targetEntityType: node
-bundle: footer
+bundle: single_case
 mode: default
 content:
   body:
@@ -40,9 +38,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_add_link:
+  field_add_title_text_content_or:
     type: paragraphs
-    weight: 129
+    weight: 125
     region: content
     settings:
       title: Paragraph
@@ -58,56 +56,33 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-  field_address:
+  field_client:
     type: string_textfield
-    weight: 123
+    weight: 122
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_country:
-    type: string_textfield
-    weight: 125
+  field_hero_image:
+    type: image_image
+    weight: 121
     region: content
     settings:
-      size: 60
-      placeholder: ''
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
-  field_e_mail:
-    type: email_default
-    weight: 126
-    region: content
-    settings:
-      placeholder: ''
-      size: 60
-    third_party_settings: {  }
-  field_footer_link:
+  field_link:
     type: link_default
-    weight: 128
+    weight: 124
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-  field_phone_number:
-    type: telephone_default
-    weight: 127
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-  field_post_code:
+  field_services:
     type: string_textfield
-    weight: 124
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_title:
-    type: string_textfield
-    weight: 122
+    weight: 123
     region: content
     settings:
       size: 60
