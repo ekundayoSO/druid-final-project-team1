@@ -21,18 +21,18 @@ export function AppLayout() {
   const isHomePage = location.pathname === '/';
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <NavMenu routes={routes} />
-      <div className='flex-grow flex flex-col'>
-        <div className={`${!isHomePage ? 'container mb-16' : ''} px-4 md:px-0 flex-grow flex flex-col`}>
+      <main className='flex-grow flex flex-col'>
+        <div className={`${!isHomePage ? 'container mb-16' : ''} px-4 md:px-0`}>
           <Outlet />
         </div>
-      </div>
+      </main>
       {location.pathname !== '/' && (
         <div className='container px-4 md:px-8'>
-          <Footer />
         </div>
       )}
-    </>
+      <Footer />
+    </div>
   );
 }
