@@ -13,17 +13,29 @@ const LandingPage: React.FC = () => {
     { src: carousel1, alt: "AI Solutions" },
   ];
 
+  const newCarouselItems = [
+    {
+      src: carousel1,
+      title: "Tam­ro",
+      description: "Enriched product information, effortless content management and seamless integrations: MyTamro service channel and a new website."
+    },
+    {
+      src: carousel1,
+      title: "Ci­ty of Hel­sin­ki",
+      description: "New universal Drupal platform and the revamp of Hel.fi web service – efficient and accessible content production."
+    },
+    {
+      src: carousel1,
+      title: "Veik­kaus",
+      description: "The new content management system makes content management easier while preserving the stability of the old interface."
+    },
+  ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === carouselItems.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000);
-
-    return () => clearInterval(timer);
-  }, [carouselItems.length]);
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % newCarouselItems.length);
+  };
 
   return (
     <div className='relative w-full min-h-screen overflow-auto bg-gray-800'>
@@ -34,33 +46,21 @@ const LandingPage: React.FC = () => {
         </h1>
         <p className='text-white mb-8'>We act as the interpreter between the customer's business and the world of technology.</p>
         
-        <div className="relative w-full max-w-7xl mx-auto overflow-hidden px-0">
-          <div className="flex animate-carousel">
-            {carouselItems.map((item, index) => (
+        <div className="relative w-full overflow-hidden">
+          <div className="flex animate-carousel space-x-4">
+            {carouselItems.concat(carouselItems).map((item, index) => (
               <div 
                 key={index} 
-                className="w-1/5 flex-shrink-0 px-2"
+                className="flex-shrink-0 w-1/5"
               >
-                <div className="relative w-64 mx-auto">
+                <div className="relative w-full h-48">
                   <img
                     src={item.src}
                     alt={item.alt}
-                    className="w-full h-48 object-cover shadow-xl rounded-lg transition-transform duration-300 hover:scale-105"
+                    className="w-full h-full object-cover shadow-xl rounded-lg transition-transform duration-300 hover:scale-105"
                   />
                 </div>
               </div>
-            ))}
-          </div>
-          
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-            {carouselItems.map((_, index) => (
-              <button
-                key={index}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  index === currentIndex ? 'bg-white' : 'bg-white/50'
-                }`}
-                onClick={() => setCurrentIndex(index)}
-              />
             ))}
           </div>
         </div>
@@ -132,6 +132,61 @@ for de­ve­lo­pers < br />
 by de­ve­lo­pers.
           </h2>
           <p className='text-white mb-8'>Get to know our culture and people</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto p-6">
+          <div className="bg-gray-700 p-6 rounded-lg shadow-lg hover:bg-gray-600 transition-colors">
+            <h3 className="text-xl font-bold text-white mb-4">Up-to-date legal knowledge</h3>
+            <p className="text-gray-200">
+              We’re well-versed in online service laws and regulations, guiding our clients through them with ease.
+            </p>
+          </div>
+
+          <div className="bg-gray-700 p-6 rounded-lg shadow-lg hover:bg-gray-600 transition-colors">
+            <h3 className="text-xl font-bold text-white mb-4">360° ser­vi­ces</h3>
+            <p className="text-gray-200">
+              Top-tier technical expertise, work quality and dependable delivery times are at the core of our operations. In addition, we offer a wide range of development services, including analytics, marketing automation, and accessibility solutions.
+            </p>
+          </div>
+
+          <div className="bg-gray-700 p-6 rounded-lg shadow-lg hover:bg-gray-600 transition-colors">
+            <h3 className="text-xl font-bold text-white mb-4">Comp­re­hen­si­ve so­lu­tions</h3>
+            <p className="text-gray-200">
+              From design and content to technical implementation and maintenance, we do it all. In addition, we offer a diverse range of development services, such as analytics, marketing automation and accessibility services.
+            </p>
+          </div>
+
+          <div className="bg-gray-700 p-6 rounded-lg shadow-lg hover:bg-gray-600 transition-colors">
+            <h3 className="text-xl font-bold text-white mb-4">Glo­bal Dru­pal ad­vo­ca­te</h3>
+            <p className="text-gray-200">
+              We’re active members of the international Drupal community, contributing to Drupal’s development and training new talents in the field.
+            </p>
+          </div>
+        </div>
+
+        <div className="relative w-full flex justify-center items-center overflow-hidden rounded-lg shadow-lg my-16">
+          <div className="flex w-2/3">
+            <div className="w-1/2">
+              <img
+                src={newCarouselItems[currentIndex].src}
+                alt={newCarouselItems[currentIndex].title}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="w-1/2 flex flex-col justify-center p-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {newCarouselItems[currentIndex].title}
+              </h2>
+              <p className="text-gray-200 mb-8">
+                {newCarouselItems[currentIndex].description}
+              </p>
+              <button
+                onClick={handleNext}
+                className="absolute right-40 top-1/2 transform -translate-y-1/2 bg-white text-gray-800 p-2 rounded-full shadow-lg hover:bg-gray-200 transition-colors"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
