@@ -1,4 +1,4 @@
-uuid: e80dcf47-b2de-4b82-a547-7418e7df4bda
+uuid: 3ee5e1a6-62dd-4e0e-bcfa-50c8971d25d8
 langcode: en
 status: true
 dependencies:
@@ -9,9 +9,9 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: 'Our Services'
-type: services
-description: null
+name: 'Our Services Read More'
+type: our_services_read_more
+description: 'This is a content type for individual page for read more under our services.'
 help: null
 new_revision: true
 preview_mode: 1

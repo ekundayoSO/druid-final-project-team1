@@ -1,0 +1,9 @@
+uuid: 9eeec94c-9ca0-408f-a340-9e0435b6b155
+langcode: en
+status: true
+dependencies: {  }
+name: services
+vid: services
+description: 'These are services taxonomy'
+weight: 0
+new_revision: false

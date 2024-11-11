@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: 'Single Case'
 type: single_case
-description: null
+description: 'This is a content type template for all individual projects.'
 help: null
 new_revision: true
 preview_mode: 1

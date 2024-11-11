@@ -1,18 +1,18 @@
-uuid: d5ee90d8-307c-4b28-a420-1d89cca8755b
+uuid: a45321f7-803c-483e-896b-2185e710c997
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_content
+    - field.storage.node.field_body
     - filter.format.full_html
-    - node.type.page
+    - node.type.single_case
   module:
     - text
-id: node.page.field_content
-field_name: field_content
+id: node.single_case.field_body
+field_name: field_body
 entity_type: node
-bundle: page
-label: content
+bundle: single_case
+label: Body
 description: ''
 required: false
 translatable: false
