@@ -1,0 +1,28 @@
+uuid: afc758f2-c5e1-4393-9775-c47d78b05c1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.billing.body
+    - node.type.billing
+  module:
+    - text
+    - user
+id: node.billing.default
+targetEntityType: node
+bundle: billing
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

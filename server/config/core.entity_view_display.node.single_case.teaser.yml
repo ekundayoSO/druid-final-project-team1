@@ -1,0 +1,30 @@
+uuid: a6e454b3-a1ed-404a-bf87-2b8f829b9e3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.single_case.field_body
+    - field.field.node.single_case.field_client
+    - field.field.node.single_case.field_hero_image
+    - field.field.node.single_case.field_link
+    - field.field.node.single_case.field_services_taxonomy
+    - node.type.single_case
+  module:
+    - user
+id: node.single_case.teaser
+targetEntityType: node
+bundle: single_case
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_body: true
+  field_client: true
+  field_hero_image: true
+  field_link: true
+  field_services_taxonomy: true

@@ -1,0 +1,28 @@
+uuid: 13b9b662-ff6a-40f0-83ec-64ec2dea9251
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.our_services_read_more.field_content_body
+    - node.type.our_services_read_more
+  module:
+    - text
+    - user
+id: node.our_services_read_more.default
+targetEntityType: node
+bundle: our_services_read_more
+mode: default
+content:
+  field_content_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

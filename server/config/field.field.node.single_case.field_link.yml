@@ -1,0 +1,23 @@
+uuid: 28db8049-da32-49d6-bb7e-54b0a4cde86d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.single_case
+  module:
+    - link
+id: node.single_case.field_link
+field_name: field_link
+entity_type: node
+bundle: single_case
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

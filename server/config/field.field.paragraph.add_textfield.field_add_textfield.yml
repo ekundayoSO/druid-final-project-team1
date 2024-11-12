@@ -1,0 +1,24 @@
+uuid: bd6eb7fa-5cda-4535-a589-aaee44d79a7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_add_textfield
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.add_textfield
+  module:
+    - text
+id: paragraph.add_textfield.field_add_textfield
+field_name: field_add_textfield
+entity_type: paragraph
+bundle: add_textfield
+label: 'add textfield'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

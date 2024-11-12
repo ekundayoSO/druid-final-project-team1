@@ -1,0 +1,27 @@
+uuid: 9950ad05-6dc1-4c50-88a3-0f4b4e2cbf46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.add_link.field_add_link
+    - paragraphs.paragraphs_type.add_link
+  module:
+    - link
+id: paragraph.add_link.default
+targetEntityType: paragraph
+bundle: add_link
+mode: default
+content:
+  field_add_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

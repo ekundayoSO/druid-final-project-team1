@@ -1,0 +1,24 @@
+uuid: 49307c5f-c636-4511-89d1-730eff77523b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_body
+    - filter.format.full_html
+    - node.type.our_services_read_more
+  module:
+    - text
+id: node.our_services_read_more.field_content_body
+field_name: field_content_body
+entity_type: node
+bundle: our_services_read_more
+label: 'Content body'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

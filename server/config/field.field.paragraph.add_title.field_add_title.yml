@@ -1,0 +1,19 @@
+uuid: 9a598fe4-a911-4344-ade0-79338bf04bcb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_add_title
+    - paragraphs.paragraphs_type.add_title
+id: paragraph.add_title.field_add_title
+field_name: field_add_title
+entity_type: paragraph
+bundle: add_title
+label: 'add title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

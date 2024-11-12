@@ -9,7 +9,7 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: Services
+name: 'Our Services'
 type: services
 description: null
 help: null

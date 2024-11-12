@@ -1,0 +1,24 @@
+uuid: 53ff1960-07df-4970-9973-a8c57201801a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.dxp.field_description
+    - field.field.node.dxp.field_dxp
+    - node.type.dxp
+  module:
+    - user
+id: node.dxp.teaser
+targetEntityType: node
+bundle: dxp
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_description: true
+  field_dxp: true

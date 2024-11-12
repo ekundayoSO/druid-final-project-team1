@@ -1,0 +1,24 @@
+uuid: a45321f7-803c-483e-896b-2185e710c997
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - filter.format.full_html
+    - node.type.single_case
+  module:
+    - text
+id: node.single_case.field_body
+field_name: field_body
+entity_type: node
+bundle: single_case
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

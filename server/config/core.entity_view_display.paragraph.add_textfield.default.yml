@@ -1,0 +1,22 @@
+uuid: cda7deb8-b74c-4147-b13e-bce95f213fcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.add_textfield.field_add_textfield
+    - paragraphs.paragraphs_type.add_textfield
+  module:
+    - text
+id: paragraph.add_textfield.default
+targetEntityType: paragraph
+bundle: add_textfield
+mode: default
+content:
+  field_add_textfield:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

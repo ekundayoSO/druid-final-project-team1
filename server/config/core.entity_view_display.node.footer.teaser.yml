@@ -5,7 +5,14 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.footer.body
-    - field.field.node.footer.field_footer
+    - field.field.node.footer.field_add_link
+    - field.field.node.footer.field_address
+    - field.field.node.footer.field_country
+    - field.field.node.footer.field_e_mail
+    - field.field.node.footer.field_footer_link
+    - field.field.node.footer.field_phone_number
+    - field.field.node.footer.field_post_code
+    - field.field.node.footer.field_title
     - node.type.footer
   module:
     - text
@@ -29,4 +36,11 @@ content:
     weight: 100
     region: content
 hidden:
-  field_footer: true
+  field_add_link: true
+  field_address: true
+  field_country: true
+  field_e_mail: true
+  field_footer_link: true
+  field_phone_number: true
+  field_post_code: true
+  field_title: true

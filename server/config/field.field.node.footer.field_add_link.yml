@@ -1,0 +1,100 @@
+uuid: 2020e86c-0145-4bd8-88ca-4e0e31b8ce7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_add_link
+    - node.type.footer
+    - paragraphs.paragraphs_type.add_link
+  module:
+    - entity_reference_revisions
+id: node.footer.field_add_link
+field_name: field_add_link
+entity_type: node
+bundle: footer
+label: 'add link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      add_link: add_link
+    negate: 0
+    target_bundles_drag_drop:
+      add_image:
+        weight: 26
+        enabled: false
+      add_link:
+        weight: 25
+        enabled: true
+      add_section:
+        weight: 27
+        enabled: false
+      add_textfield:
+        weight: 28
+        enabled: false
+      add_title:
+        weight: 29
+        enabled: false
+      card:
+        weight: 30
+        enabled: false
+      city_of_helsinki:
+        weight: 31
+        enabled: false
+      city_of_turku:
+        weight: 32
+        enabled: false
+      digital_and_population_data_serv:
+        weight: 33
+        enabled: false
+      footbalance:
+        weight: 34
+        enabled: false
+      from_library:
+        weight: 35
+        enabled: false
+      helsinki_university:
+        weight: 36
+        enabled: false
+      hus_diagnostic_center:
+        weight: 37
+        enabled: false
+      international_house_turku:
+        weight: 38
+        enabled: false
+      project:
+        weight: 39
+        enabled: false
+      section:
+        weight: 40
+        enabled: false
+      singular_project:
+        weight: 41
+        enabled: false
+      taitotalo:
+        weight: 42
+        enabled: false
+      tamro:
+        weight: 43
+        enabled: false
+      telia_inmics_nebula:
+        weight: 44
+        enabled: false
+      thing:
+        weight: 45
+        enabled: false
+      touring_cars:
+        weight: 46
+        enabled: false
+      veikkaus:
+        weight: 47
+        enabled: false
+      visma_sign:
+        weight: 48
+        enabled: false
+field_type: entity_reference_revisions

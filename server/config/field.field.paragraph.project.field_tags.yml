@@ -9,7 +9,7 @@ id: paragraph.project.field_tags
 field_name: field_tags
 entity_type: paragraph
 bundle: project
-label: Tags
+label: Services
 description: ''
 required: false
 translatable: false

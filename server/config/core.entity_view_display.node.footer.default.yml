@@ -4,10 +4,19 @@ status: true
 dependencies:
   config:
     - field.field.node.footer.body
-    - field.field.node.footer.field_footer
+    - field.field.node.footer.field_add_link
+    - field.field.node.footer.field_address
+    - field.field.node.footer.field_country
+    - field.field.node.footer.field_e_mail
+    - field.field.node.footer.field_footer_link
+    - field.field.node.footer.field_phone_number
+    - field.field.node.footer.field_post_code
+    - field.field.node.footer.field_title
     - node.type.footer
   module:
     - entity_reference_revisions
+    - link
+    - telephone
     - text
     - user
 id: node.footer.default
@@ -22,12 +31,71 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
-  field_footer:
+  field_add_link:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_address:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_country:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_e_mail:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_footer_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_phone_number:
+    type: telephone_link
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_post_code:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 102
     region: content
