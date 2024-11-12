@@ -24,7 +24,7 @@ export function AppLayout() {
     <div className="min-h-screen flex flex-col">
       <NavMenu routes={routes} />
       <main className='flex-grow flex flex-col'>
-        <div className={`${!isHomePage ? 'container mb-16' : ''} px-4 md:px-0`}>
+        <div className='px-4 md:px-0'>
           <Outlet />
         </div>
       </main>

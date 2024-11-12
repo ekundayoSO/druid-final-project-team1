@@ -127,9 +127,9 @@ const LandingPage: React.FC = () => {
           </div>
         </div>
         <h2 className="text-3xl md:text-4xl font-bold text-white text-center col-span-full my-8">
-        Com­mu­ni­ty
-for de­ve­lo­pers < br />
-by de­ve­lo­pers.
+                    Com­mu­ni­ty
+            for de­ve­lo­pers < br />
+            by de­ve­lo­pers.
           </h2>
           <p className='text-white mb-8'>Get to know our culture and people</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto p-6">
@@ -162,7 +162,7 @@ by de­ve­lo­pers.
           </div>
         </div>
 
-        <div className="relative w-full flex justify-center items-center overflow-hidden rounded-lg shadow-lg my-16">
+        <div className="relative w-full flex justify-center items-center overflow-hidden rounded-lg my-16">
           <div className="flex w-2/3">
             <div className="w-1/2">
               <img

@@ -20,36 +20,18 @@ const NavMenu: React.FC<NavMenuProps> = ({ routes }) => {
   const navigate = useNavigate();
 
   return (
-    <nav className='sticky top-0 z-20 flex justify-between items-center p-4 bg-white dark:bg-gray-900 text-gray-800 dark:text-white'>
+    <nav className='fixed top-0 left-0 w-full z-20 flex justify-between items-center p-4 text-white'>
       <div className='flex items-center'>
         <a href='/' className='flex items-center'>
           <Avatar className='filter dark:invert'>
             <AvatarImage src={Logo} />
             <AvatarFallback>WB</AvatarFallback>
           </Avatar>
-          <span className='ml-2 text-2xl font-medium text-black dark:text-white'>Druid Final Project</span>
+          <span className='ml-2 text-2xl font-medium text-white'>Druid</span>
         </a>
       </div>
-      <div className='flex flex-grow justify-center absolute left-1/2 transform -translate-x-1/2'>
-        <div className='hidden md:flex'>
-          {routes.map(({ path, name }, index) => (
-            <button
-              key={path}
-              onClick={() => navigate(path)}
-              className={`block mt-4 md:inline-block md:mt-0 mx-4 ${
-                matches[index] ? 'text-cyan-500 border-b-2 border-cyan-500' : ''
-              } text-black dark:text-white`}
-            >
-              {name}
-            </button>
-          ))}
-        </div>
-      </div>
       <div className='flex items-center'>
-        <div className='hidden md:flex'>
-          <ModeToggle />
-        </div>
-        <div className='md:hidden flex items-center relative'>
+        <div className='flex items-center relative'>
           <button onClick={() => setIsOpen(!isOpen)} className='mr-2'>
             <Menu color='currentColor' size={32} />
           </button>

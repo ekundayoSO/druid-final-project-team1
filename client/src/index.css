@@ -94,5 +94,19 @@
   }
   body {
     @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
   }
+}
+
+/* Add this CSS rule to remove default margin and padding */
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Ensure the main container has no margin or padding */
+.main-container {
+  margin-top: 0; /* Remove any top margin */
+  padding-top: 0; /* Remove any top padding */
 }
