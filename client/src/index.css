@@ -99,14 +99,14 @@
   }
 }
 
-/* Add this CSS rule to remove default margin and padding */
-body {
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+/* bg gradient css */
+.bgGradient {
+  width: auto;
+  height: auto;
+  filter: contrast(250%) brightness(150%);
+  background: 
+	radial-gradient(circle at 91% 44%, rgba(117,99,105,0.83), rgba(82,84,84,0.5)),
+	radial-gradient(circle at 26% 94%, rgba(109,151,162,0.81), rgba(255,255,255,0)),
+	url(/client/src/assets/bgGredient1.svg);
 }
-
-/* Ensure the main container has no margin or padding */
-.main-container {
-  margin-top: 0; /* Remove any top margin */
-  padding-top: 0; /* Remove any top padding */
-}
+  

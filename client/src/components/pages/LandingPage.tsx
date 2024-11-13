@@ -39,7 +39,7 @@ const LandingPage: React.FC = () => {
 
   return (
     <div className='relative w-full min-h-screen overflow-auto bg-gray-800'>
-      <div className='flex flex-col items-center justify-center min-h-screen'>
+      <div className='flex flex-col items-center justify-center min-h-screen   bgGradient'>
         <h1 className='max-w-3xl text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center p-3 rounded-lg leading-tight mt-16 md:mt-24'>
           Uncompromising<br /> and Uncomplicated<br />
           Digital Solutions 
