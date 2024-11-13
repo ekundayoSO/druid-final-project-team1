@@ -6,7 +6,7 @@ import Projects from './components/pages/Projects';
 import Maintenance from './components/pages/Maintenance';
 import Consultation from './components/pages/Consultation';
 import AboutUs from './components/pages/AboutUs';
-import Test from './components/pages/Test';
+import Blog from './components/pages/Blog';
 
 
 export const router = createBrowserRouter([
@@ -35,8 +35,8 @@ export const router = createBrowserRouter([
         element: <AboutUs />,
       },
       {
-        path: 'test',
-        element: <Test />,
+        path: 'blog',
+        element: <Blog />,
       },
     ],
   },
