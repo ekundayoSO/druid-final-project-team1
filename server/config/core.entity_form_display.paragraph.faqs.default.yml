@@ -1,0 +1,33 @@
+uuid: a82ea294-053f-49e8-bf03-70f40d5231e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faqs.field_faqs
+    - paragraphs.paragraphs_type.faqs
+  module:
+    - faqfield
+id: paragraph.faqs.default
+targetEntityType: paragraph
+bundle: faqs
+mode: default
+content:
+  field_faqs:
+    type: faqfield_default
+    weight: 0
+    region: content
+    settings:
+      answer_widget: text_format
+      question_title: Question
+      answer_title: Answer
+      question_field_required: false
+      answer_field_required: false
+      advanced:
+        question_length: 255
+        question_size: 100
+        question_rows: 0
+        answer_rows: 3
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

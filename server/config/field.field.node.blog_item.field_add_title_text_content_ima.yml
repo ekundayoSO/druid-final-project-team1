@@ -1,0 +1,88 @@
+uuid: 81631377-1764-485a-b6b2-b5959d5c1459
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_add_title_text_content_ima
+    - node.type.blog_item
+    - paragraphs.paragraphs_type.add_image
+    - paragraphs.paragraphs_type.add_link
+    - paragraphs.paragraphs_type.add_textfield
+    - paragraphs.paragraphs_type.add_title
+  module:
+    - entity_reference_revisions
+id: node.blog_item.field_add_title_text_content_ima
+field_name: field_add_title_text_content_ima
+entity_type: node
+bundle: blog_item
+label: 'add title, text content, image or a link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      add_title: add_title
+      add_image: add_image
+      add_textfield: add_textfield
+      add_link: add_link
+    negate: 0
+    target_bundles_drag_drop:
+      add_image:
+        weight: -36
+        enabled: true
+      add_link:
+        weight: -34
+        enabled: true
+      add_section:
+        weight: -33
+        enabled: false
+      add_textfield:
+        weight: -35
+        enabled: true
+      add_title:
+        weight: -37
+        enabled: true
+      card:
+        weight: -32
+        enabled: false
+      employee_name:
+        weight: -31
+        enabled: false
+      faqs:
+        weight: -30
+        enabled: false
+      feedback:
+        weight: -29
+        enabled: false
+      from_library:
+        weight: -28
+        enabled: false
+      hero_message:
+        weight: -27
+        enabled: false
+      link:
+        weight: -26
+        enabled: false
+      long_description:
+        weight: -25
+        enabled: false
+      project:
+        weight: -24
+        enabled: false
+      section:
+        weight: -23
+        enabled: false
+      services_images:
+        weight: -22
+        enabled: false
+      singular_project:
+        weight: -21
+        enabled: false
+      topic:
+        weight: -20
+        enabled: false
+field_type: entity_reference_revisions

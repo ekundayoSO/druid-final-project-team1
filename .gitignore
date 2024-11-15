@@ -49,4 +49,6 @@ composer.lock
 
 *.sql.gz
 
+*.gz
+
 .env.local

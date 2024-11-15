@@ -1,0 +1,22 @@
+uuid: da1d6cda-16c9-4dc1-b2e8-86a7b469e99b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.topic.field_short_heading
+    - paragraphs.paragraphs_type.topic
+  module:
+    - text
+id: paragraph.topic.default
+targetEntityType: paragraph
+bundle: topic
+mode: default
+content:
+  field_short_heading:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
