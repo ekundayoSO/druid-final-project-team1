@@ -1,0 +1,24 @@
+uuid: 6b3a47e6-0339-4126-b201-b54e01126773
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_short_heading
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.topic
+  module:
+    - text
+id: paragraph.topic.field_short_heading
+field_name: field_short_heading
+entity_type: paragraph
+bundle: topic
+label: 'short heading'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text

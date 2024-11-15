@@ -1,18 +1,18 @@
-uuid: cda7deb8-b74c-4147-b13e-bce95f213fcd
+uuid: 68739474-4b0e-4684-8ef7-1e700e29f6c1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.add_textfield.field_add_textfield
-    - paragraphs.paragraphs_type.add_textfield
+    - field.field.paragraph.employee_name.field_employee_name
+    - paragraphs.paragraphs_type.employee_name
   module:
     - text
-id: paragraph.add_textfield.default
+id: paragraph.employee_name.default
 targetEntityType: paragraph
-bundle: add_textfield
+bundle: employee_name
 mode: default
 content:
-  field_add_textfield:
+  field_employee_name:
     type: text_default
     label: hidden
     settings: {  }

@@ -1,18 +1,18 @@
-uuid: 0c37ac60-93fa-4f99-bcaa-562128f32b90
+uuid: 6fe8664f-fdf7-40ae-9ec4-151df9a023f1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.add_image.field_add_image
-    - paragraphs.paragraphs_type.add_image
-id: paragraph.add_image.default
+    - field.field.paragraph.services_images.field_service_image
+    - paragraphs.paragraphs_type.services_images
+id: paragraph.services_images.default
 targetEntityType: paragraph
-bundle: add_image
+bundle: services_images
 mode: default
 content:
-  field_add_image:
+  field_service_image:
     type: entity_reference_entity_view
-    label: hidden
+    label: above
     settings:
       view_mode: default
       link: false

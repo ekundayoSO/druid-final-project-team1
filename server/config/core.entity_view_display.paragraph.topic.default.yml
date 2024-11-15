@@ -1,20 +1,20 @@
-uuid: bcd8b988-7e48-4b83-9edc-5ce993c361d7
+uuid: da1d6cda-16c9-4dc1-b2e8-86a7b469e99b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.add_section.field_add_section
-    - paragraphs.paragraphs_type.add_section
+    - field.field.paragraph.topic.field_short_heading
+    - paragraphs.paragraphs_type.topic
   module:
     - text
-id: paragraph.add_section.default
+id: paragraph.topic.default
 targetEntityType: paragraph
-bundle: add_section
+bundle: topic
 mode: default
 content:
-  field_add_section:
+  field_short_heading:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 0

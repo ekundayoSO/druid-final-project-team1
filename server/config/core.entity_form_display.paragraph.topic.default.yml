@@ -1,0 +1,25 @@
+uuid: 16415f3b-f4dc-4f12-8e80-4e8178721941
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.topic.field_short_heading
+    - paragraphs.paragraphs_type.topic
+  module:
+    - text
+id: paragraph.topic.default
+targetEntityType: paragraph
+bundle: topic
+mode: default
+content:
+  field_short_heading:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

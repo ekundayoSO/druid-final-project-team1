@@ -1,0 +1,22 @@
+uuid: 57078223-5806-4865-b895-bc7602338266
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faqs
+    - node.type.jobs_page
+  module:
+    - faqfield
+id: node.jobs_page.field_faqs
+field_name: field_faqs
+entity_type: node
+bundle: jobs_page
+label: FAQs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  default_format: full_html
+field_type: faqfield

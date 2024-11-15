@@ -1,20 +1,20 @@
-uuid: bcd8b988-7e48-4b83-9edc-5ce993c361d7
+uuid: a6dafea8-34b0-45c1-8a36-e32200725e54
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.add_section.field_add_section
-    - paragraphs.paragraphs_type.add_section
+    - field.field.paragraph.hero_message.field_message
+    - paragraphs.paragraphs_type.hero_message
   module:
     - text
-id: paragraph.add_section.default
+id: paragraph.hero_message.default
 targetEntityType: paragraph
-bundle: add_section
+bundle: hero_message
 mode: default
 content:
-  field_add_section:
+  field_message:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 0

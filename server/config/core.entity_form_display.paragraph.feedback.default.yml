@@ -1,0 +1,25 @@
+uuid: f4a06298-10fc-4101-941c-75434fea6c73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.feedback.field_customers_feedbacks
+    - paragraphs.paragraphs_type.feedback
+  module:
+    - text
+id: paragraph.feedback.default
+targetEntityType: paragraph
+bundle: feedback
+mode: default
+content:
+  field_customers_feedbacks:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

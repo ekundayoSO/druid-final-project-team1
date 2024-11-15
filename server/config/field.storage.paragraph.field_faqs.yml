@@ -1,17 +1,16 @@
-uuid: d893e167-f4ce-4870-892b-64c293f9449a
+uuid: 61c4d4fc-b7e6-4eee-9f8b-b31db3b18571
 langcode: en
 status: true
 dependencies:
   module:
-    - media
+    - faqfield
     - paragraphs
-id: paragraph.field_add_image
-field_name: field_add_image
+id: paragraph.field_faqs
+field_name: field_faqs
 entity_type: paragraph
-type: entity_reference
-settings:
-  target_type: media
-module: core
+type: faqfield
+settings: {  }
+module: faqfield
 locked: false
 cardinality: -1
 translatable: true

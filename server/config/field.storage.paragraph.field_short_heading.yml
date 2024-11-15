@@ -1,17 +1,17 @@
-uuid: d893e167-f4ce-4870-892b-64c293f9449a
+uuid: 86e196c1-80bf-45ff-8dbc-40aab1ac5227
 langcode: en
 status: true
 dependencies:
   module:
-    - media
     - paragraphs
-id: paragraph.field_add_image
-field_name: field_add_image
+    - text
+id: paragraph.field_short_heading
+field_name: field_short_heading
 entity_type: paragraph
-type: entity_reference
+type: text
 settings:
-  target_type: media
-module: core
+  max_length: 255
+module: text
 locked: false
 cardinality: -1
 translatable: true
