@@ -1,0 +1,19 @@
+uuid: 72bf6746-81a2-4df9-aaa0-1d968904d3e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_of_post
+    - node.type.blog_item
+id: node.blog_item.field_date_of_post
+field_name: field_date_of_post
+entity_type: node
+bundle: blog_item
+label: date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

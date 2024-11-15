@@ -1,0 +1,9 @@
+uuid: 075a4fd5-8b59-473c-bd0a-464e5ed6e531
+langcode: en
+status: true
+dependencies: {  }
+name: 'blog taxonomy'
+vid: blog_taxonomy
+description: 'taxonomy for the blog items'
+weight: 0
+new_revision: false
