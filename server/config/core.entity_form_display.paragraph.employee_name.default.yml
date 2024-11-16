@@ -1,0 +1,25 @@
+uuid: 607d58a1-c037-4876-a076-6fd815089031
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.employee_name.field_employee_name
+    - paragraphs.paragraphs_type.employee_name
+  module:
+    - text
+id: paragraph.employee_name.default
+targetEntityType: paragraph
+bundle: employee_name
+mode: default
+content:
+  field_employee_name:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

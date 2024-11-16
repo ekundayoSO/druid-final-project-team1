@@ -1,0 +1,22 @@
+uuid: 44f0a80b-8f16-423c-ba40-4a9fa7eebcfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.meet_the_druids.field_people
+    - node.type.meet_the_druids
+  module:
+    - user
+id: node.meet_the_druids.teaser
+targetEntityType: node
+bundle: meet_the_druids
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_people: true

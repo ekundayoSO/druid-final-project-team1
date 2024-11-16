@@ -1,0 +1,20 @@
+# Ignore drupal and composer dependencies
+web/core
+web/modules/contrib
+web/themes/contrib
+web/sites/default/files
+web/libraries/*
+vendor
+
+# Ignore OSX generated files
+._*
+.DS_Store
+
+# Ignore local files
+!*.gitkeep
+!*.keepme
+.env.local
+
+# Ignore db dump file. enble this in prod
+*.sql
+*.sql.gz

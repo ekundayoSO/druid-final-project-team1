@@ -1,0 +1,10 @@
+uuid: 98251f7d-5538-4529-8d38-ca50068ecc3d
+langcode: en
+status: true
+dependencies: {  }
+id: hero_message
+label: 'hero message'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

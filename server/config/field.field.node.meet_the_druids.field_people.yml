@@ -1,0 +1,97 @@
+uuid: 8c6560d0-0227-43b9-9492-45fc5130a469
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_people
+    - node.type.meet_the_druids
+    - paragraphs.paragraphs_type.employee_name
+    - paragraphs.paragraphs_type.employee_title
+    - paragraphs.paragraphs_type.long_description
+    - paragraphs.paragraphs_type.services_images
+  module:
+    - entity_reference_revisions
+id: node.meet_the_druids.field_people
+field_name: field_people
+entity_type: node
+bundle: meet_the_druids
+label: people
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      employee_name: employee_name
+      employee_title: employee_title
+      long_description: long_description
+      services_images: services_images
+    negate: 0
+    target_bundles_drag_drop:
+      add_image:
+        weight: 22
+        enabled: false
+      add_link:
+        weight: 23
+        enabled: false
+      add_section:
+        weight: 24
+        enabled: false
+      add_textfield:
+        weight: 25
+        enabled: false
+      add_title:
+        weight: 26
+        enabled: false
+      card:
+        weight: 27
+        enabled: false
+      employee_name:
+        weight: 28
+        enabled: true
+      employee_title:
+        weight: 29
+        enabled: true
+      faqs:
+        weight: 30
+        enabled: false
+      feedback:
+        weight: 31
+        enabled: false
+      from_library:
+        weight: 32
+        enabled: false
+      hero_message:
+        weight: 33
+        enabled: false
+      link:
+        weight: 34
+        enabled: false
+      long_description:
+        weight: 35
+        enabled: true
+      meet_the_druids:
+        weight: 36
+        enabled: false
+      project:
+        weight: 37
+        enabled: false
+      section:
+        weight: 38
+        enabled: false
+      services_images:
+        weight: 39
+        enabled: true
+      singular_project:
+        weight: 40
+        enabled: false
+      topic:
+        weight: 41
+        enabled: false
+      video:
+        weight: 42
+        enabled: false
+field_type: entity_reference_revisions

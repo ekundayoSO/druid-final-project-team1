@@ -1,0 +1,30 @@
+uuid: 2d574464-c3e1-406a-b784-6649525bbf6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.working_with_us.field_work_with_us
+    - node.type.working_with_us
+  module:
+    - entity_reference_revisions
+    - user
+id: node.working_with_us.default
+targetEntityType: node
+bundle: working_with_us
+mode: default
+content:
+  field_work_with_us:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

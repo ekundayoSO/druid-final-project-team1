@@ -4,10 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.single_case.field_body
     - field.field.node.single_case.field_client
     - field.field.node.single_case.field_hero_image
     - field.field.node.single_case.field_link
+    - field.field.node.single_case.field_project_description
     - field.field.node.single_case.field_services_taxonomy
     - node.type.single_case
   module:
@@ -23,8 +23,8 @@ content:
     weight: 100
     region: content
 hidden:
-  field_body: true
   field_client: true
   field_hero_image: true
   field_link: true
+  field_project_description: true
   field_services_taxonomy: true

@@ -1,0 +1,24 @@
+uuid: cce62713-33cc-4802-8d97-cb229eb9ab6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_message
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.hero_message
+  module:
+    - text
+id: paragraph.hero_message.field_message
+field_name: field_message
+entity_type: paragraph
+bundle: hero_message
+label: message
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

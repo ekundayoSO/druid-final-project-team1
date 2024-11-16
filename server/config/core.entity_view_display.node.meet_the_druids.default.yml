@@ -1,0 +1,30 @@
+uuid: f4a102d1-6926-41b6-9ffe-7d8ae945ae51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.meet_the_druids.field_people
+    - node.type.meet_the_druids
+  module:
+    - entity_reference_revisions
+    - user
+id: node.meet_the_druids.default
+targetEntityType: node
+bundle: meet_the_druids
+mode: default
+content:
+  field_people:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

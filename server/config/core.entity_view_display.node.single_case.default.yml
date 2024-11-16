@@ -3,29 +3,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.single_case.field_body
     - field.field.node.single_case.field_client
     - field.field.node.single_case.field_hero_image
     - field.field.node.single_case.field_link
+    - field.field.node.single_case.field_project_description
     - field.field.node.single_case.field_services_taxonomy
     - node.type.single_case
   module:
+    - entity_reference_revisions
     - image
     - link
-    - text
     - user
 id: node.single_case.default
 targetEntityType: node
 bundle: single_case
 mode: default
 content:
-  field_body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 105
-    region: content
   field_client:
     type: string
     label: hidden
@@ -56,6 +49,15 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 104
+    region: content
+  field_project_description:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 106
     region: content
   field_services_taxonomy:
     type: entity_reference_label

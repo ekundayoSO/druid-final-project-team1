@@ -1,0 +1,86 @@
+uuid: 533f5353-4499-4970-a262-ef4313caf4ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mautic_marketing_automatio
+    - node.type.mautic_marketing_automation_syst
+    - paragraphs.paragraphs_type.add_link
+    - paragraphs.paragraphs_type.long_description
+    - paragraphs.paragraphs_type.topic
+  module:
+    - entity_reference_revisions
+id: node.mautic_marketing_automation_syst.field_mautic_marketing_automatio
+field_name: field_mautic_marketing_automatio
+entity_type: node
+bundle: mautic_marketing_automation_syst
+label: 'Mau­tic Mar­ke­ting Au­to­ma­tion Sys­tem'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      add_link: add_link
+      long_description: long_description
+      topic: topic
+    negate: 0
+    target_bundles_drag_drop:
+      add_image:
+        weight: 19
+        enabled: false
+      add_link:
+        weight: 20
+        enabled: true
+      add_section:
+        weight: 21
+        enabled: false
+      add_textfield:
+        weight: 22
+        enabled: false
+      add_title:
+        weight: 23
+        enabled: false
+      card:
+        weight: 24
+        enabled: false
+      employee_name:
+        weight: 25
+        enabled: false
+      faqs:
+        weight: 26
+        enabled: false
+      feedback:
+        weight: 27
+        enabled: false
+      from_library:
+        weight: 28
+        enabled: false
+      hero_message:
+        weight: 29
+        enabled: false
+      link:
+        weight: 30
+        enabled: false
+      long_description:
+        weight: 31
+        enabled: true
+      project:
+        weight: 32
+        enabled: false
+      section:
+        weight: 33
+        enabled: false
+      services_images:
+        weight: 34
+        enabled: false
+      singular_project:
+        weight: 35
+        enabled: false
+      topic:
+        weight: 36
+        enabled: true
+field_type: entity_reference_revisions

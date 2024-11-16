@@ -1,0 +1,22 @@
+uuid: ef058a17-6406-4a96-a640-74f2220c5758
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.feedback.field_customers_feedbacks
+    - paragraphs.paragraphs_type.feedback
+  module:
+    - text
+id: paragraph.feedback.default
+targetEntityType: paragraph
+bundle: feedback
+mode: default
+content:
+  field_customers_feedbacks:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

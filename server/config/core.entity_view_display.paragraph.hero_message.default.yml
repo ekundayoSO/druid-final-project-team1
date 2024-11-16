@@ -1,0 +1,22 @@
+uuid: a6dafea8-34b0-45c1-8a36-e32200725e54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_message.field_message
+    - paragraphs.paragraphs_type.hero_message
+  module:
+    - text
+id: paragraph.hero_message.default
+targetEntityType: paragraph
+bundle: hero_message
+mode: default
+content:
+  field_message:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

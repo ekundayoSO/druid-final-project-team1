@@ -1,0 +1,10 @@
+uuid: 8d8ccd27-acf9-44e4-93af-bf1ed9a84339
+langcode: en
+status: true
+dependencies: {  }
+id: topic
+label: 'Short description'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,24 @@
+uuid: b449d2de-161b-4547-b825-c9c651237fb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_employee_name
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.employee_name
+  module:
+    - text
+id: paragraph.employee_name.field_employee_name
+field_name: field_employee_name
+entity_type: paragraph
+bundle: employee_name
+label: 'employee name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text

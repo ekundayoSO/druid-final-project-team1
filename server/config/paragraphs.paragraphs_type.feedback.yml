@@ -1,0 +1,10 @@
+uuid: 0a07625c-0de4-4dda-91e9-a83f0007d58a
+langcode: en
+status: true
+dependencies: {  }
+id: feedback
+label: Feedback
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
