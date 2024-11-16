@@ -1,0 +1,92 @@
+uuid: 2f806863-02ef-4301-9ad9-cbda991a045d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_web_solutions_and_digital
+    - node.type.services_new
+    - paragraphs.paragraphs_type.feedback
+    - paragraphs.paragraphs_type.hero_message
+    - paragraphs.paragraphs_type.link
+    - paragraphs.paragraphs_type.long_description
+    - paragraphs.paragraphs_type.services_images
+    - paragraphs.paragraphs_type.topic
+  module:
+    - entity_reference_revisions
+id: node.services_new.field_web_solutions_and_digital
+field_name: field_web_solutions_and_digital
+entity_type: node
+bundle: services_new
+label: 'Web So­lu­tions and Di­gi­tal Ser­vi­ces'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      feedback: feedback
+      hero_message: hero_message
+      link: link
+      long_description: long_description
+      services_images: services_images
+      topic: topic
+    negate: 0
+    target_bundles_drag_drop:
+      add_image:
+        weight: 19
+        enabled: false
+      add_link:
+        weight: 20
+        enabled: false
+      add_section:
+        weight: 21
+        enabled: false
+      add_textfield:
+        weight: 22
+        enabled: false
+      add_title:
+        weight: 23
+        enabled: false
+      card:
+        weight: 24
+        enabled: false
+      employee_name:
+        weight: 25
+        enabled: false
+      faqs:
+        weight: 26
+        enabled: false
+      feedback:
+        weight: 27
+        enabled: true
+      from_library:
+        weight: 28
+        enabled: false
+      hero_message:
+        weight: 29
+        enabled: true
+      link:
+        weight: 30
+        enabled: true
+      long_description:
+        weight: 31
+        enabled: true
+      project:
+        weight: 32
+        enabled: false
+      section:
+        weight: 33
+        enabled: false
+      services_images:
+        weight: 34
+        enabled: true
+      singular_project:
+        weight: 35
+        enabled: false
+      topic:
+        weight: 36
+        enabled: true
+field_type: entity_reference_revisions

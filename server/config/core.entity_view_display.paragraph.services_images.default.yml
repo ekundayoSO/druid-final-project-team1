@@ -1,0 +1,22 @@
+uuid: 6fe8664f-fdf7-40ae-9ec4-151df9a023f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.services_images.field_service_image
+    - paragraphs.paragraphs_type.services_images
+id: paragraph.services_images.default
+targetEntityType: paragraph
+bundle: services_images
+mode: default
+content:
+  field_service_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

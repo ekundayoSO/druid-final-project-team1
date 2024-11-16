@@ -1,0 +1,24 @@
+uuid: fb36cc30-c69c-4d0c-a1f8-8803ecd91681
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.services_images.field_service_image
+    - paragraphs.paragraphs_type.services_images
+  module:
+    - media_library
+id: paragraph.services_images.default
+targetEntityType: paragraph
+bundle: services_images
+mode: default
+content:
+  field_service_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

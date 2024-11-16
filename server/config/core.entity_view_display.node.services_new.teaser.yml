@@ -1,0 +1,22 @@
+uuid: 08c168ea-4e3e-47f9-8e3a-8b0bbc6124c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.services_new.field_web_solutions_and_digital
+    - node.type.services_new
+  module:
+    - user
+id: node.services_new.teaser
+targetEntityType: node
+bundle: services_new
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_web_solutions_and_digital: true

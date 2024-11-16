@@ -1,0 +1,22 @@
+uuid: 421f09de-3cd9-48e4-a82c-7cfbaf89b8fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.working_with_us.field_work_with_us
+    - node.type.working_with_us
+  module:
+    - user
+id: node.working_with_us.teaser
+targetEntityType: node
+bundle: working_with_us
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_work_with_us: true

@@ -1,0 +1,30 @@
+uuid: 86a74374-1ced-4057-b156-d7ba08a00d8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.mautic_marketing_automation_syst.field_mautic_marketing_automatio
+    - node.type.mautic_marketing_automation_syst
+  module:
+    - entity_reference_revisions
+    - user
+id: node.mautic_marketing_automation_syst.default
+targetEntityType: node
+bundle: mautic_marketing_automation_syst
+mode: default
+content:
+  field_mautic_marketing_automatio:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

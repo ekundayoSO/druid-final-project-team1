@@ -1,0 +1,24 @@
+uuid: 5fb03a02-ef02-42b0-ac6b-0640f172c2fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_name
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.company_name
+  module:
+    - text
+id: paragraph.company_name.field_name
+field_name: field_name
+entity_type: paragraph
+bundle: company_name
+label: Name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text

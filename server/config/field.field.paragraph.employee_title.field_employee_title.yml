@@ -1,0 +1,24 @@
+uuid: 0e97c2ca-7b02-449b-84da-a73382c56ad7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_employee_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.employee_title
+  module:
+    - text
+id: paragraph.employee_title.field_employee_title
+field_name: field_employee_title
+entity_type: paragraph
+bundle: employee_title
+label: 'employee title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text

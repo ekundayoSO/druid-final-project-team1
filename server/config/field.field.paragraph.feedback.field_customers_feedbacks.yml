@@ -1,0 +1,24 @@
+uuid: edd314ec-b57a-42f4-a54b-d451392c7ea6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_customers_feedbacks
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.feedback
+  module:
+    - text
+id: paragraph.feedback.field_customers_feedbacks
+field_name: field_customers_feedbacks
+entity_type: paragraph
+bundle: feedback
+label: 'customer feedback'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

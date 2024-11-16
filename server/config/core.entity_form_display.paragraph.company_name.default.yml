@@ -1,0 +1,25 @@
+uuid: 4cdabe9e-b1b8-4a3a-aede-912f5181ab4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.company_name.field_name
+    - paragraphs.paragraphs_type.company_name
+  module:
+    - text
+id: paragraph.company_name.default
+targetEntityType: paragraph
+bundle: company_name
+mode: default
+content:
+  field_name:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

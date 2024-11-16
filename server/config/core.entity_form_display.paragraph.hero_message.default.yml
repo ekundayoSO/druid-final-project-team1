@@ -1,0 +1,25 @@
+uuid: 7d27a12d-f141-4931-b114-2d04beeda800
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_message.field_message
+    - paragraphs.paragraphs_type.hero_message
+  module:
+    - text
+id: paragraph.hero_message.default
+targetEntityType: paragraph
+bundle: hero_message
+mode: default
+content:
+  field_message:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

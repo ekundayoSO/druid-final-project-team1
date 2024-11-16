@@ -1,0 +1,88 @@
+uuid: 4ed9fe1c-163c-4fce-912b-12c385f07bc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_druid_xp
+    - node.type.druid_xp
+    - paragraphs.paragraphs_type.add_image
+    - paragraphs.paragraphs_type.link
+    - paragraphs.paragraphs_type.long_description
+    - paragraphs.paragraphs_type.topic
+  module:
+    - entity_reference_revisions
+id: node.druid_xp.field_druid_xp
+field_name: field_druid_xp
+entity_type: node
+bundle: druid_xp
+label: 'Druid XP'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      add_image: add_image
+      link: link
+      long_description: long_description
+      topic: topic
+    negate: 0
+    target_bundles_drag_drop:
+      add_image:
+        weight: 19
+        enabled: true
+      add_link:
+        weight: 20
+        enabled: false
+      add_section:
+        weight: 21
+        enabled: false
+      add_textfield:
+        weight: 22
+        enabled: false
+      add_title:
+        weight: 23
+        enabled: false
+      card:
+        weight: 24
+        enabled: false
+      employee_name:
+        weight: 25
+        enabled: false
+      faqs:
+        weight: 26
+        enabled: false
+      feedback:
+        weight: 27
+        enabled: false
+      from_library:
+        weight: 28
+        enabled: false
+      hero_message:
+        weight: 29
+        enabled: false
+      link:
+        weight: 30
+        enabled: true
+      long_description:
+        weight: 31
+        enabled: true
+      project:
+        weight: 32
+        enabled: false
+      section:
+        weight: 33
+        enabled: false
+      services_images:
+        weight: 34
+        enabled: false
+      singular_project:
+        weight: 35
+        enabled: false
+      topic:
+        weight: 36
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,30 @@
+uuid: 154b4086-31b0-4620-ad10-04abda21d941
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.druid_xp.field_druid_xp
+    - node.type.druid_xp
+  module:
+    - entity_reference_revisions
+    - user
+id: node.druid_xp.default
+targetEntityType: node
+bundle: druid_xp
+mode: default
+content:
+  field_druid_xp:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

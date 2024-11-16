@@ -1,0 +1,22 @@
+uuid: 0f53c2a6-e08e-4125-9dbc-6554e9511238
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.mautic_marketing_automation_syst.field_mautic_marketing_automatio
+    - node.type.mautic_marketing_automation_syst
+  module:
+    - user
+id: node.mautic_marketing_automation_syst.teaser
+targetEntityType: node
+bundle: mautic_marketing_automation_syst
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_mautic_marketing_automatio: true

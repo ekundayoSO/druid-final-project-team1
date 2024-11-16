@@ -1,0 +1,30 @@
+uuid: 0c9d3553-85f2-4c80-ad4e-4eff33be8d37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.services_new.field_web_solutions_and_digital
+    - node.type.services_new
+  module:
+    - entity_reference_revisions
+    - user
+id: node.services_new.default
+targetEntityType: node
+bundle: services_new
+mode: default
+content:
+  field_web_solutions_and_digital:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

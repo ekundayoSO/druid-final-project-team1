@@ -1,0 +1,10 @@
+uuid: c330166d-c1c6-4f10-ac83-34ad5fbd9038
+langcode: en
+status: true
+dependencies: {  }
+id: services_images
+label: images
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
