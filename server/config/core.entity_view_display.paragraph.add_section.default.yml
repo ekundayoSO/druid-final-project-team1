@@ -14,7 +14,7 @@ mode: default
 content:
   field_add_section:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 0
