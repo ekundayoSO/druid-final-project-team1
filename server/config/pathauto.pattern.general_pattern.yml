@@ -9,13 +9,14 @@ label: 'General pattern'
 type: 'canonical_entities:node'
 pattern: '[node:title]'
 selection_criteria:
-  af6d8922-1410-4ecf-8030-e2cb5e53b7b0:
+  8dbd830f-b480-4b88-b130-a71b9e8df89c:
     id: 'entity_bundle:node'
     negate: false
-    uuid: af6d8922-1410-4ecf-8030-e2cb5e53b7b0
+    uuid: 8dbd830f-b480-4b88-b130-a71b9e8df89c
     context_mapping:
       node: node
     bundles:
+      article: article
       page: page
 selection_logic: and
 weight: -5

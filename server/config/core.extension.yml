@@ -21,7 +21,6 @@ module:
   editor: 0
   entity_reference_revisions: 0
   entity_usage: 0
-  faqfield: 0
   field: 0
   field_ui: 0
   file: 0
@@ -29,11 +28,8 @@ module:
   help: 0
   history: 0
   image: 0
-  jquery_ui: 0
-  jquery_ui_accordion: 0
   jsonapi: 0
   jsonapi_extras: 0
-  jsonapi_include: 0
   link: 0
   media: 0
   media_library: 0
