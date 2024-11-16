@@ -1,0 +1,24 @@
+uuid: 35951423-f347-49cd-b494-4e968f88b0e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_short_description
+    - filter.format.full_html
+    - node.type.blog_item
+  module:
+    - text
+id: node.blog_item.field_short_description
+field_name: field_short_description
+entity_type: node
+bundle: blog_item
+label: 'short description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text
