@@ -32,7 +32,6 @@
 # Since this is just an example project, we don't want security warnings
 # for locked versions of packages.
 
-composer.lock
 
 /server/web/themes/custom/react_hello/node_modules/
 /server/node_modules/
