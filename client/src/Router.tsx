@@ -7,6 +7,7 @@ import Maintenance from './components/pages/Maintenance';
 import Consultation from './components/pages/Consultation';
 import AboutUs from './components/pages/AboutUs';
 import Blog from './components/pages/Blog';
+import Services from './components/pages/Services';
 
 
 export const router = createBrowserRouter([
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
       {
         path: 'projects',
         element: <Projects />,
+      },
+      {
+        path: 'services',
+        element: <Services />,
       },
       {
         path: 'maintenance',

@@ -10,6 +10,7 @@ interface Route {
 const routes: Route[] = [
   { path: '/', name: 'Home' },
   { path: '/projects', name: 'Projects' },
+  { path: '/services', name: 'Services' },
   { path: '/maintenance', name: 'Maintenance' },
   { path: '/consultation', name: 'Consultation' },
   { path: '/about-us', name: 'About Us' },
