@@ -1,0 +1,48 @@
+# Git and versioning files
+!.gitignore
+!.gitkeep
+!.github
+!.github/ci-files/.my.cnf
+
+# Environment files
+.env*
+!/.env.*.dist
+
+# Logs and caches
+/var/cache/*
+!/var/cache/.gitkeep
+/var/logs/*
+!/var/logs/.gitkeep
+/app/cache/*
+!/app/cache/.gitkeep
+/app/logs/*
+!/app/logs/.gitkeep
+
+# Build and vendor directories
+/node_modules
+/vendor/*
+!/vendor/.htaccess
+
+# Media files
+/media/libraries/ckeditor/*
+/media/bundles/*
+/media/files/*
+!/media/files/.htaccess
+
+# Themes
+/themes/*
+!/themes/aurora
+!/themes/blank
+...
+
+# Sensitive files
+*.key
+*.pem
+*.crt
+*.sql
+
+# IDE and tooling files
+.babelrc
+.eslintrc
+.prettierignore
+.prettierrc
