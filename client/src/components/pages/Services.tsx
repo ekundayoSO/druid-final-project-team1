@@ -28,31 +28,51 @@ const Services = () => {
       </div>
     </div>
 {/* Cards Section */}
-<div className='w-full pt-32 mx-auto p-8 bg-gray-400 '>
+<div className='w-full pt-32 pb-32 mx-auto p-8 bg-gray-400 '>
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
   {/* Card 1 */}
   <div className='bg-white rounded-lg shadow-lg overflow-hidden p-4'>
     <img src="https://via.placeholder.com/150" alt="Service 1" className='w-full h-auto object-cover mb-4 p-2' />
-    <h3 className='text-xl font-semibold'>Service 1</h3>
-    <p className='text-gray-700'>Description of service 1 goes here.</p>
+    <h3 className='text-xl font-semibold text-center'>Service 1</h3>
+    <p className='text-gray-700 text-center'>Description of service 1 goes here.</p>
+    <div className='flex justify-center'>
+      <button className="mt-4 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full">
+        Read more
+      </button>
+    </div>
   </div>
   {/* Card 2 */}
   <div className='bg-white rounded-lg shadow-lg overflow-hidden p-4'>
     <img src="https://via.placeholder.com/150" alt="Service 2" className='w-full h-auto object-cover mb-4 p-2' />
-    <h3 className='text-xl font-semibold'>Service 2</h3>
-    <p className='text-gray-700'>Description of service 2 goes here.</p>
+    <h3 className='text-xl font-semibold text-center'>Service 2</h3>
+    <p className='text-gray-700 text-center'>Description of service 2 goes here.</p>
+    <div className='flex justify-center'>
+      <button className="mt-4 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full">
+        Read more
+      </button>
+    </div>
   </div>
   {/* Card 3 */}
   <div className='bg-white rounded-lg shadow-lg overflow-hidden p-4'>
     <img src="https://via.placeholder.com/150" alt="Service 3" className='w-full h-auto object-cover mb-4 p-2' />
-    <h3 className='text-xl font-semibold'>Service 3</h3>
-    <p className='text-gray-700'>Description of service 3 goes here.</p>
+    <h3 className='text-xl font-semibold text-center'>Service 3</h3>
+    <p className='text-gray-700 text-center'>Description of service 3 goes here.</p>
+    <div className='flex justify-center'>
+      <button className="mt-4 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full">
+        Read more
+      </button>
+    </div>
   </div>
   {/* Card 4 */}
   <div className='bg-white rounded-lg shadow-lg overflow-hidden p-4'>
     <img src="https://via.placeholder.com/150" alt="Service 4" className='w-full h-auto object-cover mb-4 p-2' />
-    <h3 className='text-xl font-semibold'>Service 4</h3>
-    <p className='text-gray-700'>Description of service 4 goes here.</p>
+    <h3 className='text-xl font-semibold text-center'>Service 4</h3>
+    <p className='text-gray-700 text-center'>Description of service 4 goes here.</p>
+    <div className='flex justify-center'>
+      <button className="mt-4 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full">
+        Read more
+      </button>
+    </div>
   </div>
 </div>
 </div>
@@ -62,7 +82,7 @@ const Services = () => {
           <h1 className=' md:text-6xl italic text-white p-3 rounded-lg mt-16 '>
           “Druid’s app­roach per­fect­ly blen­ded am­bi­tion, hu­mor and a proac­ti­ve ‘get things do­ne’ mind­set. The work qua­li­ty is top-notch. The folks at Druid are app­roac­hab­le and plea­sant, and to­get­her, all of us wor­king on the pro­ject be­ca­me a team.”
           </h1>
-          <p className='text-white mb-8 max-w-xl text-left'>
+          <p className='text-white mb-8 text-left'>
           – Pia Korpisaari, Product Owner at the Digital and Population Data Services Agency
           </p>
         </div>
@@ -76,17 +96,17 @@ const Services = () => {
           <div className='flex flex-col items-center justify-center w-full '>
 <div className='flex items-center'>
   <img src={servicesIcon1} alt="icon with a screen and two shopping bags" className='mr-8' />
-  <p className='text-white mb-8 max-w-xl text-left mt-6'>We focus on enhancing your security, whether it’s for a new or existing Drupal site. We consider the security needs specific to your organization and its respective industry.
+  <p className='text-white mb-8 max-w-xl text-left mt-8'>We focus on enhancing your security, whether it’s for a new or existing Drupal site. We consider the security needs specific to your organization and its respective industry.
   </p>
 </div>
 <div className='flex items-center'>
   <img src={servicesIcon2} alt="icon with a cart and arrows" className='mr-8' />
-  <p className='text-white mb-8 max-w-xl text-left mt-6'>
+  <p className='text-white mb-8 max-w-xl text-left mt-8'>
     In addition to our primary services, we provide Matomo Analytics packages for websites, cookie management via Cookiebot and an integrated approach to publishing your social media content using Taeggie. Furthermore, we offer agile and secure web hosting solutions. </p>
 </div>
 <div className='flex items-center'>
   <img src={servicesIcon3} alt="icon with a cog and megaphone" className='mr-8' />
-  <p className='text-white mb-8 max-w-xl text-left mt-6'>Utilizing the user-friendly Mautic platform, we seamlessly blend your marketing strategy with your digital footprint, delivering precise, streamlined and impactful marketing. </p>
+  <p className='text-white mb-8 max-w-xl text-left mt-8'>Utilizing the user-friendly Mautic platform, we seamlessly blend your marketing strategy with your digital footprint, delivering precise, streamlined and impactful marketing. </p>
 </div>
           </div>
           </div>

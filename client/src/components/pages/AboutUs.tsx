@@ -3,7 +3,7 @@ import { fetchPages } from '@/lib/api/drupalAPI';
 import aboutPic1 from '@/assets/20240425-103217-Druid-Oy-1026-2.jpg';
 import aboutPic2 from '@/assets/DruidToimisto2020-1157-scaled-e1607966740706.webp';
 import aboutPic3 from '@/assets/original.png';
-import aboutPic4 from '@/assets/DruidMokki2020-1041-1-scaled.webp';
+import aboutPic4 from '@/assets/DruidMokki2020-1041-1-scaled2.webp';
 
 const AboutUs: React.FC = () => {
   const [aboutUsContent, setAboutUsContent] = useState<string>('');
@@ -25,6 +25,7 @@ const AboutUs: React.FC = () => {
   }, []);
 
   return (
+    <>
     <div className='relative w-full overflow-auto min-h-screen bg-gray-400 m-0 p-0'>
       <div className='flex flex-col items-center justify-center h-full'>
         <div className='flex flex-col md:flex-row items-center justify-center w-full max-w-7xl mx-auto p-8'>
@@ -44,11 +45,16 @@ const AboutUs: React.FC = () => {
             <img src={aboutPic1} alt="three people looking at a computer" className='w-full h-auto object-cover rounded-lg shadow-lg mt-24' />
           </div>
         </div>
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center col-span-full my-8 mt-20">
+        </div>
+</div>
+          <div className='relative w-full overflow-auto min-h-screen bg-gray-700 m-0 p-0'>
+          <div className='flex flex-col items-center justify-center h-full'>
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center col-span-full mt-20">
           A mo­re func­tio­nal world, from one li­ne of co­de to the next
           </h2>
+
                   {/* New Section 1 */}
-        <div className="flex mb-16 mt-16 mx-12 justify-center">
+        <div className="flex mx-12 justify-center">
           <div className="w-2/5">
             <img src={aboutPic2} alt="two men infront of a computer" className='w-full h-auto object-cover rounded-lg shadow-lg mt-24' />
           </div>
@@ -74,7 +80,7 @@ const AboutUs: React.FC = () => {
         </div>
       </div>
               {/* New Section 3 */}
-      <div className="flex flex-col justify-center items-center w-full h-96 mx-auto p-8 bg-black" style={{ backgroundImage: `url(${aboutPic4})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="flex flex-col justify-center items-center w-full min-h-screen mx-auto p-8 bg-black" style={{ backgroundImage: `url(${aboutPic4})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'rgba(0, 0, 0, 0.7)' }}>
         <h2 className="text-3xl md:text-4xl font-bold text-white text-center my-8">
           Why Druid?
         </h2>
@@ -98,6 +104,7 @@ const AboutUs: React.FC = () => {
         </div>
       </div>
       </div>
+      </>
 
   );
 };
