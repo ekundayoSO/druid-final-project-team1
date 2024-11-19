@@ -2,7 +2,12 @@
 web/core
 web/modules/contrib
 web/themes/contrib
-web/sites/default/files
+web/sites/default/files/*
+# Except for directories starting with 2024- or 2025-
+!web/sites/default/files/2024-*/
+!web/sites/default/files/2025-*/
+!web/sites/default/files/2024-*/**
+!web/sites/default/files/2025-*/**
 web/libraries/*
 vendor
 
