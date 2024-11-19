@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.blog_item.body
     - field.field.node.blog_item.field_add_title_text_content_ima
     - field.field.node.blog_item.field_author
     - field.field.node.blog_item.field_blog_taxonomy
@@ -22,16 +21,6 @@ targetEntityType: node
 bundle: blog_item
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 121
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10

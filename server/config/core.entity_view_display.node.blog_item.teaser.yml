@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.blog_item.body
     - field.field.node.blog_item.field_add_title_text_content_ima
     - field.field.node.blog_item.field_author
     - field.field.node.blog_item.field_blog_taxonomy
@@ -13,21 +12,12 @@ dependencies:
     - field.field.node.blog_item.field_short_description
     - node.type.blog_item
   module:
-    - text
     - user
 id: node.blog_item.teaser
 targetEntityType: node
 bundle: blog_item
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 101
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
