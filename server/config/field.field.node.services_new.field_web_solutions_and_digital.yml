@@ -17,7 +17,7 @@ id: node.services_new.field_web_solutions_and_digital
 field_name: field_web_solutions_and_digital
 entity_type: node
 bundle: services_new
-label: 'Web So­lu­tions and Di­gi­tal Ser­vi­ces'
+label: 'Read more'
 description: ''
 required: false
 translatable: false
@@ -53,8 +53,14 @@ settings:
       card:
         weight: 24
         enabled: false
+      company_name:
+        weight: 29
+        enabled: false
       employee_name:
         weight: 25
+        enabled: false
+      employee_title:
+        weight: 31
         enabled: false
       faqs:
         weight: 26
@@ -74,6 +80,9 @@ settings:
       long_description:
         weight: 31
         enabled: true
+      meet_the_druids:
+        weight: 38
+        enabled: false
       project:
         weight: 32
         enabled: false
@@ -89,4 +98,7 @@ settings:
       topic:
         weight: 36
         enabled: true
+      video:
+        weight: 44
+        enabled: false
 field_type: entity_reference_revisions
