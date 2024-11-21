@@ -8,6 +8,8 @@ import Consultation from './components/pages/Consultation';
 import AboutUs from './components/pages/AboutUs';
 import Blog from './components/pages/Blog';
 import Services from './components/pages/Services';
+import Contact from './components/pages/Contact';
+
 
 
 export const router = createBrowserRouter([
@@ -42,6 +44,10 @@ export const router = createBrowserRouter([
       {
         path: 'blog',
         element: <Blog />,
+      },
+      {
+        path: 'contact',
+        element: <Contact />,
       },
     ],
   },
