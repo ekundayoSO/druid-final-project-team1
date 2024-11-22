@@ -19,6 +19,12 @@ const NavMenu: React.FC<NavMenuProps> = ({ routes }) => {
   const matches = routes.map((route) => useMatch(route.path));
   const navigate = useNavigate();
 
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+    setIsOpen(false);
+  };
+
   return (
     <nav className='fixed top-0 left-0 w-full z-20 flex justify-between items-center p-4 text-white'>
       <div className='flex items-center'>
@@ -40,10 +46,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ routes }) => {
               {routes.map(({ path, name }, index) => (
                 <button
                   key={path}
-                  onClick={() => {
-                    navigate(path);
-                    setIsOpen(false);
-                  }}
+                  onClick={() => handleNavigation(path)}
                   className={`block mt-4 ${
                     matches[index] ? 'text-cyan-500 border-b-2 border-cyan-500' : ''
                   } text-black dark:text-white`}
