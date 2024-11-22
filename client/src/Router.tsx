@@ -6,7 +6,10 @@ import Projects from './components/pages/Projects';
 import Maintenance from './components/pages/Maintenance';
 import Consultation from './components/pages/Consultation';
 import AboutUs from './components/pages/AboutUs';
-import Test from './components/pages/Test';
+import Blog from './components/pages/Blog';
+import Services from './components/pages/Services';
+import Contact from './components/pages/Contact';
+
 
 
 export const router = createBrowserRouter([
@@ -23,6 +26,10 @@ export const router = createBrowserRouter([
         element: <Projects />,
       },
       {
+        path: 'services',
+        element: <Services />,
+      },
+      {
         path: 'maintenance',
         element: <Maintenance />,
       },
@@ -35,8 +42,12 @@ export const router = createBrowserRouter([
         element: <AboutUs />,
       },
       {
-        path: 'test',
-        element: <Test />,
+        path: 'blog',
+        element: <Blog />,
+      },
+      {
+        path: 'contact',
+        element: <Contact />,
       },
     ],
   },
