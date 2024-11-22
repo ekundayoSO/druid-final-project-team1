@@ -9,14 +9,28 @@ label: 'General pattern'
 type: 'canonical_entities:node'
 pattern: '[node:title]'
 selection_criteria:
-  af6d8922-1410-4ecf-8030-e2cb5e53b7b0:
+  5fcad161-8e79-48da-bc2b-7240ed1bbfcc:
     id: 'entity_bundle:node'
     negate: false
-    uuid: af6d8922-1410-4ecf-8030-e2cb5e53b7b0
+    uuid: 5fcad161-8e79-48da-bc2b-7240ed1bbfcc
     context_mapping:
       node: node
     bundles:
+      billing: billing
+      blog_item: blog_item
+      careers: careers
+      consultation: consultation
+      druid_xp: druid_xp
+      frontpage: frontpage
+      maintenance: maintenance
+      mautic_marketing_automation_syst: mautic_marketing_automation_syst
+      meet_the_druids: meet_the_druids
       page: page
+      projects: projects
+      services: services
+      services_new: services_new
+      single_case: single_case
+      working_with_us: working_with_us
 selection_logic: and
 weight: -5
 relationships: {  }

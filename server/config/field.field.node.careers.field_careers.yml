@@ -49,6 +49,9 @@ settings:
       card:
         weight: 27
         enabled: false
+      company_name:
+        weight: 28
+        enabled: false
       employee_name:
         weight: 28
         enabled: false
@@ -73,9 +76,6 @@ settings:
       long_description:
         weight: 35
         enabled: true
-      meet_the_druids:
-        weight: 36
-        enabled: false
       project:
         weight: 37
         enabled: false
