@@ -28,7 +28,6 @@
         "drupal/paragraphs": "^1.18",
         "drupal/pathauto": "^1.13",
         "drupal/restui": "^1.22",
-        "drupal/webform": "^6.2",
         "drush/drush": "^12.5"
     },
     "conflict": {
