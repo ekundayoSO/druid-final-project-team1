@@ -1,16 +1,15 @@
 import { createBrowserRouter } from 'react-router-dom';
+import { AppLayout } from '@/components/layouts/AppLayout';
 import LandingPage from '@/components/pages/LandingPage';
 import NoMatch from '@/components/pages/NoMatch';
-import { AppLayout } from '@/components/layouts/AppLayout';
-import Projects from './components/pages/Projects';
-import Maintenance from './components/pages/Maintenance';
-import Consultation from './components/pages/Consultation';
-import AboutUs from './components/pages/AboutUs';
-import Blog from './components/pages/Blog';
-import Services from './components/pages/Services';
-import Contact from './components/pages/Contact';
-
-
+import Projects from '@/components/pages/Projects';
+import Maintenance from '@/components/pages/Maintenance';
+import Consultation from '@/components/pages/Consultation';
+import AboutUs from '@/components/pages/AboutUs';
+import Blog from '@/components/pages/Blog';
+import BlogPost from '@/components/pages/BlogPost';
+import Services from '@/components/pages/Services';
+import Contact from '@/components/pages/Contact';
 
 export const router = createBrowserRouter([
   {
@@ -44,6 +43,10 @@ export const router = createBrowserRouter([
       {
         path: 'blog',
         element: <Blog />,
+      },
+      {
+        path: 'blog/:id',
+        element: <BlogPost />,
       },
       {
         path: 'contact',
