@@ -2,21 +2,13 @@ import { useFetchBlogs, drupalBaseUrl } from '@/hooks/useFetchBlogs';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
-
-// typed fields
-interface BlogItem {
-  id: string;
-  field_blog_taxonomy?: { name: string }[]; 
-  field_hero_image?: { uri: { url: string }; meta: { alt?: string } }; 
-  field_author?: { display_name: string }; 
-  field_date_of_post?: string; 
-  field_add_title?: string;
-  field_short_description?: { value: string };
-}
+import { useState } from 'react';
+import { BlogItem } from './types/BlogItem';
 
 const Blog = () => {
   const { blogItems, isLoading, error } = useFetchBlogs();
   const navigate = useNavigate();
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
@@ -30,8 +22,19 @@ const Blog = () => {
     )
   );
 
+  const filteredBlogItems = selectedCategory
+    ? blogItems.filter(
+        (item: BlogItem) =>
+          Array.isArray(item.field_blog_taxonomy) && item.field_blog_taxonomy.some((t) => t.name === selectedCategory)
+      )
+    : blogItems;
+
   const handleCardClick = (id: string) => {
     navigate(`/blog/${id}`);
+  };
+
+  const handleCategoryClick = (category: string) => {
+    setSelectedCategory(selectedCategory === category ? null : category);
   };
 
   return (
@@ -45,15 +48,19 @@ const Blog = () => {
         </p>
 
         <div className='flex justify-center space-x-4 mb-8'>
-          {categories.map((category, i) => (
-            <Button key={i} variant='outline'>
+          {categories.map((category) => (
+            <Button
+              key={category}
+              variant={selectedCategory === category ? 'default' : 'outline'}
+              onClick={() => handleCategoryClick(category)}
+            >
               {category}
             </Button>
           ))}
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 max-w-screen-xl mx-auto px-4'>
-          {blogItems.map((item: BlogItem) => (
+          {filteredBlogItems.map((item: BlogItem) => (
             <Card key={item.id} className='w-full cursor-pointer' onClick={() => handleCardClick(item.id)}>
               {item.field_hero_image && (
                 <img
@@ -66,13 +73,14 @@ const Blog = () => {
                 <CardHeader>
                   <div className='flex justify-between mb-2'>
                     <p className='text-sm text-gray-500 dark:text-gray-400'>
-                      {item.field_date_of_post && new Date(item.field_date_of_post)
-                        .toLocaleDateString('en-GB', {
-                          day: '2-digit',
-                          month: '2-digit',
-                          year: 'numeric',
-                        })
-                        .replace(/\//g, '.')}
+                      {item.field_date_of_post &&
+                        new Date(item.field_date_of_post)
+                          .toLocaleDateString('en-GB', {
+                            day: '2-digit',
+                            month: '2-digit',
+                            year: 'numeric',
+                          })
+                          .replace(/\//g, '.')}
                     </p>
                     <p className='text-sm text-gray-500 dark:text-gray-400'>{item.field_author?.display_name}</p>
                   </div>
