@@ -1,21 +1,20 @@
-uuid: 3f6b7f85-4fe2-4ba1-9bee-526bd3189044
+uuid: 9a963e3a-6c4e-4cc4-90d8-a163200646ce
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_careers
-    - node.type.careers
-    - paragraphs.paragraphs_type.hero_message
+    - field.storage.node.field_consultation
+    - node.type.consultation
+    - paragraphs.paragraphs_type.add_image
     - paragraphs.paragraphs_type.long_description
-    - paragraphs.paragraphs_type.services_images
     - paragraphs.paragraphs_type.topic
   module:
     - entity_reference_revisions
-id: node.careers.field_careers
-field_name: field_careers
+id: node.consultation.field_consultation
+field_name: field_consultation
 entity_type: node
-bundle: careers
-label: careers
+bundle: consultation
+label: consultation
 description: ''
 required: false
 translatable: false
@@ -25,15 +24,14 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      hero_message: hero_message
+      add_image: add_image
       long_description: long_description
-      services_images: services_images
       topic: topic
     negate: 0
     target_bundles_drag_drop:
       add_image:
         weight: 22
-        enabled: false
+        enabled: true
       add_link:
         weight: 23
         enabled: false
@@ -53,28 +51,28 @@ settings:
         weight: 28
         enabled: false
       employee_name:
-        weight: 28
-        enabled: false
-      employee_title:
         weight: 29
         enabled: false
-      faqs:
+      employee_title:
         weight: 30
         enabled: false
-      feedback:
+      faqs:
         weight: 31
         enabled: false
-      from_library:
+      feedback:
         weight: 32
         enabled: false
-      hero_message:
+      from_library:
         weight: 33
-        enabled: true
-      link:
+        enabled: false
+      hero_message:
         weight: 34
         enabled: false
-      long_description:
+      link:
         weight: 35
+        enabled: false
+      long_description:
+        weight: 36
         enabled: true
       project:
         weight: 37
@@ -84,7 +82,7 @@ settings:
         enabled: false
       services_images:
         weight: 39
-        enabled: true
+        enabled: false
       singular_project:
         weight: 40
         enabled: false

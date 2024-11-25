@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.blog_item.field_add_link
     - field.field.node.blog_item.field_add_title_text_content_ima
     - field.field.node.blog_item.field_author
     - field.field.node.blog_item.field_blog_taxonomy
@@ -24,6 +25,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_add_link: true
   field_add_title_text_content_ima: true
   field_author: true
   field_blog_taxonomy: true

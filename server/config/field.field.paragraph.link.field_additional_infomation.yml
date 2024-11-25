@@ -11,7 +11,7 @@ id: paragraph.link.field_additional_infomation
 field_name: field_additional_infomation
 entity_type: paragraph
 bundle: link
-label: 'Additional infomation'
+label: 'Additional information'
 description: ''
 required: false
 translatable: false
