@@ -10,6 +10,7 @@ import Blog from '@/components/pages/Blog';
 import BlogPost from '@/components/pages/BlogPost';
 import Services from '@/components/pages/Services';
 import Contact from '@/components/pages/Contact';
+import Careers from './components/pages/Careers';
 
 export const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ export const router = createBrowserRouter([
       {
         path: 'contact',
         element: <Contact />,
+      },
+      {
+        path: 'careers',
+        element: <Careers />,
       },
     ],
   },

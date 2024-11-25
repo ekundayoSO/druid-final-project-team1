@@ -1,16 +1,15 @@
 import { useParams } from 'react-router-dom';
-import { useFetchBlogs } from '@/hooks/useFetchBlogs';
+import { useFetchCareers } from '@/hooks/useFetchCareers';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { drupalBaseUrl } from '@/hooks/useFetchBlogs';
+import { drupalBaseUrl } from '@/hooks/useFetchCareers';
 
-// Define field type data
-interface BlogItem {
+interface CareersItem {
   id: string;
   field_hero_image?: {
     uri: {
       url: string;
     };
-    meta?: {
+    meta: {
       alt?: string;
     };
   };
@@ -31,25 +30,25 @@ interface BlogItem {
   }>;
 }
 
-const BlogPost = () => {
-  const { blogItems, isLoading, error } = useFetchBlogs();
+const CareerPost = () => {
+  const { careersItems, isLoading, error } = useFetchCareers() as { careersItems: CareersItem[]; isLoading: boolean; error: string | null };
   const { id } = useParams<{ id: string }>();
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
-  const blogItem = blogItems.find((item: BlogItem) => item.id === id) as BlogItem | undefined;
+  const careersItem = careersItems.find((item) => item.id === id);
 
-  if (!blogItem) return <div>Blog post not found</div>;
+  if (!careersItem) return <div>Career post not found</div>;
 
   return (
     <div className='relative w-full min-h-screen overflow-auto bg-gray-100 dark:bg-gray-900 m-0 p-0'>
       <div className='flex flex-col items-center justify-center min-h-screen py-16'>
         <Card className='w-full max-w-3xl'>
-          {blogItem?.field_hero_image && (
+          {careersItem.field_hero_image && (
             <img
-              src={`${drupalBaseUrl}${blogItem.field_hero_image.uri.url}`}
-              alt={blogItem.field_hero_image.meta?.alt || 'Hero Image'}
+              src={`${drupalBaseUrl}${careersItem.field_hero_image.uri.url}`}
+              alt={careersItem.field_hero_image.meta.alt || 'Hero Image'}
               className='w-full h-64 object-cover'
             />
           )}
@@ -57,7 +56,7 @@ const BlogPost = () => {
             <CardHeader>
               <div className='flex justify-between mb-2'>
                 <p className='text-sm text-gray-500 dark:text-gray-400'>
-                  {new Date(blogItem.field_date_of_post)
+                  {new Date(careersItem.field_date_of_post)
                     .toLocaleDateString('en-GB', {
                       day: '2-digit',
                       month: '2-digit',
@@ -65,12 +64,12 @@ const BlogPost = () => {
                     })
                     .replace(/\//g, '.')}
                 </p>
-                <p className='text-sm text-gray-500 dark:text-gray-400'>{blogItem.field_author?.display_name}</p>
+                <p className='text-sm text-gray-500 dark:text-gray-400'>{careersItem.field_author?.display_name}</p>
               </div>
-              <CardTitle>{blogItem.field_add_title}</CardTitle>
-              <CardDescription>{blogItem.field_short_description?.value}</CardDescription>
+              <CardTitle>{careersItem.field_add_title}</CardTitle>
+              <CardDescription>{careersItem.field_short_description?.value}</CardDescription>
             </CardHeader>
-            {blogItem.field_add_title_text_content_ima?.map((content) => {
+            {careersItem.field_add_title_text_content_ima?.map((content) => {
               switch (content.type) {
                 case 'paragraph--add_title':
                   return (
@@ -110,4 +109,4 @@ const BlogPost = () => {
   );
 };
 
-export default BlogPost;
+export default CareerPost;
