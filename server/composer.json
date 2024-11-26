@@ -27,7 +27,10 @@
         "drupal/jsonapi_include": "^1.8",
         "drupal/paragraphs": "^1.18",
         "drupal/pathauto": "^1.13",
+        "drupal/recaptcha": "^3.4",
         "drupal/restui": "^1.22",
+        "drupal/webform": "^6.3@alpha",
+        "drupal/webform_mautic": "^2.0",
         "drush/drush": "^12.5"
     },
     "conflict": {
