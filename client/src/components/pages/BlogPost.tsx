@@ -2,34 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useFetchBlogs } from '@/hooks/useFetchBlogs';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { drupalBaseUrl } from '@/hooks/useFetchBlogs';
-
-// Define field type data
-interface BlogItem {
-  id: string;
-  field_hero_image?: {
-    uri: {
-      url: string;
-    };
-    meta?: {
-      alt?: string;
-    };
-  };
-  field_date_of_post: string;
-  field_author?: {
-    display_name?: string;
-  };
-  field_add_title: string;
-  field_short_description?: {
-    value: string;
-  };
-  field_add_title_text_content_ima?: Array<{
-    id: string;
-    type: string;
-    field_add_title?: Array<{ value: string }>;
-    field_add_textfield?: { value: string };
-    field_add_link?: { uri: string; title?: string };
-  }>;
-}
+import { BlogItem } from '@/types/BlogItem';
 
 const BlogPost = () => {
   const { blogItems, isLoading, error } = useFetchBlogs();
@@ -57,7 +30,7 @@ const BlogPost = () => {
             <CardHeader>
               <div className='flex justify-between mb-2'>
                 <p className='text-sm text-gray-500 dark:text-gray-400'>
-                  {new Date(blogItem.field_date_of_post)
+                  {new Date(blogItem.field_date_of_post ?? '')
                     .toLocaleDateString('en-GB', {
                       day: '2-digit',
                       month: '2-digit',
