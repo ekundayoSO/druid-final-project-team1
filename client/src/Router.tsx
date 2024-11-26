@@ -6,11 +6,11 @@ import Projects from '@/components/pages/Projects';
 import Maintenance from '@/components/pages/Maintenance';
 import Consultation from '@/components/pages/Consultation';
 import AboutUs from '@/components/pages/AboutUs';
-import Blog from '@/components/pages/Blog/Blog';
-import BlogPost from '@/components/pages/Blog/BlogPost';
-import Services from '@/components/pages/Services';
+import Blog from '@/components/pages/Blogs/Blog';
+import BlogPost from '@/components/pages/Blogs/BlogPost';
+import Services from '@/components/pages/Services/Services';
 import Contact from '@/components/pages/Contact';
-import Careers from './components/pages/Career/Careers';
+import Careers from './components/pages/Careers/Careers';
 
 export const router = createBrowserRouter([
   {
