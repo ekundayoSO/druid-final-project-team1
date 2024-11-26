@@ -1,9 +1,9 @@
+import { useState } from 'react';
 import { useFetchBlogs, drupalBaseUrl } from '@/hooks/useFetchBlogs';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import { BlogItem } from './types/BlogItem';
+import { BlogItem } from '@/types/BlogItem';
 
 const Blog = () => {
   const { blogItems, isLoading, error } = useFetchBlogs();
@@ -65,7 +65,7 @@ const Blog = () => {
               {item.field_hero_image && (
                 <img
                   src={`${drupalBaseUrl}${item.field_hero_image.uri.url}`}
-                  alt={item.field_hero_image.meta.alt || 'Hero Image'}
+                  alt={item.field_hero_image.meta?.alt || 'Hero Image'}
                   className='w-full h-64 object-cover'
                 />
               )}
