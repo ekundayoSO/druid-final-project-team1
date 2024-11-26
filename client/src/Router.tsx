@@ -11,6 +11,7 @@ import BlogPost from '@/components/pages/Blogs/BlogPost';
 import Services from '@/components/pages/Services/Services';
 import Contact from '@/components/pages/Contact';
 import Careers from './components/pages/Careers/Careers';
+import CareersPost from './components/pages/Careers/CareersPost';
 
 export const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ export const router = createBrowserRouter([
       {
         path: 'careers',
         element: <Careers />,
+      },
+      {
+        path: 'careers/:id',
+        element: <CareersPost />,
       },
     ],
   },

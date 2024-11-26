@@ -2,111 +2,89 @@ import { useParams } from 'react-router-dom';
 import { useFetchCareers } from '@/hooks/useFetchCareers';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { drupalBaseUrl } from '@/hooks/useFetchCareers';
+import { Career, ServicesImagesProps, HeroMessageProps, ParagraphItem, Topic, LongDescriptionProps } from '@/types/Careers';
 
-interface CareersItem {
-  id: string;
-  field_hero_image?: {
-    uri: {
-      url: string;
-    };
-    meta: {
-      alt?: string;
-    };
-  };
-  field_date_of_post: string;
-  field_author?: {
-    display_name?: string;
-  };
-  field_add_title: string;
-  field_short_description?: {
-    value: string;
-  };
-  field_add_title_text_content_ima?: Array<{
-    id: string;
-    type: string;
-    field_add_title?: Array<{ value: string }>;
-    field_add_textfield?: { value: string };
-    field_add_link?: { uri: string; title?: string };
-  }>;
-}
+// Components for different paragraph types
+const ServicesImages = ({ item }: ServicesImagesProps) => (
+  <div key={item.id}>
+    {item.field_service_image && item.field_service_image[0]?.field_media_image && (
+      <img
+        src={`${drupalBaseUrl}${item.field_service_image[0].field_media_image[0].uri.url}`}
+        alt={item.field_service_image[0].field_media_image[0].meta.alt || 'Service Image'}
+        className="mx-auto w-full h-auto max-w-screen-md object-cover"
+      />
+    )}
+  </div>
+);
 
-const CareerPost = () => {
-  const { careersItems, isLoading, error } = useFetchCareers() as { careersItems: CareersItem[]; isLoading: boolean; error: string | null };
+const HeroMessage = ({ item, title }: HeroMessageProps) => (
+  <CardContent>
+    <CardHeader>
+      <div key={item.id}>
+        <CardTitle>{title.toUpperCase()}</CardTitle>
+        <div dangerouslySetInnerHTML={{ __html: item.field_message?.value || 'Not Provided' }} />
+      </div>
+    </CardHeader>
+  </CardContent>
+);
+
+// New component for paragraph--topic
+const TopicComponent = ({ item }: Topic ) => (
+  <div key={item.id}>
+        <div dangerouslySetInnerHTML={{ __html: item.field_short_heading?.[0]?.value || 'Not Provided' }} />
+  </div>
+);
+
+// New component for paragraph--long_description
+const LongDescription = ({ item }: LongDescriptionProps) => (
+  <div key={item.id}>
+    <div dangerouslySetInnerHTML={{ __html: item.field_content?.[0]?.value || 'Description Not Provided' }} />
+  </div>
+);
+
+// Mapping of paragraph types to components
+const paragraphComponents: Record<string, React.FC<any>> = {
+  'paragraph--services_images': ServicesImages,
+  'paragraph--hero_message': HeroMessage,
+  'paragraph--topic': TopicComponent,
+  'paragraph--long_description': LongDescription,
+};
+
+const CareersPost = () => {
+  const { careersItems, isLoading, error } = useFetchCareers();
   const { id } = useParams<{ id: string }>();
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
-  const careersItem = careersItems.find((item) => item.id === id);
+  const career = careersItems.find((item: Career) => item.id === id) as Career | undefined;
 
-  if (!careersItem) return <div>Career post not found</div>;
+  if (!career) return <div>Careers post not found</div>;
 
   return (
     <div className='relative w-full min-h-screen overflow-auto bg-gray-100 dark:bg-gray-900 m-0 p-0'>
       <div className='flex flex-col items-center justify-center min-h-screen py-16'>
         <Card className='w-full max-w-3xl'>
-          {careersItem.field_hero_image && (
-            <img
-              src={`${drupalBaseUrl}${careersItem.field_hero_image.uri.url}`}
-              alt={careersItem.field_hero_image.meta.alt || 'Hero Image'}
-              className='w-full h-64 object-cover'
-            />
-          )}
-          <CardContent>
-            <CardHeader>
-              <div className='flex justify-between mb-2'>
-                <p className='text-sm text-gray-500 dark:text-gray-400'>
-                  {new Date(careersItem.field_date_of_post)
-                    .toLocaleDateString('en-GB', {
-                      day: '2-digit',
-                      month: '2-digit',
-                      year: 'numeric',
-                    })
-                    .replace(/\//g, '.')}
-                </p>
-                <p className='text-sm text-gray-500 dark:text-gray-400'>{careersItem.field_author?.display_name}</p>
-              </div>
-              <CardTitle>{careersItem.field_add_title}</CardTitle>
-              <CardDescription>{careersItem.field_short_description?.value}</CardDescription>
-            </CardHeader>
-            {careersItem.field_add_title_text_content_ima?.map((content) => {
-              switch (content.type) {
-                case 'paragraph--add_title':
-                  return (
-                    <h3 key={content.id} className='text-xl font-semibold mt-4'>
-                      {content.field_add_title?.[0]?.value}
-                    </h3>
-                  );
-                case 'paragraph--add_textfield':
-                  return (
-                    <div
-                      key={content.id}
-                      className='mt-2'
-                      dangerouslySetInnerHTML={{ __html: content.field_add_textfield?.value || '' }}
-                    />
-                  );
-                case 'paragraph--add_link':
-                  return (
-                    <div key={content.id} className='mt-2'>
-                      <a
-                        href={content.field_add_link?.uri}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='text-blue-500 hover:underline'
-                      >
-                        {content.field_add_link?.title || 'Visit link'}
-                      </a>
-                    </div>
-                  );
-                default:
-                  return null;
-              }
-            })}
-          </CardContent>
+          {career.field_careers?.map((item) => {
+            const ParagraphComponent = paragraphComponents[item.type];
+            return ParagraphComponent ? (
+              item.type === 'paragraph--hero_message' ? (
+                <ParagraphComponent key={item.id} item={item} title={career.title} />
+              ) : (
+                <ParagraphComponent key={item.id} item={item} />
+              )
+            ) : (
+              item.type === 'paragraph--topic' || item.type === 'paragraph--long_description' ? null : (
+                <div key={item.id}>
+                  <p>Unhandled paragraph type: {item.type}</p>
+                </div>
+              )
+            );
+          })}
         </Card>
       </div>
     </div>
   );
 };
 
-export default CareerPost;
+export default CareersPost;
