@@ -13,6 +13,8 @@ const Careers = () => {
 
   // Components for different paragraph types
   const ServicesImages = ({ item }: ServicesImagesProps) => (
+    <CardHeader>
+
     <div key={item.id} className='w-full cursor-pointer' onClick={() => handleCardClick(item.id)}>
       {item.field_service_image && item.field_service_image[0]?.field_media_image && (
         <img
@@ -22,6 +24,7 @@ const Careers = () => {
         />
       )}
     </div>
+    </CardHeader>
   );
 
   const HeroMessage = ({ item, title }: HeroMessageProps) => (

@@ -63,11 +63,13 @@ const Blog = () => {
           {filteredBlogItems.map((item: BlogItem) => (
             <Card key={item.id} className='w-full cursor-pointer' onClick={() => handleCardClick(item.id)}>
               {item.field_hero_image && (
+                  <CardHeader>
                 <img
                   src={`${drupalBaseUrl}${item.field_hero_image.uri.url}`}
                   alt={item.field_hero_image.meta?.alt || 'Hero Image'}
                   className='w-full h-64 object-cover'
                 />
+                </CardHeader>
               )}
               <CardContent>
                 <CardHeader>

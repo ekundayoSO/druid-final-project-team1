@@ -20,11 +20,14 @@ const BlogPost = () => {
       <div className='flex flex-col items-center justify-center min-h-screen py-16'>
         <Card className='w-full max-w-3xl'>
           {blogItem?.field_hero_image && (
+              <CardHeader>
+
             <img
               src={`${drupalBaseUrl}${blogItem.field_hero_image.uri.url}`}
               alt={blogItem.field_hero_image.meta?.alt || 'Hero Image'}
               className='w-full h-64 object-cover'
             />
+            </CardHeader>
           )}
           <CardContent>
             <CardHeader>

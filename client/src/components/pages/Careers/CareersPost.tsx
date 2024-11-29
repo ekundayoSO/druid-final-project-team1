@@ -4,8 +4,9 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { drupalBaseUrl } from '@/hooks/useFetchCareers';
 import { Career, ServicesImagesProps, HeroMessageProps, ParagraphItem, Topic, LongDescriptionProps } from '@/types/Careers';
 
-// Components for different paragraph types
+// Component for paragraph--services_images
 const ServicesImages = ({ item }: ServicesImagesProps) => (
+  <CardHeader>
   <div key={item.id}>
     {item.field_service_image && item.field_service_image[0]?.field_media_image && (
       <img
@@ -15,8 +16,9 @@ const ServicesImages = ({ item }: ServicesImagesProps) => (
       />
     )}
   </div>
+  </CardHeader>
 );
-
+// component for paragraph--hero_message
 const HeroMessage = ({ item, title }: HeroMessageProps) => (
   <CardContent>
     <CardHeader>
@@ -37,9 +39,13 @@ const TopicComponent = ({ item }: Topic ) => (
 
 // New component for paragraph--long_description
 const LongDescription = ({ item }: LongDescriptionProps) => (
+  <CardContent>
+  <CardDescription>
   <div key={item.id}>
     <div dangerouslySetInnerHTML={{ __html: item.field_content?.[0]?.value || 'Description Not Provided' }} />
   </div>
+  </CardDescription>
+  </CardContent>
 );
 
 // Mapping of paragraph types to components

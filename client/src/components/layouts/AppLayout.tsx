@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import { Footer } from './Footer';
 import NavMenu from './NavMenu';
+import BackToTopButton from './BackToTopButton';
 
 interface Route {
   path: string;
@@ -35,6 +36,7 @@ export function AppLayout() {
         <div className='container px-4 md:px-8'>
         </div>
       )}
+      <BackToTopButton />
       <Footer />
     </div>
   );
