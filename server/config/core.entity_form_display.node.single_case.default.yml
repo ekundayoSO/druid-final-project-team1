@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.single_case.field_card_description
+    - field.field.node.single_case.field_card_image
     - field.field.node.single_case.field_client
     - field.field.node.single_case.field_hero_image
     - field.field.node.single_case.field_link
@@ -15,6 +17,7 @@ dependencies:
     - link
     - paragraphs
     - path
+    - text
 id: node.single_case.default
 targetEntityType: node
 bundle: single_case
@@ -25,6 +28,22 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_card_description:
+    type: text_textarea
+    weight: 128
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_card_image:
+    type: image_image
+    weight: 127
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   field_client:
     type: string_textfield

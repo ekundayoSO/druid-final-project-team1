@@ -1,0 +1,24 @@
+uuid: 9ff31a55-cf39-4dfd-aa13-4107fa8dabb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_card_title
+    - filter.format.full_html
+    - node.type.services_new
+  module:
+    - text
+id: node.services_new.field_service_card_title
+field_name: field_service_card_title
+entity_type: node
+bundle: services_new
+label: 'service card title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text

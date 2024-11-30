@@ -1,0 +1,24 @@
+uuid: fd21b121-ac90-4c03-b96d-a1141c01c74c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_card_description
+    - filter.format.full_html
+    - node.type.single_case
+  module:
+    - text
+id: node.single_case.field_card_description
+field_name: field_card_description
+entity_type: node
+bundle: single_case
+label: 'card description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

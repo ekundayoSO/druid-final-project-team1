@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.single_case.field_card_description
+    - field.field.node.single_case.field_card_image
     - field.field.node.single_case.field_client
     - field.field.node.single_case.field_hero_image
     - field.field.node.single_case.field_link
@@ -23,6 +25,8 @@ content:
     weight: 100
     region: content
 hidden:
+  field_card_description: true
+  field_card_image: true
   field_client: true
   field_hero_image: true
   field_link: true

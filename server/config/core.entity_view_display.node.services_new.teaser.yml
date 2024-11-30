@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.services_new.field_service_card_description
+    - field.field.node.services_new.field_service_card_title
     - field.field.node.services_new.field_web_solutions_and_digital
     - node.type.services_new
   module:
@@ -19,4 +21,6 @@ content:
     weight: 100
     region: content
 hidden:
+  field_service_card_description: true
+  field_service_card_title: true
   field_web_solutions_and_digital: true
