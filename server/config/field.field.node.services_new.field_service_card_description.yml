@@ -1,0 +1,24 @@
+uuid: 23337ff2-e7a5-4257-aef7-3e7bfeb71815
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_card_description
+    - filter.format.full_html
+    - node.type.services_new
+  module:
+    - text
+id: node.services_new.field_service_card_description
+field_name: field_service_card_description
+entity_type: node
+bundle: services_new
+label: 'service card description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

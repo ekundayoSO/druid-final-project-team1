@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.single_case.field_card_description
+    - field.field.node.single_case.field_card_image
     - field.field.node.single_case.field_client
     - field.field.node.single_case.field_hero_image
     - field.field.node.single_case.field_link
@@ -13,19 +15,38 @@ dependencies:
     - entity_reference_revisions
     - image
     - link
+    - text
     - user
 id: node.single_case.default
 targetEntityType: node
 bundle: single_case
 mode: default
 content:
+  field_card_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_card_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_client:
     type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 102
+    weight: 3
     region: content
   field_hero_image:
     type: image
@@ -36,7 +57,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 101
+    weight: 2
     region: content
   field_link:
     type: link
@@ -48,16 +69,16 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 104
+    weight: 5
     region: content
   field_project_description:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 106
+    weight: 6
     region: content
   field_services_taxonomy:
     type: entity_reference_label
@@ -65,11 +86,11 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 103
+    weight: 4
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 7
     region: content
 hidden: {  }

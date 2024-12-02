@@ -3,16 +3,33 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.services_new.field_service_card_description
+    - field.field.node.services_new.field_service_card_title
     - field.field.node.services_new.field_web_solutions_and_digital
     - node.type.services_new
   module:
     - entity_reference_revisions
+    - text
     - user
 id: node.services_new.default
 targetEntityType: node
 bundle: services_new
 mode: default
 content:
+  field_service_card_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_service_card_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_web_solutions_and_digital:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -20,11 +37,11 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 101
+    weight: 3
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden: {  }
