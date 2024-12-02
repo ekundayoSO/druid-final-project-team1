@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Case, ServiceTaxonomy, CardImage, CaseDetail, ProjectDescription } from '@/types/Projects';
 
 
-const DruidProjectCase = () => {
+const ProjectsPost = () => {
   const [caseData, setCaseData] = useState<CaseDetail | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -44,9 +44,7 @@ const DruidProjectCase = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-4">
-      <Link to="/" className="text-blue-500 hover:underline mb-4 block">
-        &larr; Back to all cases
-      </Link>
+
       {field_hero_image && (
         <img
           src={`${drupalBaseUrl}${field_hero_image.uri.url}`}
@@ -117,8 +115,11 @@ const DruidProjectCase = () => {
             return <p key={item.id}>Unhandled paragraph type: {item.type}</p>;
         }
       })}
+            <Link to="/" className="text-blue-500 hover:underline mb-4 block">
+        &larr; Back to all cases
+      </Link>
     </div>
   );
 };
 
-export default DruidProjectCase;
+export default ProjectsPost;
