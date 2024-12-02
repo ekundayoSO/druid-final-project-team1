@@ -52,20 +52,8 @@ const ProjectsPost = () => {
           className="w-full h-auto max-h-96 object-cover rounded-lg mb-4"
         />
       )}
-      <div className="flex flex-row items-center justify-between space-x-4 mb-4">
-        {field_client && <p className="text-md">Client: {field_client}</p>}
-        <div className="flex items-center space-x-2">
-          <h2 className="text-md">Services:</h2>
-          <ul className="flex">
-            {field_services_taxonomy?.map((service: ServiceTaxonomy, index: number, array: ServiceTaxonomy[]) => (
-              <li className="inline-block list-none" key={service.id}>
-                {service.name}
-                {index < array.length - 1 && <span className="mr-1">,</span>}
-              </li>
-            ))}
-          </ul>
-        </div>
 
+      <div className="flex justify-end">
         {field_link?.uri && (
           <a href={field_link.uri} target="_blank" rel="noopener noreferrer">
             <span className="mr-1 text-red-500">&rarr;</span>
@@ -78,11 +66,7 @@ const ProjectsPost = () => {
       {field_project_description?.map((item: ProjectDescription) => {
         switch (item.type) {
           case 'paragraph--company_name':
-            return (
-              <p key={item.id} className="mb-4">
-                {item.field_name?.value || 'Not Provided'}
-              </p>
-            );
+            return null;
           case 'paragraph--topic':
             return (
               <h3 key={item.id} className="text-xl font-medium mt-4 mb-2">
@@ -115,7 +99,7 @@ const ProjectsPost = () => {
             return <p key={item.id}>Unhandled paragraph type: {item.type}</p>;
         }
       })}
-            <Link to="/" className="text-blue-500 hover:underline mb-4 block">
+            <Link to="/projects" className="text-blue-500 hover:underline mb-4 block">
         &larr; Back to all cases
       </Link>
     </div>

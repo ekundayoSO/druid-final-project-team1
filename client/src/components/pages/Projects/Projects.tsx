@@ -15,8 +15,8 @@ const Projects= () => {
   const categories = Array.from(
     new Set(
       cases.flatMap((item) =>
-        'field_blog_taxonomy' in item && Array.isArray(item.field_blog_taxonomy) 
-          ? item.field_blog_taxonomy.map((t: { name: string }) => t.name) 
+        'field_services_taxonomy' in item && Array.isArray(item.field_services_taxonomy) 
+          ? item.field_services_taxonomy.map((t: { name: string }) => t.name) 
           : []
       )
     )
@@ -24,8 +24,8 @@ const Projects= () => {
 
   const filteredProjectItems = selectedCategory
     ? cases.filter((item) =>
-        'field_blog_taxonomy' in item && Array.isArray(item.field_blog_taxonomy) &&
-        item.field_blog_taxonomy.some((t: { name: string }) => t.name === selectedCategory)
+        'field_services_taxonomy' in item && Array.isArray(item.field_services_taxonomy) &&
+        item.field_services_taxonomy.some((t: { name: string }) => t.name === selectedCategory)
       )
     : cases;
 
@@ -33,6 +33,8 @@ const Projects= () => {
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(selectedCategory === category ? null : category);
   };
+
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -85,45 +87,50 @@ const Projects= () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 max-w-screen-xl mx-auto px-4">
-          {cases.map((caseItem) => {
+   
+          {filteredProjectItems.map((caseItem) => {
             const { id, title, field_card_description, field_card_image, field_services_taxonomy } = caseItem;
 
-            return (
+            return (       
+            <Card key={id}>
               <Link
                 to={`/projects/${id}`}
-                key={id}
                 className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
-                {field_card_image && field_card_image.uri ? (
+                <CardHeader>
+
+                {field_card_image && (
                   <img
                     src={`${drupalBaseUrl}${field_card_image.uri.url}`}
                     alt={field_card_image.meta?.alt || 'Hero Image'}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-auto max-h-96 object-cover rounded-lg mb-4"
                   />
-                ) : (
-                  <div className="w-full h-48 bg-gray-200 flex items-center justify-center">
-                    <span className="text-gray-500">No image available</span>
-                  </div>
                 )}
+                                <CardContent>
                 <div className="flex flex-row items-center justify-between space-x-4 mb-4">
                   <h2 className="text-xl font-bold mb-2">{title}</h2>
-                  <div className="flex items-center space-x-2">
-                    <ul className="flex">
-                      {field_services_taxonomy?.map((service, index, array) => (
-                        <li className="inline-block list-none" key={service.id}>
-                          {service.name}
-                          {index < array.length - 1 && <span className="mr-1"> /</span>}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+
                 </div>
                 {field_card_description && (
                   <div className="mt-2" dangerouslySetInnerHTML={{ __html: field_card_description.processed }} />
                 )}
-                <span className="mr-1 text-red-500">&rarr; Read more</span>
+   
+                <div className='mt-4'>
+                    <ul className='flex flex-wrap gap-2'>
+                      {field_services_taxonomy?.map((service, index, array) => (
+                        <li className='bg-gray-200 dark:bg-gray-700 rounded-md px-2 py-1 text-sm' key={service.id}>
+                          {service.name}
+                          {index < array.length - 1 && <span className="mr-1"> </span>}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  </CardContent>
+                </CardHeader>
               </Link>
+              </Card>
             );
+            
           })}
         </div>
       </div>
