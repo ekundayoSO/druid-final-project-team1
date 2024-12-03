@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import { ReadMore } from '@/types/Services';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 
 const ServicesPost = () => {
@@ -40,84 +41,90 @@ const ServicesPost = () => {
 
 
   return (
-    <div style={{ border: '4px solid green', maxWidth: '1600px' }} className="case mb-4 mx-auto">
-      <Link to="/services" className="text-blue-500 hover:underline mb-4 block">
-        <button className="mt-2 bg-blue-600 text-white font-bold py-2 px-2 rounded">Back to all services</button>
-      </Link>
-      {readMore.field_read_more?.map((item) => {
-        switch (item.type) {
-          case 'paragraph--hero_message':
-            return (
-              <div className="mb-4" key={item.id}>
-                <div dangerouslySetInnerHTML={{ __html: item.field_message?.value || 'Not Provided' }} />
-              </div>
-            );
-          case 'paragraph--topic':
-            return (
-              <div key={item.id}>
-                <h4 className="text-xl mt-2 font-bold">
-                  {item.field_short_heading?.[0]?.value || 'Topic Title Not Available'}
-                </h4>
-              </div>
-            );
-          case 'paragraph--long_description':
-            return (
-              <div key={item.id}>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: item.field_content?.[0]?.value || 'Long Description Not Available',
-                  }}
-                />
-              </div>
-            );
-          case 'paragraph--link':
-            if (item.field_additional_infomation?.title === 'Explore Druid XP') {
-              return (
-                <div key={item.id} className="mt-2">
-                  <Link className='p-2' style={{border: "1px solid blue", backgroundColor: "black", color: "white", borderRadius: "4px"}} to="/druid-xp" target='_blank'>{item.field_additional_infomation.title}</Link>
-                </div>
-              );
-            } else {
-              return (
-                <div key={item.id} className="link">
-                  {item.field_additional_infomation && (
-                    <a href={item.field_additional_infomation.uri} target="_blank" rel="noopener noreferrer">
-                      {item.field_additional_infomation.title || 'Read more'}
-                    </a>
-                  )}
-                </div>
-              );
+    <div className='relative w-full min-h-screen overflow-auto bg-gray-100 dark:bg-gray-900 m-0 p-0'>
+      <div className='flex flex-col items-center justify-center min-h-screen py-16'>
+        <Card className='w-full max-w-3xl'>
+<CardContent>
+          {readMore.field_read_more?.map((item) => {
+            switch (item.type) {
+              case 'paragraph--hero_message':
+                return (
+                  null
+                );
+              case 'paragraph--topic':
+                return (
+                  <div key={item.id}>
+                    <h2 className='max-w-3xl text-4xl font-bold text-gray-900 dark:text-gray-100 text-center p-3 leading-tight'>
+                      {item.field_short_heading?.[0]?.value || 'Topic Title Not Available'}
+                    </h2>
+                  </div>
+                );
+              case 'paragraph--long_description':
+                return (
+                  <div key={item.id}>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: item.field_content?.[0]?.value || 'Long Description Not Available',
+                      }}
+                    />
+                  </div>
+                );
+              case 'paragraph--link':
+                if (item.field_additional_infomation?.title === 'Explore Druid XP') {
+                  return (
+                    <div key={item.id} className="mt-2">
+                      <Link className='p-2' style={{border: "1px solid blue", backgroundColor: "black", color: "white", borderRadius: "4px"}} to="/druid-xp" target='_blank'>{item.field_additional_infomation.title}</Link>
+                    </div>
+                  );
+                } else {
+                  return (
+                    <div key={item.id} className="link">
+                      {item.field_additional_infomation && (
+                        <a href={item.field_additional_infomation.uri} target="_blank" rel="noopener noreferrer">
+                          {item.field_additional_infomation.title || 'Read more'}
+                        </a>
+                      )}
+                    </div>
+                  );
+                }
+              case 'paragraph--services_images':
+                return (
+                  <div key={item.id}>
+                    {item.field_service_image && item.field_service_image[0]?.field_media_image && (
+                      <img
+                        src={`${drupalBaseUrl}${item.field_service_image[0].field_media_image[0].uri.url}`}
+                        alt={item.field_service_image[0].field_media_image[0].meta.alt || 'Service Image'}
+                        className="mx-auto w-full h-auto max-w-screen-md object-cover"
+                      />
+                    )}
+                  </div>
+                );
+              case 'paragraph--feedback':
+                return (
+                  <div key={item.id}>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: item.field_customers_feedbacks?.value || 'Not Provided',
+                      }}
+                    />
+                  </div>
+                );
+              default:
+                return (
+                  <div key={item.id}>
+                    <p>Unhandled paragraph type: {item.type}</p>
+                  </div>
+                );
             }
-          case 'paragraph--services_images':
-            return (
-              <div key={item.id}>
-                {item.field_service_image && item.field_service_image[0]?.field_media_image && (
-                  <img
-                    src={`${drupalBaseUrl}${item.field_service_image[0].field_media_image[0].uri.url}`}
-                    alt={item.field_service_image[0].field_media_image[0].meta.alt || 'Service Image'}
-                    className="mx-auto w-full h-auto max-w-screen-md object-cover"
-                  />
-                )}
+          })}
+              <div className="flex justify-center">
+                <Link to={`/services`}>
+                  <p className="mr-1 mt-10 text-red-500" style={{ marginTop: '20px' }}>&rarr; Back to Services</p>
+                </Link>
               </div>
-            );
-          case 'paragraph--feedback':
-            return (
-              <div key={item.id}>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: item.field_customers_feedbacks?.value || 'Not Provided',
-                  }}
-                />
-              </div>
-            );
-          default:
-            return (
-              <div key={item.id}>
-                <p>Unhandled paragraph type: {item.type}</p>
-              </div>
-            );
-        }
-      })}
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 };

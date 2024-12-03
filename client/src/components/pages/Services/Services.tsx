@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Service } from '@/types/Services';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Car } from 'lucide-react';
+
 
 
 const Services = () => {
@@ -57,16 +57,17 @@ Driven by passion, we develop high-performing, dependable web services tailored 
           <Card key={id} className="flex-1 mx-2">
             <CardHeader className="flex flex-col justify-between h-full">
               <CardContent>
-                <Link to={`/service/${id}`}>
+                
                   <CardTitle className='text-lg font-bold'>{field_service_card_title?.value || 'Title Not Available'}</CardTitle>
                   <p
                     dangerouslySetInnerHTML={{
                       __html: field_service_card_description?.value || 'Long Description Not Available',
                     }}
                   />
-                </Link>
+                
               </CardContent>
-              <span className="mr-1 text-red-500 mt-auto">&rarr; Read more</span>
+              <Link to={`/services/${id}`}><span className="mr-1 text-red-500 mt-auto">&rarr; Read more</span>
+              </Link>
             </CardHeader>
           </Card>
         );
