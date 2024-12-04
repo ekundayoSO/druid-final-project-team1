@@ -26,14 +26,14 @@ const NavMenu: React.FC<NavMenuProps> = ({ routes }) => {
   };
 
   return (
-    <nav className='fixed top-0 left-0 w-full z-20 flex justify-between items-center p-4 text-white'>
+    <nav className='fixed top-0 left-0 w-full z-20 flex justify-between items-center p-4 dark:text-gray-200'>
       <div className='flex items-center'>
         <a href='/' className='flex items-center'>
           <Avatar className='filter dark:invert'>
             <AvatarImage src={Logo} />
-            <AvatarFallback>WB</AvatarFallback>
+            <AvatarFallback>Druid</AvatarFallback>
           </Avatar>
-          <span className='ml-2 text-2xl font-medium text-white'>Druid</span>
+          <span className='ml-2 text-2xl font-medium dark:text-gray-200'>Druid</span>
         </a>
       </div>
       <div className='flex items-center'>
