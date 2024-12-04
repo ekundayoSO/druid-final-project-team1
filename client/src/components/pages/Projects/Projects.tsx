@@ -98,14 +98,17 @@ const Projects= () => {
                 className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
                 <CardHeader>
-
-                {field_card_image && field_card_image.uri && (
-                  <img
-                    src={`${drupalBaseUrl}${field_card_image.uri.url}`}
-                    alt={field_card_image.meta?.alt || 'Hero Image'}
-                    className="w-full h-auto max-h-96 object-cover rounded-lg mb-4"
-                  />
-                )}
+                {field_card_image && field_card_image.uri ? (
+              <img
+                src={`${drupalBaseUrl}${field_card_image.uri.url}`}
+                alt={field_card_image.meta?.alt || 'Hero Image'}
+                className="w-full h-auto max-h-96 object-cover rounded-lg mb-4"
+              />
+            ) : (
+              <div className="w-full h-48 bg-gray-200 flex items-center justify-center">
+                <span className="text-gray-500">No image available</span>
+              </div>
+            )}
                                 <CardContent>
                 <div className="flex flex-row items-center justify-between space-x-4 mb-4">
                   <h2 className="text-xl font-bold mb-2">{title}</h2>
