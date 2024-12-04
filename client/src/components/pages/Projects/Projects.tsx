@@ -99,7 +99,7 @@ const Projects= () => {
               >
                 <CardHeader>
 
-                {field_card_image && (
+                {field_card_image && field_card_image.uri && (
                   <img
                     src={`${drupalBaseUrl}${field_card_image.uri.url}`}
                     alt={field_card_image.meta?.alt || 'Hero Image'}

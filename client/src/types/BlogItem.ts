@@ -13,14 +13,16 @@ export interface BlogItem {
   field_author?: {
     display_name?: string;
   };
-  field_add_title?: string;
+  field_add_title?: {
+    value: string;
+  };
   field_short_description?: {
     value: string;
   };
   field_add_title_text_content_ima?: Array<{
     id: string;
     type: string;
-    field_add_title?: Array<{ value: string }>;
+    field_add_title?: string;
     field_add_textfield?: { value: string };
     field_add_link?: { uri: string; title?: string };
   }>;

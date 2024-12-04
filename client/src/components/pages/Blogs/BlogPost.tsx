@@ -43,7 +43,7 @@ const BlogPost = () => {
                 </p>
                 <p className='text-sm text-gray-500 dark:text-gray-400'>{blogItem.field_author?.display_name}</p>
               </div>
-              <CardTitle>{blogItem.field_add_title}</CardTitle>
+              <h2>{blogItem.field_add_title?.value || 'Untitled'}</h2>
               <CardDescription>{blogItem.field_short_description?.value}</CardDescription>
             </CardHeader>
             {blogItem.field_add_title_text_content_ima?.map((content) => {
@@ -51,7 +51,7 @@ const BlogPost = () => {
                 case 'paragraph--add_title':
                   return (
                     <h3 key={content.id} className='text-xl font-semibold mt-4'>
-                      {content.field_add_title?.[0]?.value}
+                      {content.field_add_title}
                     </h3>
                   );
                 case 'paragraph--add_textfield':

@@ -86,7 +86,7 @@ const Blog = () => {
                     </p>
                     <p className='text-sm text-gray-500 dark:text-gray-400'>{item.field_author?.display_name}</p>
                   </div>
-                  <CardTitle>{item.field_add_title}</CardTitle>
+                  <CardTitle>{item.field_add_title?.value || 'Untitled'}</CardTitle>
                   <CardDescription>{item.field_short_description?.value}</CardDescription>
                 </CardHeader>
                 <div className='mt-4'>
