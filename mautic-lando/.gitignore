@@ -148,3 +148,5 @@
 
 /docroot
 !/.lando
+*.sql
+*.sql.gz
