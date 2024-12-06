@@ -13,9 +13,7 @@ export interface BlogItem {
   field_author?: {
     display_name?: string;
   };
-  field_add_title?: {
-    value: string;
-  };
+  title: string;
   field_short_description?: {
     value: string;
   };

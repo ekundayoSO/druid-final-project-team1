@@ -31,8 +31,8 @@ const Careers = () => {
     <CardContent>
       <CardHeader>
         <div key={item.id}>
-          <CardTitle>{title.toUpperCase()}</CardTitle>
-          <div dangerouslySetInnerHTML={{ __html: item.field_message?.value || 'Not Provided' }} />
+          <CardTitle className='text-sm mb-4 '>{title.toUpperCase()}</CardTitle>
+          <div className='text-sm' dangerouslySetInnerHTML={{ __html: item.field_message?.value || 'Not Provided' }} />
         </div>
       </CardHeader>
     </CardContent>
@@ -65,17 +65,19 @@ const Careers = () => {
             const { id, title, field_careers } = jobs;
 
             return (
-              <Card key={id} className='w-full cursor-pointer' onClick={() => handleCardClick(id)}>
+              <Card
+                key={id}
+                className="w-full cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+                onClick={() => handleCardClick(id)}
+              >
                 {field_careers?.map((item) => {
                   const ParagraphComponent = paragraphComponents[item.type];
                   return ParagraphComponent ? (
                     <ParagraphComponent key={item.id} item={item} title={title} />
-                  ) : (
-                    item.type === 'paragraph--topic' || item.type === 'paragraph--long_description' ? null : (
-                      <div key={item.id}>
-                        <p>Unhandled paragraph type: {item.type}</p>
-                      </div>
-                    )
+                  ) : item.type === 'paragraph--topic' || item.type === 'paragraph--long_description' ? null : (
+                    <div key={item.id}>
+                      <p>Unhandled paragraph type: {item.type}</p>
+                    </div>
                   );
                 })}
               </Card>
