@@ -54,7 +54,7 @@ const ServicesPost = () => {
               case 'paragraph--topic':
                 return (
                   <div key={item.id}>
-                    <h2 className='max-w-3xl text-4xl font-bold text-gray-900 dark:text-gray-100 text-center p-3 leading-tight'>
+                    <h2 className='max-w-3xl text-xl font-bold text-gray-900 dark:text-gray-100 text-center p-3 leading-tight'>
                       {item.field_short_heading?.[0]?.value || 'Topic Title Not Available'}
                     </h2>
                   </div>
@@ -62,7 +62,7 @@ const ServicesPost = () => {
               case 'paragraph--long_description':
                 return (
                   <div key={item.id}>
-                    <div
+                    <div className='text-sm mb-2'
                       dangerouslySetInnerHTML={{
                         __html: item.field_content?.[0]?.value || 'Long Description Not Available',
                       }}
@@ -101,7 +101,7 @@ const ServicesPost = () => {
                 );
               case 'paragraph--feedback':
                 return (
-                  <div key={item.id}>
+                  <div className='text-md font-bold text-center mt-4' key={item.id}>
                     <div
                       dangerouslySetInnerHTML={{
                         __html: item.field_customers_feedbacks?.value || 'Not Provided',

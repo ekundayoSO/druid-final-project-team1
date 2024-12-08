@@ -23,7 +23,7 @@ const HeroMessage = ({ item, title }: HeroMessageProps) => (
   <CardContent>
     <CardHeader>
       <div key={item.id}>
-        <CardTitle>{title.toUpperCase()}</CardTitle>
+        <CardTitle className='mb-1'>{title.toUpperCase()}</CardTitle>
         <div dangerouslySetInnerHTML={{ __html: item.field_message?.value || 'Not Provided' }} />
       </div>
     </CardHeader>
@@ -32,8 +32,8 @@ const HeroMessage = ({ item, title }: HeroMessageProps) => (
 
 // New component for paragraph--topic
 const TopicComponent = ({ item }: Topic ) => (
-  <div key={item.id}>
-        <div dangerouslySetInnerHTML={{ __html: item.field_short_heading?.[0]?.value || 'Not Provided' }} />
+  <div className='mb-2 mx-4 text-justify' key={item.id}>
+        <div className='mb-2' dangerouslySetInnerHTML={{ __html: item.field_short_heading?.[0]?.value || 'Not Provided' }} />
   </div>
 );
 

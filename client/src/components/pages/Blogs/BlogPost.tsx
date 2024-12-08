@@ -29,7 +29,7 @@ const BlogPost = () => {
             />
             </CardHeader>
           )}
-          <CardContent>
+          <CardContent className='text-justify'>
             <CardHeader>
               <div className='flex justify-between mb-2'>
                 <p className='text-sm text-gray-500 dark:text-gray-400'>
@@ -43,7 +43,7 @@ const BlogPost = () => {
                 </p>
                 <p className='text-sm text-gray-500 dark:text-gray-400'>{blogItem.field_author?.display_name}</p>
               </div>
-              <h2>{blogItem.field_add_title?.value || 'Untitled'}</h2>
+              <h2>{blogItem.title || 'Untitled'}</h2>
               <CardDescription>{blogItem.field_short_description?.value}</CardDescription>
             </CardHeader>
             {blogItem.field_add_title_text_content_ima?.map((content) => {

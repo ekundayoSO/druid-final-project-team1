@@ -54,19 +54,21 @@ Driven by passion, we develop high-performing, dependable web services tailored 
       {services.map((service) => {
         const { id, field_service_card_description, field_service_card_title } = service;
         return (
-          <Card key={id} className="flex-1 mx-2">
+          <Card key={id} className="flex-1 mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
             <CardHeader className="flex flex-col justify-between h-full">
               <CardContent>
-                
-                  <CardTitle className='text-lg font-bold'>{field_service_card_title?.value || 'Title Not Available'}</CardTitle>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: field_service_card_description?.value || 'Long Description Not Available',
-                    }}
-                  />
-                
+                <CardTitle className="text-lg font-bold mb-4">
+                  {field_service_card_title?.value || 'Title Not Available'}
+                </CardTitle>
+                <p
+                  className="text-sm"
+                  dangerouslySetInnerHTML={{
+                    __html: field_service_card_description?.value || 'Long Description Not Available',
+                  }}
+                />
               </CardContent>
-              <Link to={`/services/${id}`}><span className="mr-1 text-red-500 mt-auto">&rarr; Read more</span>
+              <Link to={`/services/${id}`}>
+                <span className="mr-1 text-red-500 mt-auto">&rarr; Read more</span>
               </Link>
             </CardHeader>
           </Card>
