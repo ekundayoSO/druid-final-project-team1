@@ -6,7 +6,10 @@ import servicesIcon3 from '@/assets/tietoturva-auditointi.webp';
 
 const Contact = () => {
   return (
-    <>
+    <body>
+    
+      
+    
     <div className='relative w-full overflow-auto min-h-screen bg-gray-700 m-0 p-0'>
       <div className='flex flex-col md:flex-row items-center justify-center h-full w-full min-h-screen'>
         <div className='flex flex-col items-center justify-center w-full md:w-1/2 h-full p-8'>
@@ -145,8 +148,8 @@ In­te­res­ted in joi­ning our team?    </h2>
 
           </div>
      
-
-</>
+          <script type="text/javascript" src="//mautic-lando.lndo.site/form/generate.js?id=1"></script>
+</body>
   );
 };
 
