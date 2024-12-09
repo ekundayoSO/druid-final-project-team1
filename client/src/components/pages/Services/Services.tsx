@@ -44,11 +44,11 @@ const Services = () => {
     <>
       <div className='relative w-full overflow-auto min-h-screen bg-gray-100 dark:bg-gray-700 m-0 p-0'>
         <div className='flex flex-col md:flex-row items-center justify-center h-full w-full min-h-screen'>
-          <div className='flex flex-col items-start justify-center w-full md:w-1/2 h-full p-8'>
-            <h1 className='max-w-3xl text-4xl sm:text-5xl md:text-6xl font-bold dark:text-white text-left p-3 rounded-lg leading-tight mt-16 md:mt-24'>
+          <div className='flex flex-col items-center justify-center w-full md:w-1/2 h-full p-8'>
+            <h1 className='max-w-3xl text-4xl sm:text-5xl md:text-6xl font-bold dark:text-white text-center p-3 rounded-lg leading-tight mt-16 md:mt-24'>
               Our ser­vi­ces.
             </h1>
-            <p className='dark:text-white mb-8 max-w-xl text-left'>
+            <p className='dark:text-white mb-8 max-w-xl text-center'>
               We thrive on designing and implementing digital solutions that help our clients’ businesses win. We keep things on budget, on time and involve customers in development, so they get to enjoy the journey – and the results.
               <br />
               <br />
@@ -62,27 +62,29 @@ const Services = () => {
           </div>
         </div>
 
-        <div className='w-full pt-32 pb-32 mx-auto p-8 bg-gray-400 min-h-screen '>
+        <div className='w-full pt-32 pb-32 mx-auto p-8 bg-gray-400 min-h-screen min-h-screen '>
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
           {services.map((service) => {
             const { id, field_service_card_description, field_service_card_title } = service;
             return (
-              <Card key={id} className="flex-1 mx-2 ">
-                <CardHeader className="flex flex-col justify-between h-full">
-                  <CardContent>
-                    <CardTitle className="text-lg font-bold mb-4">
-                      {field_service_card_title?.value || 'Title Not Available'}
-                    </CardTitle>
-                    <p
-                      className="text-sm"
-                      dangerouslySetInnerHTML={{
-                        __html: field_service_card_description?.value || 'Long Description Not Available',
-                      }}
-                    />
+              <Card key={id} className="flex-1 mx-2 dark:bg-gray-700">
+                <CardHeader className="flex flex-col h-full">
+                  <CardContent className="flex flex-col justify-between h-full">
+                    <div>
+                      <CardTitle className="text-lg font-bold mb-4" style={{ height: '50px' }}>
+                        {field_service_card_title?.value || 'Title Not Available'}
+                      </CardTitle>
+                      <p
+                        className="text-sm pt-5"
+                        dangerouslySetInnerHTML={{
+                          __html: field_service_card_description?.value || 'Long Description Not Available',
+                        }}
+                      />
+                    </div>
+                    <Link to={`/services/${id}`}>
+                      <p className="mr-1 text-red-500 mt-5 self-end">&rarr; Read more</p>
+                    </Link>
                   </CardContent>
-                  <Link to={`/services/${id}`}>
-                    <span className="mr-1 text-red-500 mt-auto">&rarr; Read more</span>
-                  </Link>
                 </CardHeader>
               </Card>
             );
@@ -90,13 +92,13 @@ const Services = () => {
         </div>
       </div>
       </div>
-      <div className='relative w-full overflow-auto min-h-screen bg-gray-900 m-0 p-0'>
+      <div className='relative w-full overflow-auto min-h-screen dark:bg-gray-900 m-0 p-0'>
       <div className='flex md:flex-row items-center justify-center h-full w-full min-h-screen'>
         <div className='flex flex-col items-start justify-center w-full md:w-3/4 h-full p-8'>
-          <h1 className=' md:text-6xl italic text-white p-3 rounded-lg mt-16 '>
+          <h1 className=' md:text-6xl italic dark:text-white p-3 rounded-lg mt-16 '>
           “Druid’s app­roach per­fect­ly blen­ded am­bi­tion, hu­mor and a proac­ti­ve ‘get things do­ne’ mind­set. The work qua­li­ty is top-notch. The folks at Druid are app­roac­hab­le and plea­sant, and to­get­her, all of us wor­king on the pro­ject be­ca­me a team.”
           </h1>
-          <p className='text-white mb-8 text-left'>
+          <p className='dark:text-white mb-8 text-left'>
           – Pia Korpisaari, Product Owner at the Digital and Population Data Services Agency
           </p>
         </div>
