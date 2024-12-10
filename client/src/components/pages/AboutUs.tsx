@@ -4,25 +4,40 @@ import aboutPic1 from '@/assets/20240425-103217-Druid-Oy-1026-2.jpg';
 import aboutPic2 from '@/assets/DruidToimisto2020-1157-scaled-e1607966740706.webp';
 import aboutPic3 from '@/assets/original.png';
 import aboutPic4 from '@/assets/DruidMokki2020-1041-1-scaled2.webp';
+import axios from 'axios';
 
 const AboutUs: React.FC = () => {
-  const [aboutUsContent, setAboutUsContent] = useState<string>('');
+  const [employees, setEmployees] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const drupalBaseUrl = 'https://druid-final-project-team1.lndo.site';
 
   useEffect(() => {
-    const getAboutUsContent = async () => {
+    const fetchData = async () => {
       try {
-        const data = await fetchPages();
-        const aboutUsPage = data.find((page) => page.attributes.title === 'About Us');
-        if (aboutUsPage) {
-          setAboutUsContent(aboutUsPage.attributes.field_content.value);
-        }
-      } catch (error) {
-        console.error('Error fetching About Us content:', error);
+        const response = await axios.get(`${drupalBaseUrl}/jsonapi/node/meet_the_druids`, {
+          params: {
+            include: 'field_people,field_people.field_service_image.field_media_image',
+          },
+        });
+        console.log(response.data.data);
+
+        setEmployees(response.data.data);
+        setIsLoading(false);
+      } catch (err) {
+        setError('An error occurred while fetching the data');
+        setIsLoading(false);
+        console.error('Fetch error:', err);
       }
     };
 
-    getAboutUsContent();
+    fetchData();
   }, []);
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+  if (employees.length === 0) return <div>No services available</div>;
 
   return (
     <>
@@ -102,6 +117,72 @@ const AboutUs: React.FC = () => {
             <p className="text-gray-200">This is a longer description for the fourth card, providing more details and insights.</p>
           </div>
         </div>
+      </div>
+      </div>
+      <div className="flex flex-col justify-center items-center w-full min-h-screen mx-auto p-8 dark:bg-black">
+        <h2 className="text-3xl md:text-4xl font-bold dark:text-white text-center my-8">
+          Meet the druids
+        </h2>
+
+      <div className="flex justify-center gap-8 w-full">
+
+      <div className="w-3/4 p-6 dark:bg-gray-700 rounded-lg">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  px-2 py-2">
+        {employees.map((people) => {
+          const { id, field_people = [] } = people;
+          
+          // Group employee data
+          let employeeData = {
+            image: '',
+            name: '',
+            title: '',
+            description: ''
+          };
+
+          field_people.forEach((item: any) => {
+            switch (item.type) {
+              case 'paragraph--services_images':
+                if ((item as any).field_service_image?.[0]?.field_media_image?.[0]?.uri?.url) {
+                  employeeData.image = `${drupalBaseUrl}${item.field_service_image[0].field_media_image[0].uri.url}`;
+                }
+                break;
+              case 'paragraph--employee_name':
+                employeeData.name = item.field_employee_name?.value || 'Name Not Provided';
+                break;
+              case 'paragraph--employee_title':
+                employeeData.title = item.field_employee_title?.value || 'Title Not Available';
+                break;
+              case 'paragraph--long_description':
+                employeeData.description = item.field_content?.[0]?.value || 'Description Not Available';
+                break;
+            }
+          });
+
+          return (
+            <div 
+              key={id} 
+              className="bg-white rounded-lg overflow-hidden w-48 h-64 text-center"
+            >
+              {employeeData.image && (
+                <div className="flex justify-center p-2">
+                  <div className="h-24 w-24 overflow-hidden rounded-full">
+                    <img
+                      src={employeeData.image}
+                      alt={`${employeeData.name}'s profile`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              )}
+              <div className="p-2">
+                <h3 className="text-sm font-bold text-gray-900 mb-1 truncate text-center">{employeeData.name}</h3>
+                <p className="text-xs text-gray-600 truncate text-center">{employeeData.title}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      </div>
       </div>
       </div>
       </>
