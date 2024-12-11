@@ -126,7 +126,7 @@ const AboutUs: React.FC = () => {
 
       <div className="flex justify-center gap-8 w-full">
 
-      <div className="w-3/4 p-6 dark:bg-gray-700 rounded-lg">
+      <div className="w-3/4 p-6 rounded-lg">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  px-2 py-2">
         {employees.map((people) => {
           const { id, field_people = [] } = people;
