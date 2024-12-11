@@ -45,16 +45,17 @@ const ServicesPost = () => {
       <div className='flex flex-col items-center justify-center min-h-screen py-16'>
         <Card className='w-full max-w-3xl'>
 <CardContent>
-          {readMore.field_read_more?.map((item) => {
+          {readMore.field_read_more?.map((item, index) => {
             switch (item.type) {
               case 'paragraph--hero_message':
                 return (
                   null
                 );
               case 'paragraph--topic':
+                const isFirstTopic = readMore.field_read_more?.findIndex(i => i.type === 'paragraph--topic') === index;
                 return (
                   <div key={item.id}>
-                    <h2 className='max-w-3xl text-xl font-bold text-gray-900 dark:text-gray-100 text-center p-3 leading-tight'>
+                    <h2 className={`max-w-3xl ${isFirstTopic ? 'text-4xl' : 'text-2xl'} font-bold text-gray-900 dark:text-gray-100 text-center p-3 leading-tight`}>
                       {item.field_short_heading?.[0]?.value || 'Topic Title Not Available'}
                     </h2>
                   </div>
