@@ -1,14 +1,16 @@
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import carousel1 from '@/assets/Tamro-carousel1.webp';
+import carousel2 from '@/assets/Tamro-carousel2.webp';
+import carousel3 from '@/assets/Tamro-carousel3.webp';
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
 
   const carouselItems = [
     { src: carousel1, alt: "Digital Solutions" },
-    { src: carousel1, alt: "Technology Services" },
-    { src: carousel1, alt: "Business Solutions" },
+    { src: carousel2, alt: "Technology Services" },
+    { src: carousel3, alt: "Business Solutions" },
     { src: carousel1, alt: "Cloud Services" },
     { src: carousel1, alt: "AI Solutions" },
   ];
@@ -20,12 +22,12 @@ const LandingPage: React.FC = () => {
       description: "Enriched product information, effortless content management and seamless integrations: MyTamro service channel and a new website."
     },
     {
-      src: carousel1,
-      title: "Ci­ty of Hel­sin­ki",
-      description: "New universal Drupal platform and the revamp of Hel.fi web service – efficient and accessible content production."
+      src: carousel2,
+      title: "Tai­to­ta­lo",
+      description: "A modern and search engine-friendly website implemented using agile methods."
     },
     {
-      src: carousel1,
+      src: carousel3,
       title: "Veik­kaus",
       description: "The new content management system makes content management easier while preserving the stability of the old interface."
     },
@@ -39,25 +41,25 @@ const LandingPage: React.FC = () => {
 
   return (
     <div className='relative w-full min-h-screen overflow-auto bg-gray-800'>
-      <div className='flex flex-col items-center justify-center min-h-screen   bgGradient'>
-        <h1 className='max-w-3xl text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center p-3 rounded-lg leading-tight mt-16 md:mt-24'>
+      <div className='flex flex-col items-center justify-center min-h-screen bgGradient'>
+        <h1 className='max-w-3xl text-5xl sm:text-6xl md:text-7xl font-bold text-white text-center p-3 rounded-lg leading-tight mt-16 md:mt-24'>
           Uncompromising<br /> and Uncomplicated<br />
           Digital Solutions 
         </h1>
         <p className='text-white mb-8'>We act as the interpreter between the customer's business and the world of technology.</p>
         
-        <div className="relative w-full overflow-hidden">
-          <div className="flex animate-carousel space-x-4">
-            {carouselItems.concat(carouselItems).map((item, index) => (
+        <div className="relative w-full overflow-hidden py-4">
+          <div className="flex animate-carousel gap-0.1"> 
+            {carouselItems.concat(carouselItems.slice(0, 2)).map((item, index) => (
               <div 
                 key={index} 
-                className="flex-shrink-0 w-1/5"
+                className="flex-shrink-0 w-1/3"
               >
-                <div className="relative w-full h-48">
+                <div className="w-auto h-[300px] group rounded-lg transition-all duration-300"> 
                   <img
                     src={item.src}
                     alt={item.alt}
-                    className="w-full h-full object-cover shadow-xl rounded-lg transition-transform duration-300 hover:scale-105"
+                    className="w-full h-full object-contain rounded-lg transition-transform duration-300 transform group-hover:scale-105"
                   />
                 </div>
               </div>
