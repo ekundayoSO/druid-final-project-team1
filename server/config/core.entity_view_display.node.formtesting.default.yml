@@ -1,0 +1,39 @@
+uuid: b1cc2765-cfa5-4baf-a171-eba78dcde102
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.formtesting.body
+    - field.field.node.formtesting.field_anotherformtest
+    - node.type.formtesting
+  module:
+    - text
+    - user
+    - webform
+id: node.formtesting.default
+targetEntityType: node
+bundle: formtesting
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_anotherformtest:
+    type: webform_entity_reference_entity_view
+    label: above
+    settings:
+      source_entity: true
+      lazy: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

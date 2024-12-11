@@ -1,0 +1,32 @@
+uuid: 362275ae-beb1-4971-bd29-8cad33003d9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.test.body
+    - field.field.node.test.field_mautic_formtest
+    - node.type.test
+  module:
+    - text
+    - user
+id: node.test.teaser
+targetEntityType: node
+bundle: test
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_mautic_formtest: true
