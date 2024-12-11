@@ -90,6 +90,10 @@ module.exports = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -97,6 +101,7 @@ module.exports = {
         "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
         "carousel-float": "carousel-float 3s ease-in-out infinite",
         carousel: "carousel 20s linear infinite",
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
       },
     },
   },

@@ -104,8 +104,16 @@
   width: 100%;
   height: 100%;
   background: 
+	radial-gradient(circle at 91% 44%, rgba(202, 152, 170, 0.83), rgba(194, 220, 220, 0.5)),
+	radial-gradient(circle at 26% 94%, rgba(171, 210, 218, 0.81), rgba(201, 180, 180, 0)),
+	url(/client/src/assets/bgGredient1.svg);
+}
+  
+.bgGradient {
+  width: 100%;
+  height: 100%;
+  background: 
 	radial-gradient(circle at 91% 44%, rgba(172, 87, 115, 0.83), rgba(72, 86, 86, 0.5)),
 	radial-gradient(circle at 26% 94%, rgba(109,151,162,0.81), rgba(255,255,255,0)),
 	url(/client/src/assets/bgGredient1.svg);
 }
-  
