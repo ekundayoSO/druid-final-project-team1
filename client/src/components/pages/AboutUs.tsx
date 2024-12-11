@@ -161,7 +161,7 @@ const AboutUs: React.FC = () => {
           return (
             <div 
               key={id} 
-              className="bg-white rounded-lg overflow-hidden w-48 h-64 text-center"
+              className="overflow-hidden w-48 h-64 text-center"
             >
               {employeeData.image && (
                 <div className="flex justify-center p-2">
@@ -175,8 +175,8 @@ const AboutUs: React.FC = () => {
                 </div>
               )}
               <div className="p-2">
-                <h3 className="text-sm font-bold text-gray-900 mb-1 truncate text-center">{employeeData.name}</h3>
-                <p className="text-xs text-gray-600 truncate text-center">{employeeData.title}</p>
+                <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-1 truncate text-center">{employeeData.name}</h3>
+                <p className="text-xs dark:text-white text-gray-600 truncate text-center">{employeeData.title}</p>
               </div>
             </div>
           );
