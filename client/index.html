@@ -3,12 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/druid.svg" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Druid Project</title>
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      (function (w, d, t, u, n, a, m) {
+        w["MauticTrackingObject"] = n;
+        (w[n] =
+          w[n] ||
+          function () {
+            (w[n].q = w[n].q || []).push(arguments);
+          }),
+          (a = d.createElement(t)),
+          (m = d.getElementsByTagName(t)[0]);
+        a.async = 1;
+        a.src = u;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "http://mautic-lando.lndo.site/mtc.js",
+        "mt"
+      );
+
+      mt("send", "pageview");
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

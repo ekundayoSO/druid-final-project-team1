@@ -1,0 +1,97 @@
+uuid: 22c85da6-9f59-4ed5-b117-9f034494af8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mautic_formtest
+    - node.type.test
+    - paragraphs.paragraphs_type.mautic
+  module:
+    - entity_reference_revisions
+id: node.test.field_mautic_formtest
+field_name: field_mautic_formtest
+entity_type: node
+bundle: test
+label: 'mautic formtest'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      mautic: mautic
+    negate: 0
+    target_bundles_drag_drop:
+      add_image:
+        weight: 24
+        enabled: false
+      add_link:
+        weight: 25
+        enabled: false
+      add_section:
+        weight: 26
+        enabled: false
+      add_textfield:
+        weight: 27
+        enabled: false
+      add_title:
+        weight: 28
+        enabled: false
+      card:
+        weight: 29
+        enabled: false
+      company_name:
+        weight: 30
+        enabled: false
+      employee_name:
+        weight: 31
+        enabled: false
+      employee_title:
+        weight: 32
+        enabled: false
+      faqs:
+        weight: 33
+        enabled: false
+      feedback:
+        weight: 34
+        enabled: false
+      from_library:
+        weight: 35
+        enabled: false
+      hero_message:
+        weight: 36
+        enabled: false
+      justatest:
+        weight: 37
+        enabled: false
+      link:
+        weight: 38
+        enabled: false
+      long_description:
+        weight: 39
+        enabled: false
+      mautic:
+        weight: 40
+        enabled: true
+      project:
+        weight: 41
+        enabled: false
+      section:
+        weight: 42
+        enabled: false
+      services_images:
+        weight: 43
+        enabled: false
+      singular_project:
+        weight: 44
+        enabled: false
+      topic:
+        weight: 45
+        enabled: false
+      video:
+        weight: 46
+        enabled: false
+field_type: entity_reference_revisions

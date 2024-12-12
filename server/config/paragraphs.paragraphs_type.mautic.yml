@@ -1,0 +1,12 @@
+uuid: 1712cacb-d623-4146-a6e5-abbb50d5ac1a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: qnoho3EMPoSsxAvQEQBtAgLI51uYNjlx1UcHeP24Oyc
+id: mautic
+label: Mautic
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

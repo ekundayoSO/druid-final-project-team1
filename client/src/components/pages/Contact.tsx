@@ -1,3 +1,4 @@
+
 import React from 'react';
 import servicesPic1 from '@/assets/arto-hymyilee-scaled.png';
 import servicesIcon1 from '@/assets/jalleenmyytavat-palvelut.webp';

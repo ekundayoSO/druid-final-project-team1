@@ -1,0 +1,12 @@
+_core:
+  default_config_hash: _jBWHDxcUqiULjXJMHx8WwoT1VIODfJ3jsHA7pycQos
+connector: basic_auth
+limit: 100
+connector_config:
+  scheme: http
+  base_url: appserver.mauticlando.internal
+  port: ''
+  path: ''
+  username: admin
+  password: Druid1234!
+cache: '3600'

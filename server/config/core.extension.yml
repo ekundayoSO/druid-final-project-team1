@@ -35,6 +35,7 @@ module:
   jsonapi_extras: 0
   jsonapi_include: 0
   link: 0
+  mautic_paragraph: 0
   media: 0
   media_library: 0
   menu_link_content: 0

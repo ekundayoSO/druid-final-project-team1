@@ -1,0 +1,23 @@
+uuid: 20c2d750-c5b1-4bf5-9b93-713a5ec22c96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mautic_layout
+    - paragraphs.paragraphs_type.mautic
+  module:
+    - options
+_core:
+  default_config_hash: RM9RjZwwP24GTlmVrUfnCyoDH4GzKlmni5zNx0KN8ec
+id: paragraph.mautic.field_mautic_layout
+field_name: field_mautic_layout
+entity_type: paragraph
+bundle: mautic
+label: Layout
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
