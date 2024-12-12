@@ -80,15 +80,16 @@ const EmployeesPost = () => {
                     __html: item.field_content?.[0]?.value || '',
                   }}
                 />
-                      <Link to="/about-us" className="text-blue-500 hover:underline mb-4 inline-block">
-        &larr; Back to About Us
-      </Link>
+
               </div>
             );
           default:
             return null;
         }
       })}
+                            <Link to="/about-us" className="text-blue-500 hover:underline mb-4 inline-block">
+        &larr; Back to About Us
+      </Link>
     </div>
   );
 };
