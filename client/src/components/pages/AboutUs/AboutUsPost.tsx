@@ -44,7 +44,7 @@ const EmployeesPost = () => {
   const { field_people }: Employee = employee as Employee;
 
   return (
-    <div className="max-w-2xl mx-auto mt-8 p-6 bg-white shadow-lg rounded-lg">
+    <div className="max-w-2xl mx-auto mt-8 p-6 bg-white dark:bg-gray-700 shadow-lg rounded-lg">
 
       {field_people?.map((item: EmployeeItem) => {
         switch (item.type) {
@@ -62,19 +62,19 @@ const EmployeesPost = () => {
             );
           case 'paragraph--employee_name':
             return (
-              <h1 key={item.id} className="text-3xl font-bold mb-2 text-center">
+              <h1 key={item.id} className="text-3xl font-bold mb-2 text-center dark:text-white">
                 {item.field_employee_name?.value || 'Name Not Provided'}
               </h1>
             );
           case 'paragraph--employee_title':
             return (
-              <h2 key={item.id} className="text-xl text-gray-600 mb-4 text-center">
+              <h2 key={item.id} className="text-xl dark:text-white text-gray-600 mb-4 text-center">
                 {item.field_employee_title?.value || 'Title Not Available'}
               </h2>
             );
           case 'paragraph--long_description':
             return (
-              <div key={item.id} className="mx-auto text-justify mb-4">
+              <div key={item.id} className="mx-auto bg-grey-700 dark:text-white text-justify mb-4">
                 <div
                   dangerouslySetInnerHTML={{
                     __html: item.field_content?.[0]?.value || '',
