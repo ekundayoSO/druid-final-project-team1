@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { fetchPages } from '@/lib/api/drupalAPI';
 import aboutPic1 from '@/assets/20240425-103217-Druid-Oy-1026-2.jpg';
 import aboutPic2 from '@/assets/DruidToimisto2020-1157-scaled-e1607966740706.webp';
 import aboutPic3 from '@/assets/original.png';
@@ -53,7 +52,7 @@ const AboutUs: React.FC = () => {
             </p>
 
             <div className='w-full md:w-1/2 flex items-center justify-center h-full'>
-            <button className="bg-gray-300 text-gray-800 rounded-full px-4 py-2 mx-2">Check out our services</button>
+              <a href="/services" className="bg-gray-300 text-gray-800 rounded-full px-4 py-2 mx-2">Check out our services</a>
             </div>
           </div>
           <div className='w-full md:w-1/2 flex'>
@@ -164,6 +163,7 @@ const AboutUs: React.FC = () => {
               className="overflow-hidden w-48 h-64 text-center"
             >
               {employeeData.image && (
+                <a href={`/about-us/${id}`}>
                 <div className="flex justify-center p-2">
                   <div className="h-24 w-24 overflow-hidden rounded-full">
                     <img
@@ -173,12 +173,16 @@ const AboutUs: React.FC = () => {
                     />
                   </div>
                 </div>
+                </a>
               )}
               <div className="p-2">
-                <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-1 truncate text-center">{employeeData.name}</h3>
+                <a href={`/about-us/${id}`} className="text-sm font-bold text-gray-900 dark:text-white mb-1 truncate text-center">
+                  {employeeData.name}
+                </a>
                 <p className="text-xs dark:text-white text-gray-600 truncate text-center">{employeeData.title}</p>
               </div>
             </div>
+            
           );
         })}
       </div>
