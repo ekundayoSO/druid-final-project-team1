@@ -5,7 +5,7 @@ import NoMatch from '@/components/pages/NoMatch';
 import Projects from '@/components/pages/Projects/Projects';
 import Maintenance from '@/components/pages/Maintenance';
 import Consultation from '@/components/pages/Consultation';
-import AboutUs from '@/components/pages/AboutUs';
+import AboutUs from '@/components/pages/AboutUs/AboutUs';
 import Blog from '@/components/pages/Blogs/Blog';
 import BlogPost from '@/components/pages/Blogs/BlogPost';
 import Services from '@/components/pages/Services/Services';
@@ -14,6 +14,7 @@ import Careers from './components/pages/Careers/Careers';
 import CareersPost from './components/pages/Careers/CareersPost';
 import ProjectsPost from './components/pages/Projects/ProjectsPost';
 import ServicesPost from './components/pages/Services/ServicesPost';
+import AboutUsPost from './components/pages/AboutUs/AboutUsPost';
 
 export const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ export const router = createBrowserRouter([
       {
         path: 'about-us',
         element: <AboutUs />,
+      },
+      {
+        path: 'about-us/:id',
+        element: <AboutUsPost />,
       },
       {
         path: 'blog',
