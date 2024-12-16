@@ -1,12 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import servicesPic1 from '@/assets/arto-hymyilee-scaled.png';
-import servicesIcon1 from '@/assets/jalleenmyytavat-palvelut.webp';
-import servicesIcon2 from '@/assets/markkinoinnin-automaatiot.webp';
-import servicesIcon3 from '@/assets/tietoturva-auditointi.webp';
-import '../../styles/mautic.css';
-import DynamicContent from './DynamicContent';
+import '../../../styles/mautic.css';
 
-const Contact = () => {
+const CampaignForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [successMessage, setSuccessMessage] = useState('');
   const MAUTIC_DOMAIN = 'http://mautic-lando.lndo.site';
@@ -73,32 +68,13 @@ const Contact = () => {
   return (
     <>
       <div className="relative w-full overflow-auto min-h-screen bg-gray-700 m-0 p-0">
-        <div className="flex flex-col md:flex-row items-center justify-center h-full w-full min-h-screen">
-          <div className="flex flex-col items-center justify-center w-full md:w-1/2 h-full p-8">
-            <h1 className="max-w-3xl text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center p-3 rounded-lg leading-tight mt-16 md:mt-24">
-              Get in touch.
-            </h1>
-            <p className="text-white mb-8 max-w-xl text-center">
-              Our magic happens at our base in Länsi-Pasila, Helsinki, where close to thirty tech maestros are dedicated
-              to creating uncompromising digital solutions.
-            </p>
-            <div className="flex justify-center w-full">
-              <button className="bg-gray-300 text-gray-800 rounded-full px-4 py-2 mx-2">Get to know us</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <DynamicContent/>
-      </div>
-      <div className="relative w-full overflow-auto min-h-screen bg-gray-700 m-0 p-0">
         <div className="flex flex-col items-center justify-center h-full w-full min-h-screen">
           {successMessage && (
             <div className="success-message" role="alert">
               {successMessage}
             </div>
           )}
-          <h2 className="text-3xl font-bold text-white mb-4">Send us a message</h2>
+          {/* <h2 className="text-3xl font-bold text-white mb-4">Send us a message</h2> */}
           <div className="flex flex-col md:flex-row items-center justify-center w-full md:w-1/2 h-full p-8">
             <form
               className="w-full max-w-lg"
@@ -202,119 +178,11 @@ const Contact = () => {
               </div>
               <input type="hidden" name="mauticform[formId]" value="1" />
             </form>
-            <div className="bg-gray-600 rounded-lg shadow-lg overflow-hidden p-4 md:ml-16">
-              <h3 className="text-xl font-bold text-left mt-4 text-gray-300">Client support</h3>
-              <p className="text-gray-300">+358 20 187 6601 (Mon to Fri 8–17)</p>
-              <h3 className="text-xl font-bold text-left mt-4 text-gray-300">Sales</h3>
-              <p className="text-gray-300">+358 20 187 6600</p>
-              <h3 className="text-xl font-bold text-left mt-4 text-gray-300">Office</h3>
-              <p className="text-gray-300">+358 20 187 6602</p>
-              <p className="text-gray-300">Pasilankatu 2</p>
-              <p className="text-gray-300">FI-00240 Helsinki</p>
-              <p className="text-gray-300">Finland</p>
-              <button className="bg-gray-500 text-gray-300 rounded-full px-2 mt-4 py-1 mx-1">
-                Billing information
-              </button>
-            </div>
           </div>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <div className="flex flex-wrap justify-center">
-            <div className="rounded-lg overflow-hidden p-4 mb-2 mr-2 min-h-300 max-w-sm">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Mikko Hämäläinen"
-                className="w-full h-auto object-cover mb-2 rounded-full"
-              />
-              <div className="text-center">
-                <h3 className="text-sm font-semibold text-gray-300">Mikko Hämäläinen</h3>
-                <p className="text-xs text-gray-300">CEO</p>
-                <p className="text-xs text-gray-300">+358 20 187 6603</p>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden p-4 mb-2 mr-2 min-h-300 max-w-sm">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Pasi Järnsstedt"
-                className="w-full h-auto object-cover mb-2 rounded-full"
-              />
-              <div className="text-center">
-                <h3 className="text-sm font-semibold text-gray-300">Pasi Järnsstedt</h3>
-                <p className="text-xs text-gray-300">Director, Production</p>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden p-4 mb-2 mr-2 min-h-300 max-w-sm">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Arto Iijäläinen"
-                className="w-full h-auto object-cover mb-2 rounded-full"
-              />
-              <div className="text-center">
-                <h3 className="text-sm font-semibold text-gray-300">Arto Iijäläinen</h3>
-                <p className="text-xs text-gray-300">
-                  Project Manager &<br /> Scrum Master
-                </p>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden p-4 mb-2 mr-2 min-h-300 max-w-sm">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Anne Klementti"
-                className="w-full h-auto object-cover mb-2 rounded-full"
-              />
-              <div className="text-center">
-                <h3 className="text-sm font-semibold text-gray-300">Anne Klementti</h3>
-                <p className="text-xs text-gray-300">
-                  Project Manager,
-                  <br /> Scrum Master
-                </p>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden p-4 mb-2 mr-2 min-h-300 max-w-sm">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Jesse Tikka"
-                className="w-full h-auto object-cover mb-2 rounded-full"
-              />
-              <div className="text-center">
-                <h3 className="text-sm font-semibold text-gray-300">Jesse Tikka</h3>
-                <p className="text-xs text-gray-300">Project Manager</p>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden p-4 mb-2 mr-2 min-h-300 max-w-sm">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Erika Vanhala"
-                className="w-full h-auto object-cover mb-2 rounded-full"
-              />
-              <div className="text-center">
-                <h3 className="text-sm font-semibold text-gray-300">Erika Vanhala</h3>
-                <p className="text-xs text-gray-300">Project Manager</p>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden p-4 mb-2 mr-2 min-h-300 max-w-sm">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Kirsi Vatanen"
-                className="w-full h-auto object-cover mb-2 rounded-full"
-              />
-              <div className="text-center">
-                <h3 className="text-sm font-semibold text-gray-300">Kirsi Vatanen</h3>
-                <p className="text-xs text-gray-300">Marketing Manager</p>
-                <p className="text-xs text-gray-300">kirsi.vatanen@druid.fi</p>
-              </div>
-            </div>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center col-span-full mt-10">
-            In­te­res­ted in joi­ning our team?{' '}
-          </h2>
-          <button className="bg-gray-300 text-gray-800 rounded-full px-4 py-2 mx-2 my-10 mb-20">
-            Take a look at our open positions
-          </button>
         </div>
       </div>
     </>
   );
 };
 
-export default Contact;
+export default CampaignForm;
