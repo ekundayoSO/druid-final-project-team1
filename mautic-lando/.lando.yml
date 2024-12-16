@@ -14,7 +14,7 @@ tooling:
     service: appserver
   npm:
     service: appserver
-  # Add these new cron job commands
+  # Add cron job commands
   cron-segment-update:
     service: appserver
     description: "Run Mautic segment update cron job"
