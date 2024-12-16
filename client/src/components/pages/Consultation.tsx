@@ -1,10 +1,8 @@
-import consultationPic1 from '@/assets/20240425-103500-Druid-Oy-1613.jpg';
+
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { ConsultationItem } from '@/types/Consultation';
-
-type ConsultationParagraph = NonNullable<ConsultationItem['field_consultation']>[number];
+import { ConsultationItem} from '@/types/Consultation';
 
 const Consultation = () => {
   const [consultation, setConsultation] = useState<ConsultationItem[]>([]);
@@ -39,7 +37,6 @@ const Consultation = () => {
   if (error) return <div>Error: {error}</div>;
   if (consultation.length === 0) return <div>No services available</div>;
 
-  const { field_consultation } = consultation[0] || {};
 
   // Get the first image URL from field_consultation
   const getHeaderImage = () => {
@@ -53,42 +50,6 @@ const Consultation = () => {
     return imageItem?.field_add_image?.[0]?.field_media_image?.[0]?.uri.url ? 
       `${drupalBaseUrl}${imageItem.field_add_image[0].field_media_image[0].uri.url}` 
       : null;
-  };
-
-  // Components for different paragraph types
-  const AddImage = ({ item }: { item: ConsultationParagraph }) => (
-    <div key={item.id}>
-      {item.field_add_image && item.field_add_image[0]?.field_media_image && (
-        <img
-          src={`${drupalBaseUrl}${item.field_add_image[0].field_media_image[0].uri.url}`}
-          alt={item.field_add_image[0].field_media_image[0].meta.alt || 'Service Image'}
-          className="mx-auto w-full h-auto max-w-screen-md object-cover"
-        />
-      )}
-    </div>
-  );
-
-  const Topic = ({ item }: { item: ConsultationParagraph }) => (
-    <div key={item.id}>
-      <h4>{item.field_short_heading?.[0]?.value || 'Topic Title Not Available'}</h4>
-    </div>
-  );
-
-  const LongDescription = ({ item }: { item: ConsultationItem['field_consultation'][number] }) => (
-    <div key={item.id}>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: item.field_content?.[0]?.value || 'Long Description Not Available',
-        }}
-      />
-    </div>
-  );
-
-  // Mapping of paragraph types to components
-  const paragraphComponents: Record<string, React.FC<{ item: ConsultationItem['field_consultation'][number] }>> = {
-    'paragraph--add_image': AddImage,
-    'paragraph--topic': Topic,
-    'paragraph--long_description': LongDescription,
   };
 
   return (
