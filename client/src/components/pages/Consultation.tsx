@@ -93,12 +93,12 @@ const Consultation = () => {
 
   return (
     <>
-    <div className='relative w-full overflow-auto min-h-screen bg-gray-400 m-0 p-0'>
+    <div className='relative w-full overflow-auto min-h-screen bg-gray-400 dark:bg-gray-800 m-0 p-0'>
       <div className='flex flex-col items-center justify-center h-full'>
         <div className='flex flex-col md:flex-row items-center justify-center w-full max-w-7xl mx-auto p-8'>
           <div className='flex flex-col items-start justify-center  md:w-1/2 mb-8 md:mb-0'>
             <div className="[hyphens:none] [word-break:normal]">
-              <h1 className='max-w-3xl text-4xl sm:text-5xl md:text-6xl font-bold text-white text-left p-3 rounded-lg leading-tight mt-16 md:mt-24'>
+              <h1 className='max-w-3xl text-4xl sm:text-5xl md:text-6xl font-bold dark:text-white text-left p-3 rounded-lg leading-tight mt-16 md:mt-24'>
                 {isLoading ? (
                   'Loading...'
                 ) : (
@@ -109,7 +109,7 @@ const Consultation = () => {
                 )}
               </h1>
             </div>
-            <p className='text-white mb-8 max-w-xl text-left'>
+            <p className='dark:text-white mb-8 max-w-xl text-left'>
             Is your web service in need of a shake up, but you don’t know where to start or how to attack it? Join us on an adventure to explore your digital service, and we’ll work together to identify what you need to succeed. We’ll put our expertise to work and wow you with solutions. 
             </p>
 
@@ -135,10 +135,10 @@ const Consultation = () => {
         </div>
         </div>
 </div>
-<div className="bg-gray-500 py-12 w-full flex justify-center  min-h-screen mx-auto items-center ">
-  <div className="bg-gray-700 md:w-3/5 rounded-lg shadow-lg p-8">
-    <h2 className="text-3xl font-bold text-white mb-4">Ma­gi­cal Sup­port: Your de­di­ca­ted team for main­te­nan­ce and growth</h2>
-    <p className="text-white mb-8">
+<div className="bg-gray-300 dark:bg-gray-500 py-12 w-full flex justify-center  min-h-screen mx-auto items-center ">
+  <div className="bg-gray-100 dark:bg-gray-700 md:w-3/5 rounded-lg shadow-lg p-8">
+    <h2 className="text-3xl font-bold dark:text-white mb-4">Ma­gi­cal Sup­port: Your de­di­ca­ted team for main­te­nan­ce and growth</h2>
+    <p className="dark:text-white mb-8">
     We’ve run the Discovery Tour with some fascinating cases. Each case is unique, but we use the same finely tuned process – adjusting it to different purposes as needed. We report with an analysis of the current situation, then we add concrete development proposals and a preliminary cost estimate. We give clear pathways to make it easy to decide to upgrade an old service or create something new.
 
     One very cool thing about the Discovery Tour is that it allows very quick testing of new service concepts without risk. We have done proof of concept implementations with many customers.
@@ -146,14 +146,14 @@ const Consultation = () => {
   </div>
 
       </div>
-      <div className='relative w-full overflow-auto min-h-screen bg-gray-700 m-0 p-0 flex items-center justify-center'>
+      <div className='relative w-full overflow-auto min-h-screen bg-gray-200 dark:bg-gray-700 m-0 p-0 flex items-center justify-center'>
           <div className='flex w-full md:w-1/2 flex-col items-center justify-center h-full'>
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center col-span-full my-20">
+        <h2 className="text-3xl md:text-4xl font-bold dark:text-white text-center col-span-full my-20">
         Dis­co­ve­ry Tour gua­ran­tees a quick and risk-free start for a de­ve­lop­ment pro­ject.
           </h2>
 
-          <div className="w-full md:w-3/4 p-6 bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 transition-colors mb-12">
-  <h3 className="text-xl font-bold text-white mb-6">
+          <div className="w-full md:w-3/4 p-6 dark:bg-gray-500 rounded-lg shadow-lg mb-12">
+  <h3 className="text-xl font-bold dark:text-white mb-6">
   {isLoading ? (
     'Loading...'
   ) : (
@@ -169,19 +169,12 @@ const Consultation = () => {
     })()
   )}
 </h3>
-  <ul className="list-disc pl-5 text-white">
-  <div
-  dangerouslySetInnerHTML={{ 
-    __html: (() => {
-      const items = consultation[0]?.field_consultation || [];
-      const longDescriptions = items.filter(
-        item => item.type === 'paragraph--long_description'
-      );
-      return longDescriptions[1]?.field_content?.[0]?.value || 'Content not found';
-    })()
-  }}
-  className="prose prose-invert max-w-none"
-/>
+  <p className="dark:text-gray-200">The Discovery Tour makes life easier and helps kick-start your development project, if:</p>
+  <ul className="list-disc pl-5 dark:text-white">
+    <li>you lack technical know-how to evaluate alternatives and define the project requirements</li>
+    <li>you are looking for fresh solutions to serve a changing customer base or for new customer needs</li>
+    <li>staying on budget and on schedule is important and project management needs support</li>
+    <li>your goal is to do the right things in the right way in one go.</li>
   </ul>
 </div>
 
