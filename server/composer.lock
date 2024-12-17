@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1a388011d49b24ebcbbd3cecf2ac556a",
+    "content-hash": "97443ef601426556c766461d0eedde08",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2444,6 +2444,69 @@
             }
         },
         {
+            "name": "drupal/mautic_paragraph",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/mautic_paragraph.git",
+                "reference": "1.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/mautic_paragraph-1.1.1.zip",
+                "reference": "1.1.1",
+                "shasum": "bf136b6e1c3346e8ffe5f438e48f9c1837282060"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10.0",
+                "mautic/api-library": "^3.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.1.1",
+                    "datestamp": "1694445259",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "patches": {
+                    "mautic/api-library": {
+                        "Add support for client credentials grant": "https://patch-diff.githubusercontent.com/raw/mautic/api-library/pull/269.diff",
+                        "Make the setLogger method on the API class adhere to the LoggerAwareInterface": "https://github.com/mautic/api-library/commit/73a92ddc259ca696ce7a6932b127529447e82d17.diff"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Grayle",
+                    "homepage": "https://www.drupal.org/user/3145497"
+                },
+                {
+                    "name": "mollux",
+                    "homepage": "https://www.drupal.org/user/785804"
+                },
+                {
+                    "name": "nginex",
+                    "homepage": "https://www.drupal.org/user/2822325"
+                },
+                {
+                    "name": "Nick_vh",
+                    "homepage": "https://www.drupal.org/user/122682"
+                }
+            ],
+            "description": "Integrates Mautic with Drupal 8",
+            "homepage": "https://www.drupal.org/project/mautic_paragraph",
+            "support": {
+                "source": "https://git.drupalcode.org/project/mautic_paragraph"
+            }
+        },
+        {
             "name": "drupal/paragraphs",
             "version": "1.18.0",
             "source": {
@@ -3793,6 +3856,49 @@
                 "source": "https://github.com/Masterminds/html5-php/tree/2.9.0"
             },
             "time": "2024-03-31T07:05:07+00:00"
+        },
+        {
+            "name": "mautic/api-library",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mautic/api-library.git",
+                "reference": "5b0d9051a3a42eea132fa6da35b712e947804d2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mautic/api-library/zipball/5b0d9051a3a42eea132fa6da35b712e947804d2c",
+                "reference": "5b0d9051a3a42eea132fa6da35b712e947804d2c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=7.2.0",
+                "psr/log": "~1.0 || ~2.0 || ~3.0"
+            },
+            "require-dev": {
+                "brianium/paratest": "^6.2",
+                "friendsofphp/php-cs-fixer": "~2.16.1",
+                "kint-php/kint": "^4.1",
+                "phpunit/phpunit": "~9.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mautic\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Mautic API Connector Library",
+            "support": {
+                "issues": "https://github.com/mautic/api-library/issues",
+                "source": "https://github.com/mautic/api-library/tree/3.1.0"
+            },
+            "time": "2022-05-04T13:59:18+00:00"
         },
         {
             "name": "mck89/peast",
@@ -7607,7 +7713,7 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "drupal/entity_usage": 10
     },

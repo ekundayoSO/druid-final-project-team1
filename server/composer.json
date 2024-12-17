@@ -26,6 +26,7 @@
         "drupal/faqfield": "^7.1",
         "drupal/jsonapi_extras": "^3.26",
         "drupal/jsonapi_include": "^1.8",
+        "drupal/mautic_paragraph": "^1.1",
         "drupal/paragraphs": "^1.18",
         "drupal/pathauto": "^1.13",
         "drupal/restui": "^1.22",
@@ -36,7 +37,7 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "allow-plugins": {
