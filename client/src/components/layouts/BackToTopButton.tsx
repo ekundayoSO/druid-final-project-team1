@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { IoMdArrowRoundUp } from "react-icons/io";
 
 const BackToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,7 +31,7 @@ const BackToTopButton: React.FC = () => {
     <div className='fixed bottom-20 right-4 z-50'>
       {isVisible && (
         <Button onClick={scrollToTop} className='bg-primary text-primary-foreground hover:bg-primary/90'>
-          Back to top
+          <IoMdArrowRoundUp />
         </Button>
       )}
     </div>
@@ -38,3 +39,5 @@ const BackToTopButton: React.FC = () => {
 };
 
 export default BackToTopButton;
+
+
