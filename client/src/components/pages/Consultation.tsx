@@ -13,7 +13,7 @@ const Consultation = () => {
         <div className='flex flex-col md:flex-row items-center justify-center w-full max-w-7xl mx-auto p-8'>
           <div className='flex flex-col items-start justify-center  md:w-1/2 mb-8 md:mb-0'>
             <h1 className='max-w-3xl text-4xl sm:text-5xl md:text-6xl font-bold text-white text-left p-3 rounded-lg leading-tight mt-16 md:mt-24'>
-            Tech­no­lo­gy <br/> con­sul­ting
+            Tech­no­lo­gy <br/> Con­sul­ting
             </h1>
             <p className='text-white mb-8 max-w-xl text-left'>
             Is your web service in need of a shake up, but you don’t know where to start or how to attack it? Join us on an adventure to explore your digital service, and we’ll work together to identify what you need to succeed. We’ll put our expertise to work and wow you with solutions. 

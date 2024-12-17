@@ -1,19 +1,19 @@
 import React from 'react';
-import servicesPic1 from '@/assets/Druid-drupal-yllapito.jpg';
+import servicesPic1 from '@/assets/20240425-102404-Druid-Oy-1455.jpg';
 import servicesIcon1 from '@/assets/jalleenmyytavat-palvelut.webp';
 import servicesIcon2 from '@/assets/markkinoinnin-automaatiot.webp';
 import servicesIcon3 from '@/assets/tietoturva-auditointi.webp';
+import { Link } from 'react-router-dom';
 
 const Maintenence = () => {
   return (
     <>
     <div className='relative w-full overflow-auto min-h-screen bg-gray-700 m-0 p-0'>
       <div className='flex flex-col md:flex-row items-center justify-center h-full w-full min-h-screen'>
-        <div className='flex flex-col items-start justify-center w-full md:w-1/2 h-full p-8'>
-          <h1 className='max-w-3xl text-4xl sm:text-5xl md:text-6xl font-bold text-white text-left p-3 rounded-lg leading-tight mt-16 md:mt-24'>
-          Client sup­port <br/>and maintanance<br/> for Dru­pal
+        <div className='flex flex-col items-center justify-center w-full md:w-1/2 h-full p-8'>
+          <h1 className='max-w-3xl text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center p-3 rounded-lg leading-tight mt-16 md:mt-24'>
+          Client Sup­port <br/>and Maintanance
           </h1>
-          <h2 className='max-w-3xl text-4xl sm:text-2xl md:text-2xl italic text-white text-left p-3 rounded-lg leading-tight '>Sup­port, se­cu­ri­ty and lon­ge­vi­ty for di­gi­tal ser­vi­ces</h2>
           <p className='text-white mb-8 max-w-xl text-left'>
           In the world of digital services, the foundations of longevity are continuous development and support you can trust. We are proactive about resolving problems and making sure that services stay current, adapt to change and continue to boost our customers’ business.
           <br/>
@@ -21,7 +21,7 @@ const Maintenence = () => {
           Long-lasting and deep customer relationships are the only way. As a technology partner, we consult and guide, come up with new ideas to meet changing business needs and continuously develop services for the better.
           </p>
           <div className='flex justify-center w-full'>
-            <button className="bg-gray-300 text-gray-800 rounded-full px-4 py-2 mx-2">Contact Client Support</button>
+            <Link to="/contact" className="bg-gray-300 text-gray-800 rounded-full px-4 py-2 mx-2">Contact Client Support</Link>
           </div>
         </div>
         <div className='w-full md:w-1/2 h-full bg-cover bg-center' style={{ backgroundImage: `url(${servicesPic1})`, minHeight: '100vh' }}>

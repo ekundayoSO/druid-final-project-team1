@@ -2,14 +2,11 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { Service } from '@/types/Services';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import servicesPic1 from '@/assets/arto-hymyilee-scaled.png';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import servicesPic1 from '@/assets/20240425-095937-Druid-Oy-0280.webp';
 import servicesIcon1 from '@/assets/jalleenmyytavat-palvelut.webp';
 import servicesIcon2 from '@/assets/markkinoinnin-automaatiot.webp';
 import servicesIcon3 from '@/assets/tietoturva-auditointi.webp';
-
-
 
 const Services = () => {
   const [services, setServices] = useState<Service[]>([]);
@@ -46,7 +43,7 @@ const Services = () => {
         <div className='flex flex-col md:flex-row items-center justify-center h-full w-full min-h-screen'>
           <div className='flex flex-col items-center justify-center w-full md:w-1/2 h-full p-8'>
             <h1 className='max-w-3xl text-4xl sm:text-5xl md:text-6xl font-bold dark:text-white text-center p-3 rounded-lg leading-tight mt-16 md:mt-24'>
-              Our ser­vi­ces.
+              Our Ser­vi­ces
             </h1>
             <p className='dark:text-white mb-8 max-w-xl text-center'>
               We thrive on designing and implementing digital solutions that help our clients’ businesses win. We keep things on budget, on time and involve customers in development, so they get to enjoy the journey – and the results.
@@ -55,7 +52,7 @@ const Services = () => {
               Driven by passion, we develop high-performing, dependable web services tailored to our clients’ business goals. We excel at navigating technically intricate projects while upholding the highest standards of quality.
             </p>
             <div className='flex justify-center w-full'>
-              <button className="bg-gray-300 text-gray-800 rounded-full px-4 py-2 mx-2">Contact Us</button>
+              <Link to="/contact" className="bg-gray-300 text-gray-800 rounded-full px-4 py-2 mx-2">Contact Us</Link>
             </div>
           </div>
           <div className='w-full md:w-1/2 h-full bg-cover bg-center' style={{ backgroundImage: `url(${servicesPic1})`, minHeight: '100vh' }}>
@@ -82,7 +79,7 @@ const Services = () => {
                       />
                     </div>
                     <Link to={`/services/${id}`}>
-                      <p className="mr-1 text-red-500 mt-5 self-end">&rarr; Read more</p>
+                      <p className="mr-1 text-red-500 dark:text-gray-300 mt-5 self-end">&rarr; Read more</p>
                     </Link>
                   </CardContent>
                 </CardHeader>

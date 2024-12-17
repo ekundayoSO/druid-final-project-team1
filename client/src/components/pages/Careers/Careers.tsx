@@ -67,7 +67,7 @@ const Careers = () => {
             return (
               <Card
                 key={id}
-                className="w-full cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+                className="w-full cursor-pointer transition ease-in-out delay-150"
                 onClick={() => handleCardClick(id)}
               >
                 {field_careers?.map((item) => {

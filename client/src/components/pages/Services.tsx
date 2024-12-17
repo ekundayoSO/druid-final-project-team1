@@ -11,7 +11,7 @@ const Services = () => {
       <div className='flex flex-col md:flex-row items-center justify-center h-full w-full min-h-screen'>
         <div className='flex flex-col items-start justify-center w-full md:w-1/2 h-full p-8'>
           <h1 className='max-w-3xl text-4xl sm:text-5xl md:text-6xl font-bold text-white text-left p-3 rounded-lg leading-tight mt-16 md:mt-24'>
-            Our ser­vi­ces.
+            Our Ser­vi­ces
           </h1>
           <p className='text-white mb-8 max-w-xl text-left'>
             We thrive on designing and implementing digital solutions that help our clients’ businesses win. We keep things on budget, on time and involve customers in development, so they get to enjoy the journey – and the results.
