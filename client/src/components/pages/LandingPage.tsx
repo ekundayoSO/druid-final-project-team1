@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import carousel1 from '@/assets/Tamro-carousel1.webp';
 import carousel2 from '@/assets/Tamro-carousel2.webp';
 import carousel3 from '@/assets/Tamro-carousel3.webp';

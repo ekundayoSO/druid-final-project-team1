@@ -1,4 +1,4 @@
-import React from 'react';
+
 import carousel1 from '@/assets/Tamro-carousel1.webp';
 
 const Projects = () => {

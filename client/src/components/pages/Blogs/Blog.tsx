@@ -63,7 +63,7 @@ const Blog = () => {
           {filteredBlogItems.map((item: BlogItem) => (
             <Card
               key={item.id}
-              className="w-full cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+              className="w-full cursor-pointer transition ease-in-out delay-150"
               onClick={() => handleCardClick(item.id)}
             >
               {item.field_hero_image && (
