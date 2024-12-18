@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useFetchBlogs } from '@/hooks/useFetchBlogs';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { drupalBaseUrl } from '@/hooks/useFetchBlogs';
@@ -16,7 +16,7 @@ const BlogPost = () => {
   if (!blogItem) return <div>Blog post not found</div>;
 
   return (
-    <div className='relative w-full min-h-screen overflow-auto bg-gray-100 dark:bg-gray-900 m-0 p-0'>
+    <div className='relative w-full min-h-screen overflow-auto bg-gray-200 dark:bg-gray-700 m-0 p-0'>
       <div className='flex flex-col items-center justify-center min-h-screen py-16'>
         <Card className='w-full max-w-3xl'>
           {blogItem?.field_hero_image && (
@@ -69,8 +69,8 @@ const BlogPost = () => {
                         href={content.field_add_link?.uri}
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='text-blue-500 hover:underline'
-                      >
+                        className='dark:text-gray-400 hover:underline'
+                      >&rarr;&nbsp; 
                         {content.field_add_link?.title || 'Visit link'}
                       </a>
                     </div>
@@ -79,6 +79,11 @@ const BlogPost = () => {
                   return null;
               }
             })}
+            <div className="flex justify-end">
+              <Link to="/blog" className="text-gray-500 hover:underline mb-4 inline-block">
+                &larr; Back to Blog
+              </Link>
+            </div>
           </CardContent>
         </Card>
       </div>
