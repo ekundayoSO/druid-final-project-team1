@@ -55,7 +55,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ routes }) => {
                   key={path}
                   onClick={() => handleNavigation(path)}
                   className={`block mt-4 ${
-                    matches[index] ? 'text-cyan-500 border-b-2 border-cyan-500' : ''
+                    matches[index] ? 'text-red-500 border-b-2 border-red-500' : ''
                   } ${isLandingPage ? 'text-white' : 'text-black dark:text-white'}`}
                 >
                   {name}
