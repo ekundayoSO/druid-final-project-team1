@@ -19,8 +19,7 @@ const Services = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`${drupalBaseUrl}/jsonapi/node/services_new`);
-        console.log(response.data.data);
-
+  
         setServices(response.data.data);
         setIsLoading(false);
       } catch (err) {

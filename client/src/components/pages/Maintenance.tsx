@@ -2,8 +2,7 @@ import servicesPic1 from '@/assets/20240425-102404-Druid-Oy-1455.jpg';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MaintenanceDescription, MaintenanceItem} from '@/types/Maintanence';
-
+import { MaintenanceItem} from '@/types/Maintanence';
 
 const Maintenence = () => {
   const [maintenance, setMaintenance] = useState<MaintenanceItem[]>([]);
@@ -59,7 +58,7 @@ const Maintenence = () => {
     </div>
 
 <div className="bg-gray-400 dark:text-white dark:bg-gray-500 py-12 w-full flex justify-center  min-h-screen mx-auto items-center ">
-  <div className="dark:bg-gray-700 bg-white md:w-3/5 rounded-lg shadow-lg p-8">
+  <div className="dark:bg-gray-700 bg-gray-200 md:w-3/5 rounded-lg shadow-lg p-8">
     <h2 className="text-3xl font-bold mb-4">Ma­gi­cal Sup­port: Your de­di­ca­ted team for main­te­nan­ce and growth</h2>
     <p className="mb-8">
       Our experienced Magical Support team, led by a designated service manager exclusively for your organization, is committed to delivering maintenance services and assisting with your development needs. Your personalized service manager possesses in-depth knowledge of your project and takes a proactive approach by proposing enhancement ideas.
@@ -79,26 +78,27 @@ const Maintenence = () => {
   </div>
 </div>
 {/* New Section 3 */}
-<div className="flex flex-col justify-center items-center dark:text-white w-full p-8 dark:bg-gray-500 pb-20">
+<div className="flex flex-col justify-center items-center dark:text-white w-full p-8 bg-gray-200 dark:bg-gray-500 pb-40">
         <h2 className="text-3xl md:text-4xl font-bold  text-center my-8">
         The ad­van­ta­ges of choo­sing the Ma­gi­cal Sup­port team
         </h2>
         <div className="flex justify-center gap-8 w-full">
           <div className="w-1/4 p-6 dark:bg-gray-700 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold  mb-6">Card Title 1</h3>
-            <p>This is a longer description for the first card, providing more details and insights.</p>
+            <h3 className="text-xl font-bold  mb-6">Drupal expertise</h3>
+            <p>Our team at Druid consists of specialists who have honed their skills in the Drupal system, making them exceptionally knowledgeable in all its facets.</p>
           </div>
           <div className="w-1/4 p-6 dark:bg-gray-700 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold  mb-6">Card Title 2</h3>
-            <p>This is a longer description for the second card, providing more details and insights.</p>
+            <h3 className="text-xl font-bold  mb-6">Efficient processes</h3>
+            <p>We employ standardized workflows that facilitate efficient operations. This means we can quickly scale our team or swap out experts without wasting valuable time.
+</p>
           </div>
           <div className="w-1/4 p-6 dark:bg-gray-700 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold  mb-6">Card Title 3</h3>
-            <p>This is a longer description for the third card, providing more details and insights.</p>
+            <h3 className="text-xl font-bold  mb-6">Premier partnerships</h3>
+            <p>We collaborate with industry-leading partners, including domestic data center service providers, guaranteeing that we collaborate with the best in the field.</p>
           </div>
           <div className="w-1/4 p-6 dark:dark:bg-gray-700 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold  mb-6">Card Title 4</h3>
-            <p>This is a longer description for the fourth card, providing more details and insights.</p>
+            <h3 className="text-xl font-bold  mb-6">Agile organization</h3>
+            <p>Our streamlined hierarchy empowers our organization to swiftly identify and address issues and risks as soon as they surface.</p>
           </div>
         </div>
         </div>
