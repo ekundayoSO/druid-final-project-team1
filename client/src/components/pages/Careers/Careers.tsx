@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useFetchCareers, drupalBaseUrl } from '@/hooks/useFetchCareers';
-import { Career, ServicesImagesProps, HeroMessageProps, ParagraphItem } from '@/types/Careers';
+import { Career, ServicesImagesProps, HeroMessageProps} from '@/types/Careers';
 
 const Careers = () => {
   const navigate = useNavigate();
@@ -20,7 +19,7 @@ const Careers = () => {
         <img
           src={`${drupalBaseUrl}${item.field_service_image[0].field_media_image[0].uri.url}`}
           alt={item.field_service_image[0].field_media_image[0].meta.alt || 'Service Image'}
-          className="mx-auto w-full h-auto max-w-screen-md object-cover"
+          className="w-full aspect-[16/9] object-cover object-center rounded-lg"
         />
       )}
     </div>
@@ -31,7 +30,7 @@ const Careers = () => {
     <CardContent>
       <CardHeader>
         <div key={item.id}>
-          <CardTitle className='text-sm mb-4 '>{title.toUpperCase()}</CardTitle>
+          <CardTitle className='mb-4 '>{title}</CardTitle>
           <div className='text-sm' dangerouslySetInnerHTML={{ __html: item.field_message?.value || 'Not Provided' }} />
         </div>
       </CardHeader>
@@ -51,7 +50,7 @@ const Careers = () => {
   if (careersItems.length === 0) return <div>No services available</div>;
 
   return (
-    <div className='relative w-full min-h-screen overflow-auto bg-gray-100 dark:bg-gray-900 m-0 p-0'>
+    <div className='relative w-full min-h-screen overflow-auto bg-gray-200 dark:bg-gray-700 m-0 p-0'>
       <div className='flex flex-col items-center justify-center min-h-screen py-16'>
         <h1 className='max-w-3xl text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 text-center p-3 leading-tight'>
           Careers
