@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
-import { Case, ServiceTaxonomy, CardImage, CaseDetail, ProjectDescription } from '@/types/Projects';
-
+import { CaseDetail, ProjectDescription } from '@/types/Projects';
 
 const ProjectsPost = () => {
   const [caseData, setCaseData] = useState<CaseDetail | null>(null);
@@ -39,7 +38,7 @@ const ProjectsPost = () => {
   if (error) return <div>Error: {error}</div>;
   if (!caseData) return <div>No case data available</div>;
 
-  const { title, field_client, field_hero_image, field_services_taxonomy, field_link, field_project_description } =
+  const { title, field_hero_image,field_link, field_project_description } =
     caseData;
 
   return (
