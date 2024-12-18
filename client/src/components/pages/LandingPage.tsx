@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import carousel1 from '@/assets/Tamro-carousel1.webp';
 import carousel2 from '@/assets/Tamro-carousel2.webp';
 import carousel3 from '@/assets/Tamro-carousel3.webp';
@@ -8,29 +8,41 @@ const LandingPage: React.FC = () => {
   const navigate = useNavigate();
 
   const carouselItems = [
-    { src: carousel1, alt: "Digital Solutions" },
-    { src: carousel2, alt: "Technology Services" },
-    { src: carousel3, alt: "Business Solutions" },
-    { src: carousel1, alt: "Cloud Services" },
-    { src: carousel1, alt: "AI Solutions" },
+    { 
+      src: carousel1, 
+      alt: "Tamro",
+      link: "/projects/82f80501-f6ef-46ec-afad-6c88ff644bc8" 
+    },
+    { 
+      src: carousel2, 
+      alt: "Taitotalo",
+      link: "/projects/28c672e2-52bf-4793-b79d-0800ba96ddc2"
+    },
+    { src: carousel3, alt: "Veikkaus",
+      link: "/projects/684d8c82-7d1d-4e3f-bad2-97eac8861a6b" },
+    { src: carousel1, alt: "Tamro" },
+    { src: carousel1, alt: "Tamro" },
   ];
 
   const newCarouselItems = [
     {
       src: carousel1,
       title: "Tam­ro",
-      description: "Enriched product information, effortless content management and seamless integrations: MyTamro service channel and a new website."
+      description: "Enriched product information, effortless content management and seamless integrations: MyTamro service channel and a new website.",
+      link: "/projects/82f80501-f6ef-46ec-afad-6c88ff644bc8"
     },
     {
       src: carousel2,
       title: "Tai­to­ta­lo",
-      description: "A modern and search engine-friendly website implemented using agile methods."
+      description: "A modern and search engine-friendly website implemented using agile methods.",
+      link: "/projects/28c672e2-52bf-4793-b79d-0800ba96ddc2"
     },
     {
       src: carousel3,
       title: "Veik­kaus",
-      description: "The new content management system makes content management easier while preserving the stability of the old interface."
-    },
+      description: "The new content management system makes content management easier while preserving the stability of the old interface.",
+      link: "/projects/684d8c82-7d1d-4e3f-bad2-97eac8861a6b"
+    }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,13 +61,15 @@ const LandingPage: React.FC = () => {
         <p className='text-white mb-8'>We act as the interpreter between the customer's business and the world of technology.</p>
         
         <div className="relative w-full overflow-hidden py-4">
-          <div className="flex animate-carousel gap-0.1"> 
+          <div className="flex animate-carousel gap-0.5">
             {carouselItems.concat(carouselItems.slice(0, 2)).map((item, index) => (
               <div 
                 key={index} 
-                className="flex-shrink-0 w-1/3"
+                className="flex-shrink-0 w-1/3 group flex justify-center"
+                onClick={() => item.link && navigate(item.link)}
+                style={{ cursor: item.link ? 'pointer' : 'default' }}
               >
-                <div className="w-auto h-[300px] group rounded-lg transition-all duration-300"> 
+                <div className="w-auto h-[320px] shadow-xl rounded-[20px] transition-all duration-300 hover:shadow-none brightness-75 contrast-125 hover:brightness-100 hover:contrast-100">
                   <img
                     src={item.src}
                     alt={item.alt}
@@ -66,26 +80,34 @@ const LandingPage: React.FC = () => {
             ))}
           </div>
         </div>
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center col-span-full my-8">
-            Open sour­ce.<br />
-            Open mind­set.
-          </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto p-6">
-          <div className="bg-gray-700 p-6 rounded-lg shadow-lg hover:bg-gray-600 transition-colors">
-            <h3 className="text-xl font-bold text-white mb-4">Finland's finest</h3>
-            <p className="text-gray-200">
-              Our Drupal experts design, develop and customize even the most challenging projects. 
-              We harness the potential of Drupal and open-source code.
-            </p>
-          </div>
+      
 
-          <div className="bg-gray-700 p-6 rounded-lg shadow-lg hover:bg-gray-600 transition-colors">
-            <h3 className="text-xl font-bold text-white mb-4">Website solutions for large enterprises</h3>
-            <p className="text-gray-200">
-              We understand the challenges of large businesses and organizations and 
-              specialize in expansive website and online service implementations.
-            </p>
-          </div>
+        <div className='mt-24 mb-12 flex items-center justify-center'>
+          <div className='w-full'>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center col-span-full mb-12">
+              Open sour­ce.<br />
+              Open mind­set.
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto p-6">
+              <div className="bg-gray-700 p-6 rounded-lg shadow-lg hover:bg-gray-600 transition-colors h-[240px] flex flex-col ">
+                <h3 className="text-xl font-bold text-white mb-6 text-center  ">Finland's finest</h3>
+                <p className="text-gray-200">
+                  Our Drupal experts design, develop and customize even the most challenging projects. 
+                  We harness the potential of Drupal and open-source code.
+                </p>
+              </div>
+        
+              <div className="bg-gray-700 p-6 rounded-lg shadow-lg hover:bg-gray-600 transition-colors h-[240px] flex flex-col ">
+                <h3 className="text-xl font-bold text-white mb-6 text-center  ">Website solutions for large enterprises</h3>
+                <p className="text-gray-200">
+                  We understand the challenges of large businesses and organizations and 
+                  specialize in expansive website and online service implementations.
+                </p>
+              </div>
+            </div>
+     
+        </div>
         </div>
         <h2 className="text-3xl md:text-4xl font-bold text-white text-center col-span-full my-8">
         Our ex­per­ti­se in ser­vi­ce pac­ka­ges
@@ -128,12 +150,12 @@ const LandingPage: React.FC = () => {
             </p>
           </div>
         </div>
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center col-span-full my-8">
+        <h2 className="text-3xl md:text-5xl font-bold text-white text-center col-span-full my-12">
                     Com­mu­ni­ty
             for de­ve­lo­pers < br />
             by de­ve­lo­pers.
           </h2>
-          <p className='text-white mb-8'>Get to know our culture and people</p>
+          <p className='text-3xl md:text-3xl italic text-white mb-12'>Get to know our culture and people</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto p-6">
           <div className="bg-gray-700 p-6 rounded-lg shadow-lg hover:bg-gray-600 transition-colors">
             <h3 className="text-xl font-bold text-white mb-4">Up-to-date legal knowledge</h3>
@@ -164,8 +186,11 @@ const LandingPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="relative w-full flex justify-center items-center overflow-hidden rounded-lg my-16">
-          <div className="flex w-2/3">
+        <div className="relative my-20 w-full flex justify-center items-center overflow-hidden rounded-lg my-16">
+          <div 
+            className="flex w-2/3 cursor-pointer"
+            onClick={() => navigate(newCarouselItems[currentIndex].link)}
+          >
             <div className="w-1/2">
               <img
                 src={newCarouselItems[currentIndex].src}
@@ -180,14 +205,14 @@ const LandingPage: React.FC = () => {
               <p className="text-gray-200 mb-8">
                 {newCarouselItems[currentIndex].description}
               </p>
-              <button
-                onClick={handleNext}
-                className="absolute right-40 top-1/2 transform -translate-y-1/2 bg-white text-gray-800 p-2 rounded-full shadow-lg hover:bg-gray-200 transition-colors"
-              >
-                Next
-              </button>
             </div>
           </div>
+          <button
+            onClick={handleNext}
+            className="absolute right-40 top-1/2 transform -translate-y-1/2 bg-white text-gray-800 p-2 rounded-full shadow-lg hover:bg-gray-200 transition-colors"
+          >
+            Next
+          </button>
         </div>
       </div>
     </div>

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { Case, ServiceTaxonomy, CardImage, CaseDetail } from '@/types/Projects';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Case } from '@/types/Projects';
+import { Card, CardContent, CardHeader} from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 const Projects= () => {
@@ -34,8 +34,6 @@ const Projects= () => {
     setSelectedCategory(selectedCategory === category ? null : category);
   };
 
-  
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -63,7 +61,7 @@ const Projects= () => {
   if (cases.length === 0) return <div>No cases available</div>;
 
   return (
-    <div className='relative w-full min-h-screen overflow-auto bg-gray-100 dark:bg-gray-900 m-0 p-0'>
+    <div className='relative w-full min-h-screen overflow-auto bg-gray-200 dark:bg-gray-700 m-0 p-0'>
       <div className='flex flex-col items-center justify-center min-h-screen py-16'>
         <h1 className='max-w-3xl text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 text-center p-3 leading-tight'>
         Cus­to­mer Ca­ses
@@ -95,27 +93,29 @@ const Projects= () => {
             <Card key={id}>
               <Link
                 to={`/projects/${id}`}
-                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                className="bg-white  rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
                 <CardHeader>
                 {field_card_image && field_card_image.uri ? (
-              <img
-                src={`${drupalBaseUrl}${field_card_image.uri.url}`}
-                alt={field_card_image.meta?.alt || 'Hero Image'}
-                className="w-full h-auto max-h-96 object-cover rounded-lg mb-4"
-              />
-            ) : (
-              <div className="w-full h-48 bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-500">No image available</span>
-              </div>
-            )}
+                  <div className="aspect-w-16 aspect-h-9 w-full">
+                    <img
+                      src={`${drupalBaseUrl}${field_card_image.uri.url}`}
+                      alt={field_card_image.meta?.alt || 'Hero Image'}
+                      className="w-full h-[300px] object-cover object-center rounded-lg"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-full h-[300px] bg-gray-200 flex items-center justify-center">
+                    <span className="text-gray-500">No image available</span>
+                  </div>
+                )}
                                 <CardContent>
                 <div className="flex flex-row items-center justify-between space-x-4 mb-4">
-                  <h2 className="text-xl font-bold mb-2">{title}</h2>
+                  <h2 className="text-xl font-bold mt-6">{title}</h2>
 
                 </div>
                 {field_card_description && (
-                  <div className="mt-2" dangerouslySetInnerHTML={{ __html: field_card_description.processed }} />
+                  <div  dangerouslySetInnerHTML={{ __html: field_card_description.processed }} />
                 )}
    
                 <div className='mt-4'>

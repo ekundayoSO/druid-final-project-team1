@@ -1,8 +1,8 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useFetchCareers } from '@/hooks/useFetchCareers';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { drupalBaseUrl } from '@/hooks/useFetchCareers';
-import { Career, ServicesImagesProps, HeroMessageProps, ParagraphItem, Topic, LongDescriptionProps } from '@/types/Careers';
+import { Career, ServicesImagesProps, HeroMessageProps,Topic, LongDescriptionProps } from '@/types/Careers';
 
 // Component for paragraph--services_images
 const ServicesImages = ({ item }: ServicesImagesProps) => (
@@ -12,7 +12,7 @@ const ServicesImages = ({ item }: ServicesImagesProps) => (
       <img
         src={`${drupalBaseUrl}${item.field_service_image[0].field_media_image[0].uri.url}`}
         alt={item.field_service_image[0].field_media_image[0].meta.alt || 'Service Image'}
-        className="mx-auto w-full h-auto max-w-screen-md object-cover"
+       className="w-full aspect-[16/9] object-cover object-center rounded-lg"
       />
     )}
   </div>
@@ -23,7 +23,7 @@ const HeroMessage = ({ item, title }: HeroMessageProps) => (
   <CardContent>
     <CardHeader>
       <div key={item.id}>
-        <CardTitle className='mb-1'>{title.toUpperCase()}</CardTitle>
+        <CardTitle className='mb-1'>{title}</CardTitle>
         <div dangerouslySetInnerHTML={{ __html: item.field_message?.value || 'Not Provided' }} />
       </div>
     </CardHeader>
@@ -32,9 +32,13 @@ const HeroMessage = ({ item, title }: HeroMessageProps) => (
 
 // New component for paragraph--topic
 const TopicComponent = ({ item }: Topic ) => (
-  <div className='mb-2 mx-4 text-justify' key={item.id}>
-        <div className='mb-2' dangerouslySetInnerHTML={{ __html: item.field_short_heading?.[0]?.value || 'Not Provided' }} />
+  <CardContent>
+  <CardDescription>
+  <div className='mb-4 mx-8 text-justify text-lg' key={item.id}>
+    <div className='mb-4' dangerouslySetInnerHTML={{ __html: item.field_short_heading?.[0]?.value || 'Not Provided' }} />
   </div>
+  </CardDescription>
+  </CardContent>
 );
 
 // New component for paragraph--long_description
@@ -45,6 +49,7 @@ const LongDescription = ({ item }: LongDescriptionProps) => (
     <div dangerouslySetInnerHTML={{ __html: item.field_content?.[0]?.value || 'Description Not Provided' }} />
   </div>
   </CardDescription>
+  
   </CardContent>
 );
 
@@ -68,7 +73,7 @@ const CareersPost = () => {
   if (!career) return <div>Careers post not found</div>;
 
   return (
-    <div className='relative w-full min-h-screen overflow-auto bg-gray-100 dark:bg-gray-900 m-0 p-0'>
+    <div className='relative w-full min-h-screen overflow-auto bg-gray-200 dark:bg-gray-700 m-0 p-0'>
       <div className='flex flex-col items-center justify-center min-h-screen py-16'>
         <Card className='w-full max-w-3xl'>
           {career.field_careers?.map((item) => {
@@ -84,9 +89,17 @@ const CareersPost = () => {
                 <div key={item.id}>
                   <p>Unhandled paragraph type: {item.type}</p>
                 </div>
+                
               )
             );
           })}
+          <CardContent>
+                            <div className="flex justify-end">
+              <Link to="/careers" className="text-gray-500 hover:underline mb-4 inline-block">
+                &larr; Back to Careers
+              </Link>
+            </div>
+            </CardContent>
         </Card>
       </div>
     </div>

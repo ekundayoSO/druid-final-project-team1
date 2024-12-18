@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import { ReadMore } from '@/types/Services';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-
+import { Card, CardContent } from '@/components/ui/card';
 
 const ServicesPost = () => {
   const [readMore, setReadMore] = useState<ReadMore | null>(null);
@@ -39,9 +38,8 @@ const ServicesPost = () => {
   if (error) return <div>Error: {error}</div>;
   if (!readMore) return <div>No service available</div>;
 
-
   return (
-    <div className='relative w-full min-h-screen overflow-auto bg-gray-100 dark:bg-gray-900 m-0 p-0'>
+    <div className='relative w-full min-h-screen overflow-auto bg-gray-200 dark:bg-gray-700 m-0 p-0'>
       <div className='flex flex-col items-center justify-center min-h-screen py-16'>
         <Card className='w-full max-w-3xl'>
 <CardContent>
@@ -120,7 +118,7 @@ const ServicesPost = () => {
           })}
               <div className="flex justify-center">
                 <Link to={`/services`}>
-                  <p className="mr-1 mt-10 text-red-500" style={{ marginTop: '20px' }}>&rarr; Back to Services</p>
+                  <p className="mr-1 mt-10 text-red-500 dark:text-gray-300" style={{ marginTop: '20px' }}>&rarr; Back to Services</p>
                 </Link>
               </div>
           </CardContent>

@@ -38,7 +38,7 @@ const Blog = () => {
   };
 
   return (
-    <div className="relative w-full min-h-screen overflow-auto bg-gray-100 dark:bg-gray-900 m-0 p-0">
+    <div className="relative w-full min-h-screen overflow-auto bg-gray-200 dark:bg-gray-700 m-0 p-0">
       <div className="flex flex-col items-center justify-center min-h-screen py-16">
         <h1 className="max-w-3xl text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 text-center p-3 leading-tight">
           Blogs
@@ -63,19 +63,19 @@ const Blog = () => {
           {filteredBlogItems.map((item: BlogItem) => (
             <Card
               key={item.id}
-              className="w-full cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+              className="w-full cursor-pointer transition ease-in-out delay-150 flex flex-col min-h-[500px]"
               onClick={() => handleCardClick(item.id)}
             >
               {item.field_hero_image && (
-                <CardHeader>
+                <CardHeader className="overflow-hidden">
                   <img
                     src={`${drupalBaseUrl}${item.field_hero_image.uri.url}`}
                     alt={item.field_hero_image.meta?.alt || 'Hero Image'}
-                    className="w-full h-64 object-cover"
+                    className="w-full aspect-[16/9] object-cover object-center rounded-lg"
                   />
                 </CardHeader>
               )}
-              <CardContent>
+              <CardContent className="flex flex-col flex-1">
                 <CardHeader>
                   <div className="flex justify-between mb-2">
                     <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -93,7 +93,7 @@ const Blog = () => {
                   <CardTitle>{item.title || 'Untitled'}</CardTitle>
                   <CardDescription>{item.field_short_description?.value}</CardDescription>
                 </CardHeader>
-                <div className="mt-4">
+                <div className="mt-auto pt-4">
                   {Array.isArray(item.field_blog_taxonomy) && item.field_blog_taxonomy.length > 0 ? (
                     <ul className="flex flex-wrap gap-2">
                       {item.field_blog_taxonomy?.map((taxonomy, index) => (
