@@ -138,18 +138,10 @@ const Consultation = () => {
     <li>your goal is to do the right things in the right way in one go.</li>
   </ul>
 </div>
-
-
-
-
-
         </div> 
         </div>
-        
-      
-
+  
       </>
-
   );
 };
 
